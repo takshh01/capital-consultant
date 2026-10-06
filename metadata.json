@@ -1,0 +1,6 @@
+{
+  "name": "Capital Consultancy - Loan & Financial Advisory",
+  "description": "Premium loan and financial consultancy in Delhi NCR offering Business Loans, MSME, CGTMSE, LAP, Working Capital, Home & Personal Loans with automated WhatsApp enquiry desk.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
