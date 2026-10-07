@@ -75,28 +75,28 @@ export const EligibilityChecker: React.FC = () => {
   };
 
   return (
-    <section id="eligibility-checker" className="py-20 bg-white border-b border-zinc-200">
+    <section id="eligibility-checker" className="py-20 bg-[#0a0a0a] border-b border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-3 mb-12">
-          <span className="inline-block px-3 py-1 rounded-full bg-emerald-500/10 text-xs font-bold uppercase tracking-wider text-emerald-600 border border-emerald-500/20">
+          <span className="inline-block px-3 py-1 rounded-full bg-emerald-500/10 text-xs font-bold uppercase tracking-wider text-emerald-400 border border-emerald-500/20">
             Pre-Screening Assessment
           </span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0d0d0d] tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
             Eligibility & Requirement Checker
           </h2>
-          <p className="text-sm sm:text-base text-zinc-600">
+          <p className="text-sm sm:text-base text-zinc-400">
             Check preliminary borrowing feasibility according to your cash flow, CIBIL range, and business vintage before formal bank file submission.
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto bg-zinc-50 rounded-2xl border border-zinc-200/90 p-6 sm:p-10 shadow-xs">
+        <div className="max-w-4xl mx-auto bg-[#121214] rounded-2xl border border-white/10 p-6 sm:p-10 shadow-xs">
           
           <form onSubmit={handleAssess} className="space-y-6">
             
             {error && (
-              <div className="p-3.5 bg-rose-50 border border-rose-200 rounded-lg text-rose-700 text-xs flex items-center gap-2">
+              <div className="p-3.5 bg-rose-950/40 border border-rose-500/30 rounded-lg text-rose-300 text-xs flex items-center gap-2">
                 <AlertCircle className="w-4 h-4 shrink-0" />
                 <span>{error}</span>
               </div>
@@ -105,28 +105,28 @@ export const EligibilityChecker: React.FC = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 text-left">
               
               <div>
-                <label className="block text-xs font-bold text-zinc-800 mb-1.5">
+                <label className="block text-xs font-bold text-zinc-300 mb-1.5">
                   Full Name *
                 </label>
                 <div className="relative">
-                  <User className="w-4 h-4 text-zinc-400 absolute left-3.5 top-3.5" />
+                  <User className="w-4 h-4 text-zinc-500 absolute left-3.5 top-3.5" />
                   <input
                     type="text"
                     required
                     placeholder="Enter your name"
                     value={name}
                     onChange={(e) => { setName(e.target.value); setError(''); }}
-                    className="w-full pl-10 pr-3.5 py-2.5 text-sm bg-white border border-zinc-300 rounded-lg focus:bg-white focus:ring-2 focus:ring-emerald-500 focus:outline-hidden"
+                    className="w-full pl-10 pr-3.5 py-2.5 text-sm bg-zinc-900 border border-white/10 rounded-lg text-white focus:ring-2 focus:ring-emerald-500 focus:outline-hidden placeholder:text-zinc-500"
                   />
                 </div>
               </div>
 
               <div>
-                <label className="block text-xs font-bold text-zinc-800 mb-1.5">
+                <label className="block text-xs font-bold text-zinc-300 mb-1.5">
                   Mobile Number (WhatsApp Enabled) *
                 </label>
                 <div className="relative">
-                  <span className="text-xs font-semibold text-zinc-500 absolute left-3.5 top-3">
+                  <span className="text-xs font-semibold text-zinc-400 absolute left-3.5 top-3">
                     +91
                   </span>
                   <input
@@ -136,7 +136,7 @@ export const EligibilityChecker: React.FC = () => {
                     placeholder="10-digit number"
                     value={mobile}
                     onChange={(e) => { setMobile(e.target.value.replace(/\D/g, '')); setError(''); }}
-                    className="w-full pl-12 pr-3.5 py-2.5 text-sm bg-white border border-zinc-300 rounded-lg focus:bg-white focus:ring-2 focus:ring-emerald-500 focus:outline-hidden"
+                    className="w-full pl-12 pr-3.5 py-2.5 text-sm bg-zinc-900 border border-white/10 rounded-lg text-white focus:ring-2 focus:ring-emerald-500 focus:outline-hidden placeholder:text-zinc-500"
                   />
                 </div>
               </div>
@@ -146,13 +146,13 @@ export const EligibilityChecker: React.FC = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 text-left">
               
               <div>
-                <label className="block text-xs font-bold text-zinc-800 mb-1.5">
+                <label className="block text-xs font-bold text-zinc-300 mb-1.5">
                   Customer Type *
                 </label>
                 <select
                   value={customerType}
                   onChange={(e) => setCustomerType(e.target.value as CustomerType)}
-                  className="w-full px-3.5 py-2.5 text-sm bg-white border border-zinc-300 rounded-lg focus:bg-white focus:ring-2 focus:ring-emerald-500 focus:outline-hidden"
+                  className="w-full px-3.5 py-2.5 text-sm bg-zinc-900 border border-white/10 rounded-lg text-white focus:ring-2 focus:ring-emerald-500 focus:outline-hidden"
                 >
                   {customerTypes.map(ct => (
                     <option key={ct} value={ct}>{ct}</option>
@@ -161,13 +161,13 @@ export const EligibilityChecker: React.FC = () => {
               </div>
 
               <div>
-                <label className="block text-xs font-bold text-zinc-800 mb-1.5">
+                <label className="block text-xs font-bold text-zinc-300 mb-1.5">
                   Desired Loan Product *
                 </label>
                 <select
                   value={loanType}
                   onChange={(e) => setLoanType(e.target.value as LoanType)}
-                  className="w-full px-3.5 py-2.5 text-sm bg-white border border-zinc-300 rounded-lg focus:bg-white focus:ring-2 focus:ring-emerald-500 focus:outline-hidden"
+                  className="w-full px-3.5 py-2.5 text-sm bg-zinc-900 border border-white/10 rounded-lg text-white focus:ring-2 focus:ring-emerald-500 focus:outline-hidden"
                 >
                   {loanOptions.map(opt => (
                     <option key={opt} value={opt}>{opt}</option>
@@ -180,7 +180,7 @@ export const EligibilityChecker: React.FC = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 text-left">
               
               <div>
-                <label className="block text-xs font-bold text-zinc-800 mb-1.5">
+                <label className="block text-xs font-bold text-zinc-300 mb-1.5">
                   Required Loan Quantum (₹) *
                 </label>
                 <input
@@ -189,12 +189,12 @@ export const EligibilityChecker: React.FC = () => {
                   placeholder="e.g. 50,00,000 (50 Lakhs)"
                   value={requiredAmount}
                   onChange={(e) => setRequiredAmount(e.target.value)}
-                  className="w-full px-3.5 py-2.5 text-sm bg-white border border-zinc-300 rounded-lg focus:bg-white focus:ring-2 focus:ring-emerald-500 focus:outline-hidden"
+                  className="w-full px-3.5 py-2.5 text-sm bg-zinc-900 border border-white/10 rounded-lg text-white focus:ring-2 focus:ring-emerald-500 focus:outline-hidden placeholder:text-zinc-500"
                 />
               </div>
 
               <div>
-                <label className="block text-xs font-bold text-zinc-800 mb-1.5">
+                <label className="block text-xs font-bold text-zinc-300 mb-1.5">
                   Monthly Income / Annual Turnover
                 </label>
                 <input
@@ -202,7 +202,7 @@ export const EligibilityChecker: React.FC = () => {
                   placeholder="e.g. ₹1.5 Cr Turnover or ₹1.2L Salary"
                   value={incomeOrTurnover}
                   onChange={(e) => setIncomeOrTurnover(e.target.value)}
-                  className="w-full px-3.5 py-2.5 text-sm bg-white border border-zinc-300 rounded-lg focus:bg-white focus:ring-2 focus:ring-emerald-500 focus:outline-hidden"
+                  className="w-full px-3.5 py-2.5 text-sm bg-zinc-900 border border-white/10 rounded-lg text-white focus:ring-2 focus:ring-emerald-500 focus:outline-hidden placeholder:text-zinc-500"
                 />
               </div>
 
@@ -211,13 +211,13 @@ export const EligibilityChecker: React.FC = () => {
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 text-left">
               
               <div>
-                <label className="block text-xs font-bold text-zinc-800 mb-1.5">
+                <label className="block text-xs font-bold text-zinc-300 mb-1.5">
                   CIBIL / Credit Score
                 </label>
                 <select
                   value={creditScore}
                   onChange={(e) => setCreditScore(e.target.value)}
-                  className="w-full px-3.5 py-2.5 text-sm bg-white border border-zinc-300 rounded-lg focus:bg-white focus:ring-2 focus:ring-emerald-500 focus:outline-hidden"
+                  className="w-full px-3.5 py-2.5 text-sm bg-zinc-900 border border-white/10 rounded-lg text-white focus:ring-2 focus:ring-emerald-500 focus:outline-hidden"
                 >
                   <option value="750+ (Excellent)">750+ (Excellent)</option>
                   <option value="700 - 749 (Good)">700 - 749 (Good)</option>
@@ -228,13 +228,13 @@ export const EligibilityChecker: React.FC = () => {
               </div>
 
               <div>
-                <label className="block text-xs font-bold text-zinc-800 mb-1.5">
+                <label className="block text-xs font-bold text-zinc-300 mb-1.5">
                   Business / Job Vintage
                 </label>
                 <select
                   value={vintage}
                   onChange={(e) => setVintage(e.target.value)}
-                  className="w-full px-3.5 py-2.5 text-sm bg-white border border-zinc-300 rounded-lg focus:bg-white focus:ring-2 focus:ring-emerald-500 focus:outline-hidden"
+                  className="w-full px-3.5 py-2.5 text-sm bg-zinc-900 border border-white/10 rounded-lg text-white focus:ring-2 focus:ring-emerald-500 focus:outline-hidden"
                 >
                   <option value="Less than 1 Year">Less than 1 Year</option>
                   <option value="1 - 3 Years">1 - 3 Years</option>
@@ -244,13 +244,13 @@ export const EligibilityChecker: React.FC = () => {
               </div>
 
               <div>
-                <label className="block text-xs font-bold text-zinc-800 mb-1.5">
+                <label className="block text-xs font-bold text-zinc-300 mb-1.5">
                   Applicant Age Bracket
                 </label>
                 <select
                   value={age}
                   onChange={(e) => setAge(e.target.value)}
-                  className="w-full px-3.5 py-2.5 text-sm bg-white border border-zinc-300 rounded-lg focus:bg-white focus:ring-2 focus:ring-emerald-500 focus:outline-hidden"
+                  className="w-full px-3.5 py-2.5 text-sm bg-zinc-900 border border-white/10 rounded-lg text-white focus:ring-2 focus:ring-emerald-500 focus:outline-hidden"
                 >
                   <option value="21 - 30 Years">21 - 30 Years</option>
                   <option value="31 - 45 Years">31 - 45 Years</option>
@@ -265,7 +265,7 @@ export const EligibilityChecker: React.FC = () => {
               <div className="pt-2 text-left">
                 <button
                   type="submit"
-                  className="w-full sm:w-auto px-8 py-3.5 text-xs font-bold text-white bg-[#0a0a0a] hover:bg-emerald-600 rounded-full transition-all cursor-pointer shadow-md hover:scale-105 active:scale-95"
+                  className="w-full sm:w-auto px-8 py-3.5 text-xs font-bold text-black bg-emerald-500 hover:bg-emerald-400 rounded-full transition-all cursor-pointer shadow-md hover:scale-105 active:scale-95"
                 >
                   Evaluate Requirement Feasibility
                 </button>
@@ -288,16 +288,16 @@ export const EligibilityChecker: React.FC = () => {
                   <button
                     type="button"
                     onClick={handleWhatsAppSubmit}
-                    className="px-6 py-3.5 text-xs font-bold text-[#080808] bg-white hover:bg-zinc-200 rounded-full flex items-center justify-center gap-2 shadow-xl transition-all cursor-pointer hover:scale-105 active:scale-95"
+                    className="px-6 py-3.5 text-xs font-bold text-black bg-emerald-400 hover:bg-emerald-300 rounded-full flex items-center justify-center gap-2 shadow-xl transition-all cursor-pointer hover:scale-105 active:scale-95"
                   >
-                    <MessageCircle className="w-4 h-4 text-emerald-600" />
+                    <MessageCircle className="w-4 h-4 text-black" />
                     <span>Discuss My Requirement on WhatsApp</span>
                   </button>
 
                   <button
                     type="button"
                     onClick={() => setSubmitted(false)}
-                    className="px-4 py-3 text-xs font-semibold text-zinc-300 hover:text-white bg-zinc-900 border border-zinc-700 rounded-full transition-colors cursor-pointer"
+                    className="px-4 py-3 text-xs font-semibold text-zinc-300 hover:text-white bg-zinc-900 border border-white/10 rounded-full transition-colors cursor-pointer"
                   >
                     Recalculate / Modify
                   </button>
@@ -306,8 +306,8 @@ export const EligibilityChecker: React.FC = () => {
             )}
 
             {/* MANDATORY STATUTORY DISCLAIMER */}
-            <div className="mt-6 pt-4 border-t border-zinc-200 text-left">
-              <p className="text-[11px] text-zinc-500 leading-normal">
+            <div className="mt-6 pt-4 border-t border-white/10 text-left">
+              <p className="text-[11px] text-zinc-400 leading-normal">
                 <strong>Important Notice:</strong> This is only an initial enquiry and does not represent guaranteed loan eligibility or approval. Loan approval, interest rates, eligibility, documentation requirements and disbursement are subject to the respective lender&apos;s policies, assessment and applicable regulations.
               </p>
             </div>

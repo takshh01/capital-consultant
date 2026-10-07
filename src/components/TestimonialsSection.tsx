@@ -30,17 +30,17 @@ export const TestimonialsSection: React.FC = () => {
   ];
 
   return (
-    <section className="py-20 bg-zinc-50 border-b border-zinc-200">
+    <section className="py-20 bg-[#050607] border-b border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="text-center max-w-3xl mx-auto space-y-3 mb-12">
-          <span className="inline-block px-3 py-1 rounded-full bg-emerald-500/10 text-xs font-bold uppercase tracking-wider text-emerald-600 border border-emerald-500/20">
+          <span className="inline-block px-3 py-1 rounded-full bg-emerald-500/10 text-xs font-bold uppercase tracking-wider text-emerald-400 border border-emerald-500/20">
             Client Experiences & Case Outcomes
           </span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0d0d0d] tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
             How We Have Helped Delhi NCR Enterprises Expand
           </h2>
-          <p className="text-sm sm:text-base text-zinc-600">
+          <p className="text-sm sm:text-base text-zinc-400">
             Real financing engagements structured and facilitated through transparent banking advisory and diligent credit compliance.
           </p>
         </div>
@@ -49,29 +49,29 @@ export const TestimonialsSection: React.FC = () => {
           {experiences.map((exp, idx) => (
             <div
               key={idx}
-              className="bg-white rounded-2xl border border-zinc-200/80 p-6 shadow-xs flex flex-col justify-between text-left hover:border-emerald-500/40 hover:shadow-lg transition-all"
+              className="bg-[#121214] rounded-2xl border border-white/10 p-6 shadow-xs flex flex-col justify-between text-left hover:border-emerald-500/40 hover:shadow-lg transition-all"
             >
               <div>
-                <Quote className="w-8 h-8 text-emerald-500 mb-3" />
+                <Quote className="w-8 h-8 text-emerald-400 mb-3" />
                 
-                <p className="text-xs sm:text-sm text-zinc-600 leading-relaxed italic">
+                <p className="text-xs sm:text-sm text-zinc-300 leading-relaxed italic">
                   &ldquo;{exp.outcome}&rdquo;
                 </p>
 
-                <div className="mt-4 pt-3 border-t border-zinc-100 flex items-center justify-between text-xs">
-                  <span className="font-bold text-[#0d0d0d]">{exp.loanCategory}</span>
-                  <span className="font-black text-emerald-600">{exp.quantum}</span>
+                <div className="mt-4 pt-3 border-t border-white/10 flex items-center justify-between text-xs">
+                  <span className="font-bold text-white">{exp.loanCategory}</span>
+                  <span className="font-black text-emerald-400">{exp.quantum}</span>
                 </div>
               </div>
 
-              <div className="mt-6 pt-4 border-t border-zinc-100">
-                <div className="font-extrabold text-sm text-[#0d0d0d]">
+              <div className="mt-6 pt-4 border-t border-white/10">
+                <div className="font-extrabold text-sm text-white">
                   {exp.clientName}
                 </div>
-                <div className="text-xs text-zinc-600 mt-0.5 font-medium">
+                <div className="text-xs text-zinc-400 mt-0.5 font-medium">
                   {exp.business}
                 </div>
-                <div className="text-[11px] text-zinc-400 mt-0.5">
+                <div className="text-[11px] text-zinc-500 mt-0.5">
                   {exp.location}
                 </div>
               </div>

@@ -36,17 +36,17 @@ export const WhyChooseUs: React.FC = () => {
   ];
 
   return (
-    <section className="py-20 bg-zinc-50 border-b border-zinc-200">
+    <section className="py-20 bg-[#050607] border-b border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="text-center max-w-3xl mx-auto space-y-3 mb-12">
-          <span className="inline-block px-3 py-1 rounded-full bg-emerald-500/10 text-xs font-bold uppercase tracking-wider text-emerald-600 border border-emerald-500/20">
+          <span className="inline-block px-3 py-1 rounded-full bg-emerald-500/10 text-xs font-bold uppercase tracking-wider text-emerald-400 border border-emerald-500/20">
             Strategic Advantages
           </span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0d0d0d] tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
             Why Delhi NCR Businesses Trust Capital Consultancy
           </h2>
-          <p className="text-sm sm:text-base text-zinc-600">
+          <p className="text-sm sm:text-base text-zinc-400">
             Professional debt advisory that bridges the gap between your balance sheet and bank underwriting mandates.
           </p>
         </div>
@@ -57,15 +57,15 @@ export const WhyChooseUs: React.FC = () => {
             return (
               <div 
                 key={i}
-                className="p-6 rounded-2xl bg-white border border-zinc-200/80 shadow-xs hover:border-emerald-500/40 hover:shadow-md transition-all text-left group"
+                className="p-6 rounded-2xl bg-[#121214] border border-white/10 shadow-xs hover:border-emerald-500/40 transition-all text-left group"
               >
-                <div className="w-10 h-10 rounded-xl bg-[#0d0d0d] text-white group-hover:bg-emerald-600 transition-colors flex items-center justify-center mb-4 shadow-sm">
-                  <Icon className="w-5 h-5 text-zinc-200 group-hover:text-white" />
+                <div className="w-10 h-10 rounded-xl bg-black border border-white/10 text-white group-hover:bg-emerald-500 group-hover:text-black transition-colors flex items-center justify-center mb-4 shadow-sm">
+                  <Icon className="w-5 h-5 text-emerald-400 group-hover:text-black" />
                 </div>
-                <h3 className="text-base font-bold text-[#0d0d0d] group-hover:text-emerald-600 transition-colors">
+                <h3 className="text-base font-bold text-white group-hover:text-emerald-400 transition-colors">
                   {r.title}
                 </h3>
-                <p className="text-xs sm:text-sm text-zinc-600 mt-2 leading-relaxed">
+                <p className="text-xs sm:text-sm text-zinc-400 mt-2 leading-relaxed">
                   {r.description}
                 </p>
               </div>

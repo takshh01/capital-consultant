@@ -8,7 +8,7 @@ interface AboutSectionProps {
 
 export const AboutSection: React.FC<AboutSectionProps> = ({ onApplyClick }) => {
   return (
-    <section id="about" className="py-20 bg-white border-b border-zinc-200">
+    <section id="about" className="py-20 bg-[#050607] border-b border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -16,60 +16,60 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onApplyClick }) => {
           {/* Left Column: Corporate profile & narrative */}
           <div className="lg:col-span-7 space-y-6 text-left">
             <div className="space-y-2">
-              <span className="inline-block px-3 py-1 rounded-full bg-emerald-500/10 text-xs font-bold uppercase tracking-wider text-emerald-600 border border-emerald-500/20">
+              <span className="inline-block px-3 py-1 rounded-full bg-emerald-500/10 text-xs font-bold uppercase tracking-wider text-emerald-400 border border-emerald-500/20">
                 About Capital Consultancy
               </span>
-              <h2 className="text-2xl sm:text-4xl font-extrabold text-[#0d0d0d] tracking-tight">
+              <h2 className="text-2xl sm:text-4xl font-extrabold text-white tracking-tight">
                 Strategic Debt Syndication & Pragmatic Financial Advisory in Delhi NCR
               </h2>
             </div>
 
-            <p className="text-zinc-600 text-sm sm:text-base leading-relaxed">
-              Headquartered at <strong>Pragati Tower, Rajender Place, Delhi</strong>, Capital Consultancy was founded to demystify business borrowing. Traditional bank procedures can be opaque, time-consuming, and burdened with complex criteria.
+            <p className="text-zinc-300 text-sm sm:text-base leading-relaxed">
+              Headquartered at <strong className="text-white">Pragati Tower, Rajender Place, Delhi</strong>, Capital Consultancy was founded to demystify business borrowing. Traditional bank procedures can be opaque, time-consuming, and burdened with complex criteria.
             </p>
 
-            <p className="text-zinc-600 text-sm sm:text-base leading-relaxed">
-              Under the leadership of <strong>Manish Chawla (CEO)</strong> and <strong>Reena Taank (Manager)</strong>, our advisory team evaluates your actual cash flows, turnover velocity, and collateral profile to structure your loan file precisely for the most advantageous institutions.
+            <p className="text-zinc-300 text-sm sm:text-base leading-relaxed">
+              Under the leadership of <strong className="text-white">Manish Chawla (CEO)</strong> and <strong className="text-white">Reena Taank (Manager)</strong>, our advisory team evaluates your actual cash flows, turnover velocity, and collateral profile to structure your loan file precisely for the most advantageous institutions.
             </p>
 
             {/* Core Values / Features */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
-              <div className="p-4 rounded-xl bg-zinc-50 border border-zinc-200/80 hover:border-zinc-300 transition-colors">
-                <h4 className="text-sm font-bold text-[#0d0d0d] flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-emerald-500 shrink-0" />
+              <div className="p-4 rounded-xl bg-[#121214] border border-white/10 hover:border-emerald-500/40 transition-colors">
+                <h4 className="text-sm font-bold text-white flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-emerald-400 shrink-0" />
                   No Hidden Advance Fees
                 </h4>
-                <p className="text-xs text-zinc-500 mt-1">
+                <p className="text-xs text-zinc-400 mt-1">
                   We maintain full transparency with complete clarity on process timelines and statutory bank charges.
                 </p>
               </div>
 
-              <div className="p-4 rounded-xl bg-zinc-50 border border-zinc-200/80 hover:border-zinc-300 transition-colors">
-                <h4 className="text-sm font-bold text-[#0d0d0d] flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-emerald-500 shrink-0" />
+              <div className="p-4 rounded-xl bg-[#121214] border border-white/10 hover:border-emerald-500/40 transition-colors">
+                <h4 className="text-sm font-bold text-white flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-emerald-400 shrink-0" />
                   Deep Credit Underwriting Insight
                 </h4>
-                <p className="text-xs text-zinc-500 mt-1">
+                <p className="text-xs text-zinc-400 mt-1">
                   We prepare robust CMA reports, cash flow projections, and compliance documentation.
                 </p>
               </div>
 
-              <div className="p-4 rounded-xl bg-zinc-50 border border-zinc-200/80 hover:border-zinc-300 transition-colors">
-                <h4 className="text-sm font-bold text-[#0d0d0d] flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-emerald-500 shrink-0" />
+              <div className="p-4 rounded-xl bg-[#121214] border border-white/10 hover:border-emerald-500/40 transition-colors">
+                <h4 className="text-sm font-bold text-white flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-emerald-400 shrink-0" />
                   Government Scheme Mastery
                 </h4>
-                <p className="text-xs text-zinc-500 mt-1">
+                <p className="text-xs text-zinc-400 mt-1">
                   Specialized experience with CGTMSE collateral-free limits, Mudra loans, and MSME interest subsidies.
                 </p>
               </div>
 
-              <div className="p-4 rounded-xl bg-zinc-50 border border-zinc-200/80 hover:border-zinc-300 transition-colors">
-                <h4 className="text-sm font-bold text-[#0d0d0d] flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-emerald-500 shrink-0" />
+              <div className="p-4 rounded-xl bg-[#121214] border border-white/10 hover:border-emerald-500/40 transition-colors">
+                <h4 className="text-sm font-bold text-white flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-emerald-400 shrink-0" />
                   Rapid WhatsApp Integration
                 </h4>
-                <p className="text-xs text-zinc-500 mt-1">
+                <p className="text-xs text-zinc-400 mt-1">
                   Direct digital desk connectivity for instant updates, query resolution, and document coordination.
                 </p>
               </div>

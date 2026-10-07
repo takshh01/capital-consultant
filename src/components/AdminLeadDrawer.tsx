@@ -94,8 +94,8 @@ export const AdminLeadDrawer: React.FC<AdminLeadDrawerProps> = ({ isOpen, onClos
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-end bg-slate-900/60 backdrop-blur-xs">
-      <div className="bg-white w-full max-w-4xl h-full shadow-2xl flex flex-col justify-between text-left relative animate-in slide-in-from-right duration-200">
+    <div className="fixed inset-0 z-50 flex items-center justify-end bg-black/75 backdrop-blur-xs">
+      <div className="bg-[#0c0d0f] text-white w-full max-w-4xl h-full shadow-2xl flex flex-col justify-between text-left relative animate-in slide-in-from-right duration-200 border-l border-white/10">
         
         {/* Top Header */}
         <div className="bg-[#0d0d0d] text-white px-6 py-4 flex items-center justify-between border-b border-white/10">
@@ -121,7 +121,7 @@ export const AdminLeadDrawer: React.FC<AdminLeadDrawerProps> = ({ isOpen, onClos
             </button>
             <button
               onClick={onClose}
-              className="text-zinc-400 hover:text-white p-1.5 rounded-lg"
+              className="text-zinc-400 hover:text-white p-1.5 rounded-lg transition-colors cursor-pointer"
               aria-label="Close lead manager"
             >
               <X className="w-5 h-5" />
@@ -130,26 +130,26 @@ export const AdminLeadDrawer: React.FC<AdminLeadDrawerProps> = ({ isOpen, onClos
         </div>
 
         {/* Filter Controls Bar */}
-        <div className="p-4 bg-slate-100 border-b border-slate-200 flex flex-wrap items-center justify-between gap-3 text-xs">
+        <div className="p-4 bg-[#121316] border-b border-white/10 flex flex-wrap items-center justify-between gap-3 text-xs">
           <div className="flex items-center gap-2 flex-1 min-w-[200px]">
             <div className="relative w-full">
-              <Search className="w-3.5 h-3.5 text-slate-400 absolute left-3 top-2.5" />
+              <Search className="w-3.5 h-3.5 text-zinc-400 absolute left-3 top-2.5" />
               <input
                 type="text"
                 placeholder="Search by name, phone, business or loan type..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-9 pr-3 py-1.5 bg-white border border-slate-300 rounded-lg text-slate-900 focus:outline-hidden"
+                className="w-full pl-9 pr-3 py-1.5 bg-[#0a0a0c] border border-white/15 rounded-lg text-white placeholder:text-zinc-500 focus:outline-hidden focus:border-emerald-500"
               />
             </div>
           </div>
 
           <div className="flex items-center gap-2">
-            <Filter className="w-3.5 h-3.5 text-slate-500" />
+            <Filter className="w-3.5 h-3.5 text-zinc-400" />
             <select
               value={statusFilter}
               onChange={(e) => setStatusFilter(e.target.value)}
-              className="px-2.5 py-1.5 bg-white border border-slate-300 rounded-lg text-slate-800 font-medium"
+              className="px-2.5 py-1.5 bg-[#0a0a0c] border border-white/15 rounded-lg text-zinc-200 font-medium focus:outline-hidden"
             >
               <option value="ALL">All Statuses ({leads.length})</option>
               <option value="NEW">NEW</option>
@@ -163,7 +163,7 @@ export const AdminLeadDrawer: React.FC<AdminLeadDrawerProps> = ({ isOpen, onClos
 
             <button
               onClick={handleClearAll}
-              className="p-1.5 text-slate-400 hover:text-rose-600 transition-colors"
+              className="p-1.5 text-zinc-400 hover:text-rose-400 transition-colors"
               title="Clear all leads"
             >
               <Trash2 className="w-4 h-4" />
@@ -172,11 +172,11 @@ export const AdminLeadDrawer: React.FC<AdminLeadDrawerProps> = ({ isOpen, onClos
         </div>
 
         {/* Leads Content Area */}
-        <div className="flex-1 overflow-y-auto p-4 sm:p-6 space-y-4">
+        <div className="flex-1 overflow-y-auto p-4 sm:p-6 space-y-4 bg-[#08080a]">
           {filteredLeads.length === 0 ? (
-            <div className="text-center py-16 text-slate-500 space-y-2">
+            <div className="text-center py-16 text-zinc-400 space-y-2">
               <p className="text-sm font-semibold">No enquiries found matching criteria.</p>
-              <p className="text-xs text-slate-400">
+              <p className="text-xs text-zinc-500">
                 Any loan enquiry submitted on the website is automatically mirrored here.
               </p>
             </div>
@@ -185,17 +185,17 @@ export const AdminLeadDrawer: React.FC<AdminLeadDrawerProps> = ({ isOpen, onClos
               {filteredLeads.map((lead) => (
                 <div
                   key={lead.id}
-                  className="bg-white rounded-xl border border-slate-200 p-4 shadow-2xs hover:border-blue-400 transition-colors"
+                  className="bg-[#121316] rounded-xl border border-white/10 p-4 shadow-sm hover:border-emerald-500/50 transition-colors"
                 >
-                  <div className="flex flex-wrap items-start justify-between gap-2 pb-3 border-b border-slate-100">
+                  <div className="flex flex-wrap items-start justify-between gap-2 pb-3 border-b border-white/10">
                     <div>
                       <div className="flex items-center gap-2">
-                        <span className="font-bold text-sm text-slate-900">{lead.fullName}</span>
-                        <span className="text-[11px] font-mono text-slate-500 bg-slate-100 px-1.5 py-0.5 rounded">
+                        <span className="font-bold text-sm text-white">{lead.fullName}</span>
+                        <span className="text-[11px] font-mono text-zinc-400 bg-zinc-800/80 px-1.5 py-0.5 rounded border border-white/5">
                           {lead.id}
                         </span>
                       </div>
-                      <div className="text-xs text-slate-500 mt-0.5 flex flex-wrap items-center gap-2">
+                      <div className="text-xs text-zinc-400 mt-0.5 flex flex-wrap items-center gap-2">
                         <span>{lead.phone}</span>
                         <span>&middot;</span>
                         <span>{lead.city || 'Delhi NCR'}</span>
@@ -211,12 +211,12 @@ export const AdminLeadDrawer: React.FC<AdminLeadDrawerProps> = ({ isOpen, onClos
                         onChange={(e) => handleStatusChange(lead.id, e.target.value as LeadStatus)}
                         className={`text-xs font-semibold px-2 py-1 rounded-md border ${
                           lead.status === 'NEW' 
-                            ? 'bg-emerald-50 text-emerald-700 border-emerald-200'
+                            ? 'bg-emerald-950/60 text-emerald-400 border-emerald-500/30'
                             : lead.status === 'APPROVED'
-                            ? 'bg-emerald-50 text-emerald-700 border-emerald-200'
+                            ? 'bg-emerald-950/60 text-emerald-400 border-emerald-500/30'
                             : lead.status === 'IN PROCESS'
-                            ? 'bg-amber-50 text-amber-700 border-amber-200'
-                            : 'bg-zinc-100 text-zinc-700 border-zinc-200'
+                            ? 'bg-amber-950/60 text-amber-400 border-amber-500/30'
+                            : 'bg-zinc-800/60 text-zinc-300 border-zinc-700'
                         }`}
                       >
                         <option value="NEW">NEW</option>
@@ -234,51 +234,51 @@ export const AdminLeadDrawer: React.FC<AdminLeadDrawerProps> = ({ isOpen, onClos
                   <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 py-3 text-xs">
                     <div>
                       <span className="text-[10px] uppercase text-zinc-400 font-bold block">Facility</span>
-                      <span className="font-bold text-emerald-600">{lead.loanType}</span>
+                      <span className="font-bold text-emerald-400">{lead.loanType}</span>
                     </div>
                     <div>
-                      <span className="text-[10px] uppercase text-slate-400 font-bold block">Required Amount</span>
-                      <span className="font-bold text-slate-900">₹{lead.requiredLoanAmount}</span>
+                      <span className="text-[10px] uppercase text-zinc-400 font-bold block">Required Amount</span>
+                      <span className="font-bold text-white">₹{lead.requiredLoanAmount}</span>
                     </div>
                     <div>
-                      <span className="text-[10px] uppercase text-slate-400 font-bold block">Customer Type</span>
-                      <span className="text-slate-800">{lead.customerType}</span>
+                      <span className="text-[10px] uppercase text-zinc-400 font-bold block">Customer Type</span>
+                      <span className="text-zinc-300">{lead.customerType}</span>
                     </div>
                     <div>
-                      <span className="text-[10px] uppercase text-slate-400 font-bold block">Income / Turnover</span>
-                      <span className="text-slate-800">₹{lead.incomeOrTurnover || 'N/A'}</span>
+                      <span className="text-[10px] uppercase text-zinc-400 font-bold block">Income / Turnover</span>
+                      <span className="text-zinc-300">₹{lead.incomeOrTurnover || 'N/A'}</span>
                     </div>
                   </div>
 
                   {/* Business & Purpose Details */}
                   {(lead.businessName || lead.purpose || lead.additionalMessage) && (
-                    <div className="bg-slate-50 p-2.5 rounded-lg border border-slate-100 text-xs text-slate-600 space-y-1 mt-1">
+                    <div className="bg-[#0c0d0f] p-2.5 rounded-lg border border-white/5 text-xs text-zinc-300 space-y-1 mt-1">
                       {lead.businessName && (
                         <div>
-                          <strong>Business:</strong> {lead.businessName} ({lead.businessVintage || 'Vintage not stated'})
+                          <strong className="text-white">Business:</strong> {lead.businessName} ({lead.businessVintage || 'Vintage not stated'})
                         </div>
                       )}
                       {lead.purpose && (
                         <div>
-                          <strong>Purpose:</strong> {lead.purpose}
+                          <strong className="text-white">Purpose:</strong> {lead.purpose}
                         </div>
                       )}
                       {lead.additionalMessage && (
-                        <div className="italic text-slate-500">
+                        <div className="italic text-zinc-400">
                           &ldquo;{lead.additionalMessage}&rdquo;
                         </div>
                       )}
                       {lead.dynamicDetails && Object.keys(lead.dynamicDetails).length > 0 && (
-                        <div className="pt-1 text-[11px] text-slate-500 border-t border-slate-200">
-                          <strong>Dynamic Fields:</strong> {Object.entries(lead.dynamicDetails).map(([k, v]) => `${k}: ${v}`).join(' | ')}
+                        <div className="pt-1 text-[11px] text-zinc-400 border-t border-white/10">
+                          <strong className="text-zinc-300">Dynamic Fields:</strong> {Object.entries(lead.dynamicDetails).map(([k, v]) => `${k}: ${v}`).join(' | ')}
                         </div>
                       )}
                     </div>
                   )}
 
                   {/* Action Bar */}
-                  <div className="pt-3 mt-2 border-t border-slate-100 flex items-center justify-between text-xs">
-                    <span className="text-slate-400 text-[11px]">
+                  <div className="pt-3 mt-2 border-t border-white/10 flex items-center justify-between text-xs">
+                    <span className="text-zinc-500 text-[11px]">
                       Source: {lead.leadSource}
                     </span>
                     <div className="flex items-center gap-2">
@@ -286,14 +286,14 @@ export const AdminLeadDrawer: React.FC<AdminLeadDrawerProps> = ({ isOpen, onClos
                         href={`https://wa.me/91${lead.phone}?text=${encodeURIComponent(`Hello ${lead.fullName}, this is Manish Chawla / Reena Taank from Capital Consultancy following up on your ${lead.loanType} enquiry.`)}`}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="px-2.5 py-1 bg-emerald-50 text-emerald-700 hover:bg-emerald-100 border border-emerald-200 rounded font-medium flex items-center gap-1 transition-colors"
+                        className="px-2.5 py-1 bg-emerald-500/10 text-emerald-400 hover:bg-emerald-500/20 border border-emerald-500/30 rounded font-medium flex items-center gap-1 transition-colors"
                       >
                         <MessageCircle className="w-3.5 h-3.5" />
                         <span>WhatsApp Client</span>
                       </a>
                       <a
                         href={`tel:${lead.phone}`}
-                        className="px-2.5 py-1 bg-slate-100 text-slate-700 hover:bg-slate-200 rounded font-medium flex items-center gap-1 transition-colors"
+                        className="px-2.5 py-1 bg-zinc-800 text-zinc-200 hover:bg-zinc-700 rounded font-medium flex items-center gap-1 transition-colors"
                       >
                         <Phone className="w-3.5 h-3.5" />
                         <span>Call</span>
@@ -308,7 +308,7 @@ export const AdminLeadDrawer: React.FC<AdminLeadDrawerProps> = ({ isOpen, onClos
         </div>
 
         {/* Footer info */}
-        <div className="bg-slate-50 px-6 py-3 border-t border-slate-200 text-xs text-slate-500 flex items-center justify-between">
+        <div className="bg-[#0a0a0c] px-6 py-3 border-t border-white/10 text-xs text-zinc-400 flex items-center justify-between">
           <span>Total Records: {leads.length}</span>
           <span>Capital Consultancy · Rajender Place, Delhi</span>
         </div>

@@ -1,6 +1,7 @@
 import React from 'react';
 import { ArrowRight, MessageCircle, Phone, Sparkles } from 'lucide-react';
 import { BUSINESS_WHATSAPP_NUMBER, BUSINESS_PHONE_DISPLAY } from '../utils/whatsapp';
+import heroFluidWavesImg from '../assets/images/hero_fluid_waves_1791353920161.jpg';
 
 interface HeroProps {
   onApplyClick: () => void;
@@ -18,7 +19,7 @@ export const Hero: React.FC<HeroProps> = ({
       {/* Background Graphic: Luxury Silk Undulating Emerald Fluid Smoke Waves */}
       <div className="absolute inset-0 z-0 pointer-events-none select-none">
         <img
-          src="/src/assets/images/hero_fluid_waves_1791353920161.jpg"
+          src={heroFluidWavesImg}
           alt="Dark fluid silk background"
           referrerPolicy="no-referrer"
           className="w-full h-full object-cover object-right-top opacity-75 sm:opacity-85 mix-blend-screen scale-105"

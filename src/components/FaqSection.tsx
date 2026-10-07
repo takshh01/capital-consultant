@@ -37,17 +37,17 @@ export const FaqSection: React.FC = () => {
   };
 
   return (
-    <section id="faq" className="py-20 bg-white border-b border-zinc-200">
+    <section id="faq" className="py-20 bg-[#0a0a0a] border-b border-white/10">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="text-center space-y-3 mb-12">
-          <span className="inline-block px-3 py-1 rounded-full bg-emerald-500/10 text-xs font-bold uppercase tracking-wider text-emerald-600 border border-emerald-500/20">
+          <span className="inline-block px-3 py-1 rounded-full bg-emerald-500/10 text-xs font-bold uppercase tracking-wider text-emerald-400 border border-emerald-500/20">
             Common Inquiries
           </span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0d0d0d] tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
             Frequently Asked Questions
           </h2>
-          <p className="text-sm sm:text-base text-zinc-600">
+          <p className="text-sm sm:text-base text-zinc-400">
             Clear, transparent answers regarding loan eligibility, documentation, CGTMSE coverage, and processing turnaround.
           </p>
         </div>
@@ -58,19 +58,19 @@ export const FaqSection: React.FC = () => {
             return (
               <div 
                 key={idx}
-                className="border border-zinc-200/90 rounded-2xl overflow-hidden transition-colors bg-zinc-50"
+                className="border border-white/10 rounded-2xl overflow-hidden transition-colors bg-[#121214]"
               >
                 <button
                   onClick={() => toggle(idx)}
-                  className="w-full p-4 sm:p-5 text-left flex items-center justify-between gap-4 font-bold text-sm sm:text-base text-[#0d0d0d] hover:text-emerald-600 transition-colors cursor-pointer"
+                  className="w-full p-4 sm:p-5 text-left flex items-center justify-between gap-4 font-bold text-sm sm:text-base text-white hover:text-emerald-400 transition-colors cursor-pointer"
                   aria-expanded={isOpen}
                 >
                   <span className="text-left">{faq.q}</span>
-                  <ChevronDown className={`w-5 h-5 text-zinc-400 shrink-0 transition-transform duration-200 ${isOpen ? 'rotate-180 text-emerald-500' : ''}`} />
+                  <ChevronDown className={`w-5 h-5 text-zinc-400 shrink-0 transition-transform duration-200 ${isOpen ? 'rotate-180 text-emerald-400' : ''}`} />
                 </button>
 
                 {isOpen && (
-                  <div className="px-4 sm:px-5 pb-5 pt-1 text-xs sm:text-sm text-zinc-600 leading-relaxed border-t border-zinc-200 bg-white text-left">
+                  <div className="px-4 sm:px-5 pb-5 pt-1 text-xs sm:text-sm text-zinc-300 leading-relaxed border-t border-white/10 bg-[#0d0d0d] text-left">
                     {faq.a}
                   </div>
                 )}
@@ -89,9 +89,9 @@ export const FaqSection: React.FC = () => {
             href={`https://wa.me/${BUSINESS_WHATSAPP_NUMBER}?text=${encodeURIComponent('Hello Capital Consultancy, I have a specific loan question regarding my business proposal.')}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="px-5 py-2.5 text-xs font-extrabold text-[#080808] bg-white hover:bg-zinc-200 rounded-full inline-flex items-center gap-1.5 whitespace-nowrap shadow-md transition-all hover:scale-105 active:scale-95"
+            className="px-5 py-2.5 text-xs font-extrabold text-black bg-emerald-400 hover:bg-emerald-300 rounded-full inline-flex items-center gap-1.5 whitespace-nowrap shadow-md transition-all hover:scale-105 active:scale-95"
           >
-            <MessageCircle className="w-3.5 h-3.5 text-emerald-600" />
+            <MessageCircle className="w-3.5 h-3.5 text-black" />
             <span>Ask on WhatsApp</span>
           </a>
         </div>

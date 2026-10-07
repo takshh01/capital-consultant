@@ -181,18 +181,18 @@ export const LoanEnquiryForm: React.FC<LoanEnquiryFormProps> = ({ initialLoanTyp
   };
 
   return (
-    <section id="enquiry-form" className="py-20 bg-white border-b border-slate-200">
+    <section id="enquiry-form" className="py-20 bg-[#050607] border-b border-white/10">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto space-y-3 mb-10">
-          <span className="inline-block px-3 py-1 rounded-full bg-emerald-500/10 text-xs font-bold uppercase tracking-wider text-emerald-600 border border-emerald-500/20">
+          <span className="inline-block px-3 py-1 rounded-full bg-emerald-500/10 text-xs font-bold uppercase tracking-wider text-emerald-400 border border-emerald-500/20">
             Automated WhatsApp Desk
           </span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0d0d0d] tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
             Apply for a Loan & Connect on WhatsApp
           </h2>
-          <p className="text-sm sm:text-base text-zinc-600">
+          <p className="text-sm sm:text-base text-zinc-400">
             Submit your complete requirements below. Our automated system generates an official structured WhatsApp enquiry for our senior advisory team at <strong>+91 9625456835</strong>.
           </p>
         </div>
@@ -225,16 +225,16 @@ export const LoanEnquiryForm: React.FC<LoanEnquiryFormProps> = ({ initialLoanTyp
                 href={preparedWhatsAppUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto px-6 py-3.5 text-sm font-extrabold text-white bg-emerald-600 hover:bg-emerald-500 rounded-full flex items-center justify-center gap-2 shadow-lg shadow-emerald-600/25 transition-all cursor-pointer transform hover:-translate-y-0.5"
+                className="w-full sm:w-auto px-6 py-3.5 text-sm font-extrabold text-black bg-emerald-500 hover:bg-emerald-400 rounded-full flex items-center justify-center gap-2 shadow-lg shadow-emerald-500/25 transition-all cursor-pointer transform hover:-translate-y-0.5"
               >
-                <MessageCircle className="w-5 h-5 text-emerald-300" />
+                <MessageCircle className="w-5 h-5 text-black" />
                 <span>Open WhatsApp Now</span>
               </a>
 
               <button
                 type="button"
                 onClick={() => setIsPrepared(false)}
-                className="w-full sm:w-auto px-6 py-3.5 text-sm font-semibold text-zinc-300 hover:text-white bg-zinc-900 border border-zinc-700 rounded-full transition-all cursor-pointer"
+                className="w-full sm:w-auto px-6 py-3.5 text-sm font-semibold text-zinc-300 hover:text-white bg-zinc-900 border border-white/10 rounded-full transition-all cursor-pointer"
               >
                 Back to Website
               </button>
@@ -249,12 +249,12 @@ export const LoanEnquiryForm: React.FC<LoanEnquiryFormProps> = ({ initialLoanTyp
           <form 
             onSubmit={handleSubmit}
             noValidate
-            className="bg-[#F4F9FA] border border-[#DCE8EA] rounded-2xl p-6 sm:p-10 shadow-xs space-y-8"
+            className="bg-[#121214] border border-white/10 rounded-2xl p-6 sm:p-10 shadow-xs space-y-8"
           >
             {/* Step 1: Core Applicant Identification */}
             <div className="space-y-4">
-              <div className="flex items-center gap-2 border-b border-slate-200 pb-2">
-                <span className="text-xs font-bold text-blue-700 uppercase tracking-wider">
+              <div className="flex items-center gap-2 border-b border-white/10 pb-2">
+                <span className="text-xs font-bold text-emerald-400 uppercase tracking-wider">
                   01. Applicant Information
                 </span>
               </div>
@@ -262,11 +262,11 @@ export const LoanEnquiryForm: React.FC<LoanEnquiryFormProps> = ({ initialLoanTyp
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-left">
                 {/* Full Name */}
                 <div className="lg:col-span-2">
-                  <label className="block text-xs font-bold text-slate-800 mb-1">
-                    Full Name <span className="text-rose-600">*</span>
+                  <label className="block text-xs font-bold text-zinc-300 mb-1">
+                    Full Name <span className="text-rose-400">*</span>
                   </label>
                   <div className="relative">
-                    <User className="w-4 h-4 text-slate-400 absolute left-3.5 top-3.5" />
+                    <User className="w-4 h-4 text-zinc-500 absolute left-3.5 top-3.5" />
                     <input
                       type="text"
                       placeholder="e.g. Ramesh Chandra Verma"
@@ -275,21 +275,21 @@ export const LoanEnquiryForm: React.FC<LoanEnquiryFormProps> = ({ initialLoanTyp
                         setFullName(e.target.value);
                         if (errors.fullName) setErrors(prev => ({ ...prev, fullName: '' }));
                       }}
-                      className={`w-full pl-10 pr-3.5 py-2.5 text-sm bg-white border rounded-lg focus:outline-hidden focus:ring-2 focus:ring-blue-600 ${
-                        errors.fullName ? 'border-rose-400 bg-rose-50/20' : 'border-slate-300'
+                      className={`w-full pl-10 pr-3.5 py-2.5 text-sm bg-zinc-900 text-white placeholder:text-zinc-500 border rounded-lg focus:outline-hidden focus:ring-2 focus:ring-emerald-500 ${
+                        errors.fullName ? 'border-rose-400 bg-rose-950/20' : 'border-white/10'
                       }`}
                     />
                   </div>
-                  {errors.fullName && <p className="text-rose-600 text-[11px] mt-1">{errors.fullName}</p>}
+                  {errors.fullName && <p className="text-rose-400 text-[11px] mt-1">{errors.fullName}</p>}
                 </div>
 
                 {/* Mobile Number */}
                 <div className="lg:col-span-2">
-                  <label className="block text-xs font-bold text-slate-800 mb-1">
-                    Mobile Number (WhatsApp) <span className="text-rose-600">*</span>
+                  <label className="block text-xs font-bold text-zinc-300 mb-1">
+                    Mobile Number (WhatsApp) <span className="text-rose-400">*</span>
                   </label>
                   <div className="relative">
-                    <span className="text-xs font-semibold text-slate-500 absolute left-3.5 top-3">
+                    <span className="text-xs font-semibold text-zinc-400 absolute left-3.5 top-3">
                       +91
                     </span>
                     <input
@@ -301,21 +301,21 @@ export const LoanEnquiryForm: React.FC<LoanEnquiryFormProps> = ({ initialLoanTyp
                         setMobileNumber(e.target.value.replace(/\D/g, ''));
                         if (errors.mobileNumber) setErrors(prev => ({ ...prev, mobileNumber: '' }));
                       }}
-                      className={`w-full pl-12 pr-3.5 py-2.5 text-sm bg-white border rounded-lg focus:outline-hidden focus:ring-2 focus:ring-blue-600 ${
-                        errors.mobileNumber ? 'border-rose-400 bg-rose-50/20' : 'border-slate-300'
+                      className={`w-full pl-12 pr-3.5 py-2.5 text-sm bg-zinc-900 text-white placeholder:text-zinc-500 border rounded-lg focus:outline-hidden focus:ring-2 focus:ring-emerald-500 ${
+                        errors.mobileNumber ? 'border-rose-400 bg-rose-950/20' : 'border-white/10'
                       }`}
                     />
                   </div>
-                  {errors.mobileNumber && <p className="text-rose-600 text-[11px] mt-1">{errors.mobileNumber}</p>}
+                  {errors.mobileNumber && <p className="text-rose-400 text-[11px] mt-1">{errors.mobileNumber}</p>}
                 </div>
 
                 {/* Email Address */}
                 <div className="lg:col-span-2">
-                  <label className="block text-xs font-bold text-slate-800 mb-1">
+                  <label className="block text-xs font-bold text-zinc-300 mb-1">
                     Email Address
                   </label>
                   <div className="relative">
-                    <Mail className="w-4 h-4 text-slate-400 absolute left-3.5 top-3.5" />
+                    <Mail className="w-4 h-4 text-zinc-500 absolute left-3.5 top-3.5" />
                     <input
                       type="email"
                       placeholder="e.g. business@company.com"
@@ -324,25 +324,25 @@ export const LoanEnquiryForm: React.FC<LoanEnquiryFormProps> = ({ initialLoanTyp
                         setEmail(e.target.value);
                         if (errors.email) setErrors(prev => ({ ...prev, email: '' }));
                       }}
-                      className="w-full pl-10 pr-3.5 py-2.5 text-sm bg-white border border-slate-300 rounded-lg focus:outline-hidden focus:ring-2 focus:ring-blue-600"
+                      className="w-full pl-10 pr-3.5 py-2.5 text-sm bg-zinc-900 text-white placeholder:text-zinc-500 border border-white/10 rounded-lg focus:outline-hidden focus:ring-2 focus:ring-emerald-500"
                     />
                   </div>
-                  {errors.email && <p className="text-rose-600 text-[11px] mt-1">{errors.email}</p>}
+                  {errors.email && <p className="text-rose-400 text-[11px] mt-1">{errors.email}</p>}
                 </div>
 
                 {/* City */}
                 <div className="lg:col-span-2">
-                  <label className="block text-xs font-bold text-slate-800 mb-1">
+                  <label className="block text-xs font-bold text-zinc-300 mb-1">
                     City / Location
                   </label>
                   <div className="relative">
-                    <MapPin className="w-4 h-4 text-slate-400 absolute left-3.5 top-3.5" />
+                    <MapPin className="w-4 h-4 text-zinc-500 absolute left-3.5 top-3.5" />
                     <input
                       type="text"
                       placeholder="e.g. Delhi, Gurugram, Noida"
                       value={city}
                       onChange={(e) => setCity(e.target.value)}
-                      className="w-full pl-10 pr-3.5 py-2.5 text-sm bg-white border border-slate-300 rounded-lg focus:outline-hidden focus:ring-2 focus:ring-blue-600"
+                      className="w-full pl-10 pr-3.5 py-2.5 text-sm bg-zinc-900 text-white placeholder:text-zinc-500 border border-white/10 rounded-lg focus:outline-hidden focus:ring-2 focus:ring-emerald-500"
                     />
                   </div>
                 </div>
@@ -351,8 +351,8 @@ export const LoanEnquiryForm: React.FC<LoanEnquiryFormProps> = ({ initialLoanTyp
 
             {/* Step 2: Loan Category & Profile Classification */}
             <div className="space-y-4">
-              <div className="flex items-center gap-2 border-b border-slate-200 pb-2">
-                <span className="text-xs font-bold text-blue-700 uppercase tracking-wider">
+              <div className="flex items-center gap-2 border-b border-white/10 pb-2">
+                <span className="text-xs font-bold text-emerald-400 uppercase tracking-wider">
                   02. Loan Requirement & Customer Profile
                 </span>
               </div>
@@ -360,13 +360,13 @@ export const LoanEnquiryForm: React.FC<LoanEnquiryFormProps> = ({ initialLoanTyp
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-left">
                 {/* Customer Type */}
                 <div>
-                  <label className="block text-xs font-bold text-slate-800 mb-1">
-                    Customer Type <span className="text-rose-600">*</span>
+                  <label className="block text-xs font-bold text-zinc-300 mb-1">
+                    Customer Type <span className="text-rose-400">*</span>
                   </label>
                   <select
                     value={customerType}
                     onChange={(e) => setCustomerType(e.target.value as CustomerType)}
-                    className="w-full px-3.5 py-2.5 text-sm bg-white border border-slate-300 rounded-lg focus:outline-hidden focus:ring-2 focus:ring-blue-600"
+                    className="w-full px-3.5 py-2.5 text-sm bg-zinc-900 text-white border border-white/10 rounded-lg focus:outline-hidden focus:ring-2 focus:ring-emerald-500"
                   >
                     <option value="Business Owner">Business Owner</option>
                     <option value="Salaried">Salaried</option>
@@ -378,8 +378,8 @@ export const LoanEnquiryForm: React.FC<LoanEnquiryFormProps> = ({ initialLoanTyp
 
                 {/* Loan Type */}
                 <div>
-                  <label className="block text-xs font-bold text-slate-800 mb-1">
-                    Loan Type <span className="text-rose-600">*</span>
+                  <label className="block text-xs font-bold text-zinc-300 mb-1">
+                    Loan Type <span className="text-rose-400">*</span>
                   </label>
                   <select
                     value={loanType}
@@ -387,7 +387,7 @@ export const LoanEnquiryForm: React.FC<LoanEnquiryFormProps> = ({ initialLoanTyp
                       setLoanType(e.target.value as LoanType);
                       if (errors.loanType) setErrors(prev => ({ ...prev, loanType: '' }));
                     }}
-                    className="w-full px-3.5 py-2.5 text-sm bg-white border border-slate-300 rounded-lg font-semibold text-blue-800 focus:outline-hidden focus:ring-2 focus:ring-blue-600"
+                    className="w-full px-3.5 py-2.5 text-sm bg-zinc-900 border border-white/10 rounded-lg font-semibold text-emerald-400 focus:outline-hidden focus:ring-2 focus:ring-emerald-500"
                   >
                     <option value="Business Loan">Business Loan (Unsecured)</option>
                     <option value="MSME Loan">MSME Loan</option>
@@ -408,11 +408,11 @@ export const LoanEnquiryForm: React.FC<LoanEnquiryFormProps> = ({ initialLoanTyp
 
                 {/* Required Loan Amount */}
                 <div>
-                  <label className="block text-xs font-bold text-slate-800 mb-1">
-                    Required Loan Amount (₹) <span className="text-rose-600">*</span>
+                  <label className="block text-xs font-bold text-zinc-300 mb-1">
+                    Required Loan Amount (₹) <span className="text-rose-400">*</span>
                   </label>
                   <div className="relative">
-                    <IndianRupee className="w-4 h-4 text-slate-400 absolute left-3.5 top-3.5" />
+                    <IndianRupee className="w-4 h-4 text-zinc-500 absolute left-3.5 top-3.5" />
                     <input
                       type="text"
                       placeholder="e.g. 50 Lakhs / 2.5 Crore"
@@ -421,17 +421,17 @@ export const LoanEnquiryForm: React.FC<LoanEnquiryFormProps> = ({ initialLoanTyp
                         setRequiredLoanAmount(e.target.value);
                         if (errors.requiredLoanAmount) setErrors(prev => ({ ...prev, requiredLoanAmount: '' }));
                       }}
-                      className={`w-full pl-10 pr-3.5 py-2.5 text-sm bg-white border rounded-lg focus:outline-hidden focus:ring-2 focus:ring-blue-600 ${
-                        errors.requiredLoanAmount ? 'border-rose-400 bg-rose-50/20' : 'border-slate-300'
+                      className={`w-full pl-10 pr-3.5 py-2.5 text-sm bg-zinc-900 text-white placeholder:text-zinc-500 border rounded-lg focus:outline-hidden focus:ring-2 focus:ring-emerald-500 ${
+                        errors.requiredLoanAmount ? 'border-rose-400 bg-rose-950/20' : 'border-white/10'
                       }`}
                     />
                   </div>
-                  {errors.requiredLoanAmount && <p className="text-rose-600 text-[11px] mt-1">{errors.requiredLoanAmount}</p>}
+                  {errors.requiredLoanAmount && <p className="text-rose-400 text-[11px] mt-1">{errors.requiredLoanAmount}</p>}
                 </div>
 
                 {/* Monthly Income / Business Turnover */}
                 <div>
-                  <label className="block text-xs font-bold text-slate-800 mb-1">
+                  <label className="block text-xs font-bold text-zinc-300 mb-1">
                     Monthly Income / Annual Turnover
                   </label>
                   <input
@@ -439,14 +439,14 @@ export const LoanEnquiryForm: React.FC<LoanEnquiryFormProps> = ({ initialLoanTyp
                     placeholder="e.g. ₹2 Cr Annual or ₹1.5L Monthly"
                     value={monthlyIncomeOrTurnover}
                     onChange={(e) => setMonthlyIncomeOrTurnover(e.target.value)}
-                    className="w-full px-3.5 py-2.5 text-sm bg-white border border-slate-300 rounded-lg focus:outline-hidden focus:ring-2 focus:ring-blue-600"
+                    className="w-full px-3.5 py-2.5 text-sm bg-zinc-900 text-white placeholder:text-zinc-500 border border-white/10 rounded-lg focus:outline-hidden focus:ring-2 focus:ring-emerald-500"
                   />
                 </div>
 
                 {/* Business Name */}
                 <div>
-                  <label className="block text-xs font-bold text-slate-800 mb-1">
-                    Business / Employer Name {isBusinessCategory(loanType) && <span className="text-rose-600">*</span>}
+                  <label className="block text-xs font-bold text-zinc-300 mb-1">
+                    Business / Employer Name {isBusinessCategory(loanType) && <span className="text-rose-400">*</span>}
                   </label>
                   <input
                     type="text"
@@ -456,22 +456,22 @@ export const LoanEnquiryForm: React.FC<LoanEnquiryFormProps> = ({ initialLoanTyp
                       setBusinessName(e.target.value);
                       if (errors.businessName) setErrors(prev => ({ ...prev, businessName: '' }));
                     }}
-                    className={`w-full px-3.5 py-2.5 text-sm bg-white border rounded-lg focus:outline-hidden focus:ring-2 focus:ring-blue-600 ${
-                      errors.businessName ? 'border-rose-400 bg-rose-50/20' : 'border-slate-300'
+                    className={`w-full px-3.5 py-2.5 text-sm bg-zinc-900 text-white placeholder:text-zinc-500 border rounded-lg focus:outline-hidden focus:ring-2 focus:ring-emerald-500 ${
+                      errors.businessName ? 'border-rose-400 bg-rose-950/20' : 'border-white/10'
                     }`}
                   />
-                  {errors.businessName && <p className="text-rose-600 text-[11px] mt-1">{errors.businessName}</p>}
+                  {errors.businessName && <p className="text-rose-400 text-[11px] mt-1">{errors.businessName}</p>}
                 </div>
 
                 {/* Business Vintage / Experience */}
                 <div>
-                  <label className="block text-xs font-bold text-slate-800 mb-1">
+                  <label className="block text-xs font-bold text-zinc-300 mb-1">
                     Years in Business / Work Experience
                   </label>
                   <select
                     value={businessVintage}
                     onChange={(e) => setBusinessVintage(e.target.value)}
-                    className="w-full px-3.5 py-2.5 text-sm bg-white border border-slate-300 rounded-lg focus:outline-hidden focus:ring-2 focus:ring-blue-600"
+                    className="w-full px-3.5 py-2.5 text-sm bg-zinc-900 text-white border border-white/10 rounded-lg focus:outline-hidden focus:ring-2 focus:ring-emerald-500"
                   >
                     <option value="">Select Vintage</option>
                     <option value="Less than 1 Year">Less than 1 Year</option>
@@ -485,15 +485,15 @@ export const LoanEnquiryForm: React.FC<LoanEnquiryFormProps> = ({ initialLoanTyp
             </div>
 
             {/* Step 3: DYNAMIC LOAN-SPECIFIC QUESTIONS */}
-            <div className="space-y-4 bg-emerald-50/50 p-5 rounded-2xl border border-emerald-100">
-              <div className="flex items-center justify-between border-b border-emerald-100 pb-2">
-                <span className="text-xs font-bold text-[#0d0d0d] uppercase tracking-wider flex items-center gap-1.5">
+            <div className="space-y-4 bg-emerald-950/20 p-5 rounded-2xl border border-emerald-500/20">
+              <div className="flex items-center justify-between border-b border-emerald-500/20 pb-2">
+                <span className="text-xs font-bold text-white uppercase tracking-wider flex items-center gap-1.5">
                   <span>03. Dynamic Questions for:</span>
-                  <span className="text-white bg-emerald-600 font-bold px-2 py-0.5 rounded-md shadow-xs">
+                  <span className="text-black bg-emerald-400 font-bold px-2 py-0.5 rounded-md shadow-xs">
                     {loanType}
                   </span>
                 </span>
-                <span className="text-[11px] text-zinc-500 font-medium">
+                <span className="text-[11px] text-zinc-400 font-medium">
                   Tailored parameters
                 </span>
               </div>
@@ -502,13 +502,13 @@ export const LoanEnquiryForm: React.FC<LoanEnquiryFormProps> = ({ initialLoanTyp
               {(loanType === 'Business Loan' || loanType === 'MSME Loan' || loanType === 'CGTMSE Loan' || loanType === 'Mudra Loan') && (
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-left">
                   <div>
-                    <label className="block text-xs font-bold text-slate-800 mb-1">
+                    <label className="block text-xs font-bold text-zinc-300 mb-1">
                       Business Constitution
                     </label>
                     <select
                       value={dynamicFields.businessType}
                       onChange={(e) => handleDynamicChange('businessType', e.target.value)}
-                      className="w-full px-3.5 py-2.5 text-sm bg-white border border-slate-300 rounded-lg"
+                      className="w-full px-3.5 py-2.5 text-sm bg-zinc-900 text-white border border-white/10 rounded-lg focus:outline-hidden focus:ring-2 focus:ring-emerald-500"
                     >
                       <option value="Proprietorship">Proprietorship</option>
                       <option value="Partnership Firm">Partnership Firm</option>
@@ -519,7 +519,7 @@ export const LoanEnquiryForm: React.FC<LoanEnquiryFormProps> = ({ initialLoanTyp
                   </div>
 
                   <div>
-                    <label className="block text-xs font-bold text-slate-800 mb-1">
+                    <label className="block text-xs font-bold text-zinc-300 mb-1">
                       Average Monthly Turnover
                     </label>
                     <input
@@ -527,12 +527,12 @@ export const LoanEnquiryForm: React.FC<LoanEnquiryFormProps> = ({ initialLoanTyp
                       placeholder="e.g. ₹25 Lakhs / month"
                       value={dynamicFields.monthlyTurnover}
                       onChange={(e) => handleDynamicChange('monthlyTurnover', e.target.value)}
-                      className="w-full px-3.5 py-2.5 text-sm bg-white border border-slate-300 rounded-lg"
+                      className="w-full px-3.5 py-2.5 text-sm bg-zinc-900 text-white placeholder:text-zinc-500 border border-white/10 rounded-lg focus:outline-hidden focus:ring-2 focus:ring-emerald-500"
                     />
                   </div>
 
                   <div>
-                    <label className="block text-xs font-bold text-slate-800 mb-1">
+                    <label className="block text-xs font-bold text-zinc-300 mb-1">
                       Primary Purpose of Funding
                     </label>
                     <input
@@ -540,7 +540,7 @@ export const LoanEnquiryForm: React.FC<LoanEnquiryFormProps> = ({ initialLoanTyp
                       placeholder="e.g. Raw material purchase / New outlet"
                       value={dynamicFields.purposeOfFunding}
                       onChange={(e) => handleDynamicChange('purposeOfFunding', e.target.value)}
-                      className="w-full px-3.5 py-2.5 text-sm bg-white border border-slate-300 rounded-lg"
+                      className="w-full px-3.5 py-2.5 text-sm bg-zinc-900 text-white placeholder:text-zinc-500 border border-white/10 rounded-lg focus:outline-hidden focus:ring-2 focus:ring-emerald-500"
                     />
                   </div>
                 </div>
@@ -550,13 +550,13 @@ export const LoanEnquiryForm: React.FC<LoanEnquiryFormProps> = ({ initialLoanTyp
               {loanType === 'Home Loan' && (
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-left">
                   <div>
-                    <label className="block text-xs font-bold text-slate-800 mb-1">
+                    <label className="block text-xs font-bold text-zinc-300 mb-1">
                       Property Type
                     </label>
                     <select
                       value={dynamicFields.propertyType}
                       onChange={(e) => handleDynamicChange('propertyType', e.target.value)}
-                      className="w-full px-3.5 py-2.5 text-sm bg-white border border-slate-300 rounded-lg"
+                      className="w-full px-3.5 py-2.5 text-sm bg-zinc-900 text-white border border-white/10 rounded-lg focus:outline-hidden focus:ring-2 focus:ring-emerald-500"
                     >
                       <option value="Ready to Move Flat">Ready to Move Flat</option>
                       <option value="Under Construction Builder Floor">Under Construction Builder Floor</option>
@@ -567,7 +567,7 @@ export const LoanEnquiryForm: React.FC<LoanEnquiryFormProps> = ({ initialLoanTyp
                   </div>
 
                   <div>
-                    <label className="block text-xs font-bold text-slate-800 mb-1">
+                    <label className="block text-xs font-bold text-zinc-300 mb-1">
                       Estimated Property Value (₹) *
                     </label>
                     <input
@@ -575,13 +575,13 @@ export const LoanEnquiryForm: React.FC<LoanEnquiryFormProps> = ({ initialLoanTyp
                       placeholder="e.g. 1.2 Crore"
                       value={dynamicFields.propertyValue}
                       onChange={(e) => handleDynamicChange('propertyValue', e.target.value)}
-                      className="w-full px-3.5 py-2.5 text-sm bg-white border border-slate-300 rounded-lg"
+                      className="w-full px-3.5 py-2.5 text-sm bg-zinc-900 text-white placeholder:text-zinc-500 border border-white/10 rounded-lg focus:outline-hidden focus:ring-2 focus:ring-emerald-500"
                     />
-                    {errors.propertyValue && <p className="text-rose-600 text-[11px] mt-1">{errors.propertyValue}</p>}
+                    {errors.propertyValue && <p className="text-rose-400 text-[11px] mt-1">{errors.propertyValue}</p>}
                   </div>
 
                   <div>
-                    <label className="block text-xs font-bold text-slate-800 mb-1">
+                    <label className="block text-xs font-bold text-zinc-300 mb-1">
                       Property Location (City / Area)
                     </label>
                     <input
@@ -589,7 +589,7 @@ export const LoanEnquiryForm: React.FC<LoanEnquiryFormProps> = ({ initialLoanTyp
                       placeholder="e.g. Dwarka Expressway / Sector 62 Noida"
                       value={dynamicFields.propertyLocation}
                       onChange={(e) => handleDynamicChange('propertyLocation', e.target.value)}
-                      className="w-full px-3.5 py-2.5 text-sm bg-white border border-slate-300 rounded-lg"
+                      className="w-full px-3.5 py-2.5 text-sm bg-zinc-900 text-white placeholder:text-zinc-500 border border-white/10 rounded-lg focus:outline-hidden focus:ring-2 focus:ring-emerald-500"
                     />
                   </div>
                 </div>
@@ -599,13 +599,13 @@ export const LoanEnquiryForm: React.FC<LoanEnquiryFormProps> = ({ initialLoanTyp
               {loanType === 'Loan Against Property' && (
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-left">
                   <div>
-                    <label className="block text-xs font-bold text-slate-800 mb-1">
+                    <label className="block text-xs font-bold text-zinc-300 mb-1">
                       Collateral Property Type
                     </label>
                     <select
                       value={dynamicFields.propertyType}
                       onChange={(e) => handleDynamicChange('propertyType', e.target.value)}
-                      className="w-full px-3.5 py-2.5 text-sm bg-white border border-slate-300 rounded-lg"
+                      className="w-full px-3.5 py-2.5 text-sm bg-zinc-900 text-white border border-white/10 rounded-lg focus:outline-hidden focus:ring-2 focus:ring-emerald-500"
                     >
                       <option value="Self-Occupied Residential House">Self-Occupied Residential House</option>
                       <option value="Commercial Shop / Office">Commercial Shop / Office</option>
@@ -616,7 +616,7 @@ export const LoanEnquiryForm: React.FC<LoanEnquiryFormProps> = ({ initialLoanTyp
                   </div>
 
                   <div>
-                    <label className="block text-xs font-bold text-slate-800 mb-1">
+                    <label className="block text-xs font-bold text-zinc-300 mb-1">
                       Approximate Property Value (₹) *
                     </label>
                     <input
@@ -624,13 +624,13 @@ export const LoanEnquiryForm: React.FC<LoanEnquiryFormProps> = ({ initialLoanTyp
                       placeholder="e.g. 3.5 Crore"
                       value={dynamicFields.propertyValue}
                       onChange={(e) => handleDynamicChange('propertyValue', e.target.value)}
-                      className="w-full px-3.5 py-2.5 text-sm bg-white border border-slate-300 rounded-lg"
+                      className="w-full px-3.5 py-2.5 text-sm bg-zinc-900 text-white placeholder:text-zinc-500 border border-white/10 rounded-lg focus:outline-hidden focus:ring-2 focus:ring-emerald-500"
                     />
-                    {errors.propertyValue && <p className="text-rose-600 text-[11px] mt-1">{errors.propertyValue}</p>}
+                    {errors.propertyValue && <p className="text-rose-400 text-[11px] mt-1">{errors.propertyValue}</p>}
                   </div>
 
                   <div>
-                    <label className="block text-xs font-bold text-slate-800 mb-1">
+                    <label className="block text-xs font-bold text-zinc-300 mb-1">
                       Location & Title Status
                     </label>
                     <input
@@ -638,7 +638,7 @@ export const LoanEnquiryForm: React.FC<LoanEnquiryFormProps> = ({ initialLoanTyp
                       placeholder="e.g. West Delhi, Clear Chain Deeds"
                       value={dynamicFields.propertyLocation}
                       onChange={(e) => handleDynamicChange('propertyLocation', e.target.value)}
-                      className="w-full px-3.5 py-2.5 text-sm bg-white border border-slate-300 rounded-lg"
+                      className="w-full px-3.5 py-2.5 text-sm bg-zinc-900 text-white placeholder:text-zinc-500 border border-white/10 rounded-lg focus:outline-hidden focus:ring-2 focus:ring-emerald-500"
                     />
                   </div>
                 </div>
@@ -648,13 +648,13 @@ export const LoanEnquiryForm: React.FC<LoanEnquiryFormProps> = ({ initialLoanTyp
               {loanType === 'Personal Loan' && (
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-left">
                   <div>
-                    <label className="block text-xs font-bold text-slate-800 mb-1">
+                    <label className="block text-xs font-bold text-zinc-300 mb-1">
                       Employment Details
                     </label>
                     <select
                       value={dynamicFields.employmentType}
                       onChange={(e) => handleDynamicChange('employmentType', e.target.value)}
-                      className="w-full px-3.5 py-2.5 text-sm bg-white border border-slate-300 rounded-lg"
+                      className="w-full px-3.5 py-2.5 text-sm bg-zinc-900 text-white border border-white/10 rounded-lg focus:outline-hidden focus:ring-2 focus:ring-emerald-500"
                     >
                       <option value="Salaried Corporate / MNC">Salaried Corporate / MNC</option>
                       <option value="Central / State Govt Employee">Central / State Govt Employee</option>
@@ -664,7 +664,7 @@ export const LoanEnquiryForm: React.FC<LoanEnquiryFormProps> = ({ initialLoanTyp
                   </div>
 
                   <div>
-                    <label className="block text-xs font-bold text-slate-800 mb-1">
+                    <label className="block text-xs font-bold text-zinc-300 mb-1">
                       Existing Monthly EMIs (₹)
                     </label>
                     <input
@@ -672,7 +672,7 @@ export const LoanEnquiryForm: React.FC<LoanEnquiryFormProps> = ({ initialLoanTyp
                       placeholder="e.g. ₹22,000 / month (or 0)"
                       value={dynamicFields.existingEmi}
                       onChange={(e) => handleDynamicChange('existingEmi', e.target.value)}
-                      className="w-full px-3.5 py-2.5 text-sm bg-white border border-slate-300 rounded-lg"
+                      className="w-full px-3.5 py-2.5 text-sm bg-zinc-900 text-white placeholder:text-zinc-500 border border-white/10 rounded-lg focus:outline-hidden focus:ring-2 focus:ring-emerald-500"
                     />
                   </div>
                 </div>
@@ -682,21 +682,21 @@ export const LoanEnquiryForm: React.FC<LoanEnquiryFormProps> = ({ initialLoanTyp
               {loanType === 'Machinery / Equipment Finance' && (
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-left">
                   <div>
-                    <label className="block text-xs font-bold text-slate-800 mb-1">
-                      Machinery Type / Brand <span className="text-rose-600">*</span>
+                    <label className="block text-xs font-bold text-zinc-300 mb-1">
+                      Machinery Type / Brand <span className="text-rose-400">*</span>
                     </label>
                     <input
                       type="text"
                       placeholder="e.g. CNC 5-Axis Milling, Heidelberg Offset Press"
                       value={dynamicFields.machineryType}
                       onChange={(e) => handleDynamicChange('machineryType', e.target.value)}
-                      className="w-full px-3.5 py-2.5 text-sm bg-white border border-slate-300 rounded-lg"
+                      className="w-full px-3.5 py-2.5 text-sm bg-zinc-900 text-white placeholder:text-zinc-500 border border-white/10 rounded-lg focus:outline-hidden focus:ring-2 focus:ring-emerald-500"
                     />
-                    {errors.machineryType && <p className="text-rose-600 text-[11px] mt-1">{errors.machineryType}</p>}
+                    {errors.machineryType && <p className="text-rose-400 text-[11px] mt-1">{errors.machineryType}</p>}
                   </div>
 
                   <div>
-                    <label className="block text-xs font-bold text-slate-800 mb-1">
+                    <label className="block text-xs font-bold text-zinc-300 mb-1">
                       Quoted Machinery Cost (₹)
                     </label>
                     <input
@@ -704,7 +704,7 @@ export const LoanEnquiryForm: React.FC<LoanEnquiryFormProps> = ({ initialLoanTyp
                       placeholder="e.g. ₹85 Lakhs (as per Proforma)"
                       value={dynamicFields.machineryCost}
                       onChange={(e) => handleDynamicChange('machineryCost', e.target.value)}
-                      className="w-full px-3.5 py-2.5 text-sm bg-white border border-slate-300 rounded-lg"
+                      className="w-full px-3.5 py-2.5 text-sm bg-zinc-900 text-white placeholder:text-zinc-500 border border-white/10 rounded-lg focus:outline-hidden focus:ring-2 focus:ring-emerald-500"
                     />
                   </div>
                 </div>
@@ -714,7 +714,7 @@ export const LoanEnquiryForm: React.FC<LoanEnquiryFormProps> = ({ initialLoanTyp
               {(loanType === 'Working Capital' || loanType === 'Bill Discounting' || loanType === 'Project Finance' || loanType === 'Equity Funds' || loanType === 'Private Funding' || loanType === 'Other') && (
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-left">
                   <div>
-                    <label className="block text-xs font-bold text-slate-800 mb-1">
+                    <label className="block text-xs font-bold text-zinc-300 mb-1">
                       Existing Banking Limits / Facility
                     </label>
                     <input
@@ -722,12 +722,12 @@ export const LoanEnquiryForm: React.FC<LoanEnquiryFormProps> = ({ initialLoanTyp
                       placeholder="e.g. Current OD limit ₹50L with Bank of Baroda"
                       value={dynamicFields.existingBankingLimits}
                       onChange={(e) => handleDynamicChange('existingBankingLimits', e.target.value)}
-                      className="w-full px-3.5 py-2.5 text-sm bg-white border border-slate-300 rounded-lg"
+                      className="w-full px-3.5 py-2.5 text-sm bg-zinc-900 text-white placeholder:text-zinc-500 border border-white/10 rounded-lg focus:outline-hidden focus:ring-2 focus:ring-emerald-500"
                     />
                   </div>
 
                   <div>
-                    <label className="block text-xs font-bold text-slate-800 mb-1">
+                    <label className="block text-xs font-bold text-zinc-300 mb-1">
                       Average Monthly Billing / Invoicing
                     </label>
                     <input
@@ -735,7 +735,7 @@ export const LoanEnquiryForm: React.FC<LoanEnquiryFormProps> = ({ initialLoanTyp
                       placeholder="e.g. ₹40-60 Lakhs monthly GST billing"
                       value={dynamicFields.averageMonthlyBilling}
                       onChange={(e) => handleDynamicChange('averageMonthlyBilling', e.target.value)}
-                      className="w-full px-3.5 py-2.5 text-sm bg-white border border-slate-300 rounded-lg"
+                      className="w-full px-3.5 py-2.5 text-sm bg-zinc-900 text-white placeholder:text-zinc-500 border border-white/10 rounded-lg focus:outline-hidden focus:ring-2 focus:ring-emerald-500"
                     />
                   </div>
                 </div>
@@ -744,8 +744,8 @@ export const LoanEnquiryForm: React.FC<LoanEnquiryFormProps> = ({ initialLoanTyp
 
             {/* Step 4: Purpose, Contact Method & Additional Message */}
             <div className="space-y-4">
-              <div className="flex items-center gap-2 border-b border-slate-200 pb-2">
-                <span className="text-xs font-bold text-blue-700 uppercase tracking-wider">
+              <div className="flex items-center gap-2 border-b border-white/10 pb-2">
+                <span className="text-xs font-bold text-emerald-400 uppercase tracking-wider">
                   04. Contact Preference & Details
                 </span>
               </div>
@@ -753,7 +753,7 @@ export const LoanEnquiryForm: React.FC<LoanEnquiryFormProps> = ({ initialLoanTyp
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-left">
                 {/* Purpose of Loan */}
                 <div>
-                  <label className="block text-xs font-bold text-slate-800 mb-1">
+                  <label className="block text-xs font-bold text-zinc-300 mb-1">
                     Purpose of Loan
                   </label>
                   <input
@@ -761,35 +761,35 @@ export const LoanEnquiryForm: React.FC<LoanEnquiryFormProps> = ({ initialLoanTyp
                     placeholder="e.g. Working capital expansion, factory upgrade"
                     value={purposeOfLoan}
                     onChange={(e) => setPurposeOfLoan(e.target.value)}
-                    className="w-full px-3.5 py-2.5 text-sm bg-white border border-slate-300 rounded-lg focus:outline-hidden focus:ring-2 focus:ring-blue-600"
+                    className="w-full px-3.5 py-2.5 text-sm bg-zinc-900 text-white placeholder:text-zinc-500 border border-white/10 rounded-lg focus:outline-hidden focus:ring-2 focus:ring-emerald-500"
                   />
                 </div>
 
                 {/* Preferred Contact Method */}
                 <div>
-                  <label className="block text-xs font-bold text-slate-800 mb-1">
+                  <label className="block text-xs font-bold text-zinc-300 mb-1">
                     Preferred Contact Method
                   </label>
                   <div className="flex items-center gap-4 pt-2">
-                    <label className="flex items-center gap-2 text-xs font-medium text-slate-800 cursor-pointer">
+                    <label className="flex items-center gap-2 text-xs font-medium text-zinc-300 cursor-pointer">
                       <input
                         type="radio"
                         name="contactMethod"
                         value="WhatsApp"
                         checked={preferredContactMethod === 'WhatsApp'}
                         onChange={() => setPreferredContactMethod('WhatsApp')}
-                        className="text-blue-600 focus:ring-blue-500"
+                        className="text-emerald-500 focus:ring-emerald-500 accent-emerald-500"
                       />
                       <span>WhatsApp (Fastest)</span>
                     </label>
-                    <label className="flex items-center gap-2 text-xs font-medium text-slate-800 cursor-pointer">
+                    <label className="flex items-center gap-2 text-xs font-medium text-zinc-300 cursor-pointer">
                       <input
                         type="radio"
                         name="contactMethod"
                         value="Phone Call"
                         checked={preferredContactMethod === 'Phone Call'}
                         onChange={() => setPreferredContactMethod('Phone Call')}
-                        className="text-blue-600 focus:ring-blue-500"
+                        className="text-emerald-500 focus:ring-emerald-500 accent-emerald-500"
                       />
                       <span>Phone Call</span>
                     </label>
@@ -798,7 +798,7 @@ export const LoanEnquiryForm: React.FC<LoanEnquiryFormProps> = ({ initialLoanTyp
 
                 {/* Additional Message */}
                 <div className="sm:col-span-2">
-                  <label className="block text-xs font-bold text-slate-800 mb-1">
+                  <label className="block text-xs font-bold text-zinc-300 mb-1">
                     Additional Message / Specific Requirements
                   </label>
                   <textarea
@@ -806,31 +806,31 @@ export const LoanEnquiryForm: React.FC<LoanEnquiryFormProps> = ({ initialLoanTyp
                     placeholder="Please include any additional details regarding your loan history, required timelines, or preferred banks..."
                     value={additionalMessage}
                     onChange={(e) => setAdditionalMessage(e.target.value)}
-                    className="w-full px-3.5 py-2.5 text-sm bg-white border border-slate-300 rounded-lg focus:outline-hidden focus:ring-2 focus:ring-blue-600"
+                    className="w-full px-3.5 py-2.5 text-sm bg-zinc-900 text-white placeholder:text-zinc-500 border border-white/10 rounded-lg focus:outline-hidden focus:ring-2 focus:ring-emerald-500"
                   />
                 </div>
               </div>
             </div>
 
             {/* Submit Action */}
-            <div className="pt-4 border-t border-zinc-200 flex flex-col sm:flex-row items-center justify-between gap-4">
-              <div className="text-left text-xs text-zinc-500">
-                <span className="block font-bold text-[#0d0d0d]">Official WhatsApp Desk:</span>
+            <div className="pt-4 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
+              <div className="text-left text-xs text-zinc-400">
+                <span className="block font-bold text-white">Official WhatsApp Desk:</span>
                 <span>+91 9625456835 · Capital Consultancy</span>
               </div>
 
               {/* Exact CTA in signature emerald green */}
               <button
                 type="submit"
-                className="w-full sm:w-auto px-8 py-4 text-sm font-extrabold text-white bg-emerald-600 hover:bg-emerald-500 active:bg-emerald-700 rounded-full shadow-lg shadow-emerald-600/25 hover:shadow-xl transition-all flex items-center justify-center gap-2.5 cursor-pointer transform hover:scale-105 active:scale-95"
+                className="w-full sm:w-auto px-8 py-4 text-sm font-extrabold text-black bg-emerald-500 hover:bg-emerald-400 active:bg-emerald-600 rounded-full shadow-lg shadow-emerald-500/25 hover:shadow-xl transition-all flex items-center justify-center gap-2.5 cursor-pointer transform hover:scale-105 active:scale-95"
               >
-                <MessageCircle className="w-5 h-5 text-white" />
+                <MessageCircle className="w-5 h-5 text-black" />
                 <span>SUBMIT & CONTINUE ON WHATSAPP</span>
               </button>
             </div>
 
             {/* Compliance footnote */}
-            <p className="text-[11px] text-zinc-500 text-center leading-normal">
+            <p className="text-[11px] text-zinc-400 text-center leading-normal">
               By submitting this form, your enquiry data is securely compiled and opened in WhatsApp for direct review by Capital Consultancy senior advisory desk. No advance charges required.
             </p>
           </form>

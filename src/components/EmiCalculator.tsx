@@ -74,18 +74,18 @@ export const EmiCalculator: React.FC = () => {
   ];
 
   return (
-    <section id="emi-calculator" className="py-20 bg-white border-b border-slate-200">
+    <section id="emi-calculator" className="py-20 bg-[#050607] border-b border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-3 mb-12">
-          <span className="inline-block px-3 py-1 rounded-full bg-emerald-500/10 text-xs font-bold uppercase tracking-wider text-emerald-600 border border-emerald-500/20">
+          <span className="inline-block px-3 py-1 rounded-full bg-emerald-500/10 text-xs font-bold uppercase tracking-wider text-emerald-400 border border-emerald-500/20">
             Interactive Financial Planning
           </span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0d0d0d] tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
             Loan EMI Calculator
           </h2>
-          <p className="text-sm sm:text-base text-zinc-600">
+          <p className="text-sm sm:text-base text-zinc-400">
             Simulate your monthly repayment installments, total interest cost, and tenure suitability before submitting an enquiry.
           </p>
         </div>
@@ -93,20 +93,20 @@ export const EmiCalculator: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           
           {/* Controls Column */}
-          <div className="lg:col-span-7 bg-zinc-50 border border-zinc-200/90 rounded-2xl p-6 sm:p-8 space-y-8">
+          <div className="lg:col-span-7 bg-[#121214] border border-white/10 rounded-2xl p-6 sm:p-8 space-y-8">
             
             {/* Loan Amount Control */}
             <div className="space-y-3">
               <div className="flex items-center justify-between">
-                <label className="text-sm font-bold text-[#0d0d0d] flex items-center gap-1.5">
-                  <IndianRupee className="w-4 h-4 text-emerald-500" />
+                <label className="text-sm font-bold text-white flex items-center gap-1.5">
+                  <IndianRupee className="w-4 h-4 text-emerald-400" />
                   Loan Amount
                 </label>
                 <div className="text-right">
-                  <span className="text-lg font-extrabold text-[#0d0d0d] tabular-nums">
+                  <span className="text-lg font-extrabold text-white tabular-nums">
                     ₹{formatINR(loanAmount)}
                   </span>
-                  <span className="text-xs text-zinc-500 block">
+                  <span className="text-xs text-zinc-400 block">
                     ({getIndianLabel(loanAmount)})
                   </span>
                 </div>
@@ -119,7 +119,7 @@ export const EmiCalculator: React.FC = () => {
                 step={50000}
                 value={loanAmount}
                 onChange={(e) => setLoanAmount(Number(e.target.value))}
-                className="w-full h-2 bg-zinc-200 rounded-lg appearance-none cursor-pointer accent-emerald-500"
+                className="w-full h-2 bg-zinc-700 rounded-lg appearance-none cursor-pointer accent-emerald-500"
               />
 
               {/* Presets */}
@@ -131,8 +131,8 @@ export const EmiCalculator: React.FC = () => {
                     onClick={() => setLoanAmount(preset.val)}
                     className={`px-3 py-1 text-xs rounded-lg font-bold border transition-colors cursor-pointer ${
                       loanAmount === preset.val
-                        ? 'bg-emerald-600 text-white border-emerald-600 shadow-xs'
-                        : 'bg-white text-zinc-600 border-zinc-200 hover:bg-zinc-100'
+                        ? 'bg-emerald-500 text-black border-emerald-500 shadow-xs'
+                        : 'bg-zinc-900 text-zinc-300 border-white/10 hover:bg-zinc-800'
                     }`}
                   >
                     {preset.label}
@@ -144,15 +144,15 @@ export const EmiCalculator: React.FC = () => {
             {/* Interest Rate Control */}
             <div className="space-y-3">
               <div className="flex items-center justify-between">
-                <label className="text-sm font-bold text-[#0d0d0d] flex items-center gap-1.5">
-                  <Percent className="w-4 h-4 text-emerald-500" />
+                <label className="text-sm font-bold text-white flex items-center gap-1.5">
+                  <Percent className="w-4 h-4 text-emerald-400" />
                   Annual Interest Rate
                 </label>
                 <div className="text-right">
-                  <span className="text-lg font-extrabold text-[#0d0d0d] tabular-nums">
+                  <span className="text-lg font-extrabold text-white tabular-nums">
                     {interestRate.toFixed(2)}%
                   </span>
-                  <span className="text-xs text-zinc-500 block">p.a.</span>
+                  <span className="text-xs text-zinc-400 block">p.a.</span>
                 </div>
               </div>
 
@@ -163,10 +163,10 @@ export const EmiCalculator: React.FC = () => {
                 step={0.1}
                 value={interestRate}
                 onChange={(e) => setInterestRate(Number(e.target.value))}
-                className="w-full h-2 bg-zinc-200 rounded-lg appearance-none cursor-pointer accent-emerald-500"
+                className="w-full h-2 bg-zinc-700 rounded-lg appearance-none cursor-pointer accent-emerald-500"
               />
 
-              <div className="flex justify-between text-[11px] text-zinc-500">
+              <div className="flex justify-between text-[11px] text-zinc-400">
                 <span>6.5% (Prime Home Loan)</span>
                 <span>12.5% (MSME / Business)</span>
                 <span>24.0% (Unsecured High-Risk)</span>
@@ -176,15 +176,15 @@ export const EmiCalculator: React.FC = () => {
             {/* Tenure Control */}
             <div className="space-y-3">
               <div className="flex items-center justify-between">
-                <label className="text-sm font-bold text-[#0d0d0d] flex items-center gap-1.5">
-                  <Calendar className="w-4 h-4 text-emerald-500" />
+                <label className="text-sm font-bold text-white flex items-center gap-1.5">
+                  <Calendar className="w-4 h-4 text-emerald-400" />
                   Loan Tenure
                 </label>
                 <div className="text-right">
-                  <span className="text-lg font-extrabold text-[#0d0d0d] tabular-nums">
+                  <span className="text-lg font-extrabold text-white tabular-nums">
                     {tenureYears} Years
                   </span>
-                  <span className="text-xs text-zinc-500 block">
+                  <span className="text-xs text-zinc-400 block">
                     ({tenureYears * 12} Months)
                   </span>
                 </div>
@@ -197,10 +197,10 @@ export const EmiCalculator: React.FC = () => {
                 step={1}
                 value={tenureYears}
                 onChange={(e) => setTenureYears(Number(e.target.value))}
-                className="w-full h-2 bg-zinc-200 rounded-lg appearance-none cursor-pointer accent-emerald-500"
+                className="w-full h-2 bg-zinc-700 rounded-lg appearance-none cursor-pointer accent-emerald-500"
               />
 
-              <div className="flex justify-between text-[11px] text-zinc-500">
+              <div className="flex justify-between text-[11px] text-zinc-400">
                 <span>1 Year</span>
                 <span>5 Years (Typical Term Loan)</span>
                 <span>25 Years</span>
@@ -208,8 +208,8 @@ export const EmiCalculator: React.FC = () => {
             </div>
 
             {/* Optional Customer Name */}
-            <div className="pt-2 border-t border-zinc-200">
-              <label className="block text-xs font-bold text-[#0d0d0d] mb-1">
+            <div className="pt-2 border-t border-white/10">
+              <label className="block text-xs font-bold text-white mb-1">
                 Your Name (Optional, included in your WhatsApp query)
               </label>
               <input
@@ -217,7 +217,7 @@ export const EmiCalculator: React.FC = () => {
                 placeholder="e.g. Rajesh Sharma"
                 value={customerName}
                 onChange={(e) => setCustomerName(e.target.value)}
-                className="w-full px-3.5 py-2.5 text-sm bg-white border border-zinc-200 rounded-xl focus:outline-hidden focus:ring-2 focus:ring-emerald-500 focus:border-transparent text-zinc-900"
+                className="w-full px-3.5 py-2.5 text-sm bg-zinc-900 border border-white/10 rounded-xl focus:outline-hidden focus:ring-2 focus:ring-emerald-500 text-white placeholder:text-zinc-500"
               />
             </div>
 

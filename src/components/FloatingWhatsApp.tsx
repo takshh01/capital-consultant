@@ -63,19 +63,19 @@ export const FloatingWhatsApp: React.FC = () => {
     <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end">
       {/* Expanded Quick Chat Card */}
       {isOpen && (
-        <div className="mb-3 w-80 sm:w-96 bg-white rounded-2xl shadow-2xl border border-slate-200 overflow-hidden animate-in fade-in slide-in-from-bottom-4 duration-200 text-left">
+        <div className="mb-3 w-80 sm:w-96 bg-[#0f0f11] text-white rounded-2xl shadow-2xl border border-white/15 overflow-hidden animate-in fade-in slide-in-from-bottom-4 duration-200 text-left">
           {/* Card Header */}
-          <div className="bg-emerald-600 text-white p-4 flex items-center justify-between">
+          <div className="bg-[#141416] text-white p-4 flex items-center justify-between border-b border-white/10">
             <div className="flex items-center gap-2.5">
-              <div className="w-9 h-9 rounded-full bg-white/20 flex items-center justify-center font-bold text-white text-sm">
+              <div className="w-9 h-9 rounded-full bg-emerald-500/20 border border-emerald-500/30 flex items-center justify-center font-bold text-emerald-400 text-sm">
                 CC
               </div>
               <div>
                 <h4 className="text-sm font-bold text-white leading-tight">Capital Consultancy Desk</h4>
-                <p className="text-[11px] text-emerald-100 flex items-center gap-1 mt-0.5">
-                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-300 animate-pulse" />
+                <p className="text-[11px] text-zinc-400 flex items-center gap-1 mt-0.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
                   {isTyping ? (
-                    <span className="italic font-medium text-emerald-200">typing...</span>
+                    <span className="italic font-medium text-emerald-400">typing...</span>
                   ) : (
                     <span>Online · +91 9625456835</span>
                   )}
@@ -84,7 +84,7 @@ export const FloatingWhatsApp: React.FC = () => {
             </div>
             <button
               onClick={() => setIsOpen(false)}
-              className="text-white/80 hover:text-white p-1 rounded-lg"
+              className="text-zinc-400 hover:text-white p-1 rounded-lg transition-colors cursor-pointer"
               aria-label="Close WhatsApp chat popup"
             >
               <X className="w-4 h-4" />
@@ -92,13 +92,13 @@ export const FloatingWhatsApp: React.FC = () => {
           </div>
 
           {/* Chat Body */}
-          <div className="p-4 bg-slate-50 space-y-3 max-h-72 overflow-y-auto text-xs">
+          <div className="p-4 bg-[#0a0a0c] space-y-3 max-h-72 overflow-y-auto text-xs">
             {/* Animated Welcome Bubble */}
-            <div className="bg-white p-3 rounded-xl border border-slate-200 text-slate-700 shadow-2xs leading-relaxed">
+            <div className="bg-[#18181b] p-3 rounded-xl border border-white/10 text-zinc-300 shadow-2xs leading-relaxed">
               <div className="min-h-[22px]">
                 {displayedText.includes('Capital Consultancy') ? (
                   <span>
-                    Hello! Welcome to <strong className="text-slate-900 font-bold">Capital Consultancy</strong>.
+                    Hello! Welcome to <strong className="text-white font-bold">Capital Consultancy</strong>.
                   </span>
                 ) : (
                   <span>{displayedText}</span>
@@ -107,7 +107,7 @@ export const FloatingWhatsApp: React.FC = () => {
                 {/* Blinking typing cursor */}
                 {isTyping && (
                   <span 
-                    className="inline-block w-1.5 h-3.5 bg-emerald-600 ml-1 rounded-xs animate-pulse align-middle"
+                    className="inline-block w-1.5 h-3.5 bg-emerald-500 ml-1 rounded-xs animate-pulse align-middle"
                     aria-hidden="true"
                   />
                 )}
@@ -115,7 +115,7 @@ export const FloatingWhatsApp: React.FC = () => {
 
               {/* Follow-up question fades in after typing finishes */}
               {typingComplete && (
-                <p className="mt-1.5 text-slate-600 animate-in fade-in duration-300">
+                <p className="mt-1.5 text-zinc-400 animate-in fade-in duration-300">
                   How can we assist you with business, MSME, or mortgage loans today?
                 </p>
               )}
@@ -123,14 +123,14 @@ export const FloatingWhatsApp: React.FC = () => {
 
             {/* Quick Prompts */}
             <div className={`space-y-1.5 pt-1 transition-opacity duration-300 ${typingComplete ? 'opacity-100' : 'opacity-40'}`}>
-              <span className="text-[10px] uppercase font-bold text-slate-400 tracking-wider block">
+              <span className="text-[10px] uppercase font-bold text-zinc-400 tracking-wider block">
                 Quick Inquiries:
               </span>
               {quickPrompts.map((prompt, i) => (
                 <button
                   key={i}
                   onClick={() => handleSend(prompt)}
-                  className="w-full text-left p-2 rounded-lg bg-white hover:bg-emerald-50 hover:text-emerald-900 border border-slate-200 hover:border-emerald-300 text-slate-700 transition-colors cursor-pointer text-[11px] block"
+                  className="w-full text-left p-2 rounded-lg bg-[#141416] hover:bg-[#1f1f23] hover:text-emerald-400 border border-white/10 hover:border-emerald-500/40 text-zinc-300 transition-colors cursor-pointer text-[11px] block"
                 >
                   &ldquo;{prompt}&rdquo;
                 </button>
@@ -139,7 +139,7 @@ export const FloatingWhatsApp: React.FC = () => {
           </div>
 
           {/* Custom Message Input Footer */}
-          <div className="p-3 bg-white border-t border-slate-200 flex items-center gap-2">
+          <div className="p-3 bg-[#141416] border-t border-white/10 flex items-center gap-2">
             <input
               type="text"
               placeholder="Type your loan query..."
@@ -148,11 +148,11 @@ export const FloatingWhatsApp: React.FC = () => {
               onKeyDown={(e) => {
                 if (e.key === 'Enter') handleSend(customMsg);
               }}
-              className="flex-1 px-3 py-2 text-xs bg-slate-100 border border-slate-200 rounded-lg focus:outline-hidden focus:ring-1 focus:ring-emerald-500 text-slate-900"
+              className="flex-1 px-3 py-2 text-xs bg-[#0a0a0c] border border-white/15 rounded-lg focus:outline-hidden focus:ring-1 focus:ring-emerald-500 text-white placeholder:text-zinc-500"
             />
             <button
               onClick={() => handleSend(customMsg || 'Hello Capital Consultancy, I have a loan enquiry.')}
-              className="p-2 bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg transition-colors cursor-pointer shrink-0"
+              className="p-2 bg-emerald-500 hover:bg-emerald-600 text-black font-bold rounded-lg transition-colors cursor-pointer shrink-0"
               title="Send to WhatsApp"
             >
               <Send className="w-4 h-4" />

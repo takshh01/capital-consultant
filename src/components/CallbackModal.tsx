@@ -57,7 +57,7 @@ export const CallbackModal: React.FC<CallbackModalProps> = ({ isOpen, onClose })
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-xs">
       <div 
-        className="bg-white rounded-2xl border border-slate-200 shadow-2xl w-full max-w-lg overflow-hidden relative animate-in fade-in zoom-in-95 duration-150"
+        className="bg-[#121214] rounded-2xl border border-white/10 shadow-2xl w-full max-w-lg overflow-hidden relative animate-in fade-in zoom-in-95 duration-150"
       >
         {/* Header */}
         <div className="bg-[#0d0d0d] text-white px-6 py-4 flex items-center justify-between border-b border-white/10">
@@ -83,13 +83,13 @@ export const CallbackModal: React.FC<CallbackModalProps> = ({ isOpen, onClose })
         <div className="p-6">
           {submitted ? (
             <div className="text-center py-6 space-y-4">
-              <div className="w-14 h-14 bg-emerald-50 text-emerald-600 rounded-full flex items-center justify-center mx-auto border border-emerald-100">
+              <div className="w-14 h-14 bg-emerald-950/40 text-emerald-400 rounded-full flex items-center justify-center mx-auto border border-emerald-500/30">
                 <CheckCircle2 className="w-8 h-8" />
               </div>
-              <h4 className="text-lg font-bold text-[#0d0d0d]">
+              <h4 className="text-lg font-bold text-white">
                 Callback Request Prepared!
               </h4>
-              <p className="text-xs sm:text-sm text-zinc-600 max-w-sm mx-auto">
+              <p className="text-xs sm:text-sm text-zinc-300 max-w-sm mx-auto">
                 WhatsApp has been launched with your preferred callback details. Please send the message to initiate scheduling with +91 9625456835.
               </p>
               <div className="pt-2">
@@ -104,7 +104,7 @@ export const CallbackModal: React.FC<CallbackModalProps> = ({ isOpen, onClose })
           ) : (
             <form onSubmit={handleSubmit} className="space-y-4 text-left">
               {error && (
-                <div className="p-3 bg-amber-50 border border-amber-200 text-amber-800 rounded-lg text-xs flex items-center gap-2">
+                <div className="p-3 bg-amber-950/30 border border-amber-500/30 text-amber-300 rounded-lg text-xs flex items-center gap-2">
                   <AlertCircle className="w-4 h-4 shrink-0" />
                   <span>{error}</span>
                 </div>
@@ -112,7 +112,7 @@ export const CallbackModal: React.FC<CallbackModalProps> = ({ isOpen, onClose })
 
               {/* Name */}
               <div>
-                <label className="block text-xs font-bold text-[#0d0d0d] mb-1">
+                <label className="block text-xs font-bold text-zinc-300 mb-1">
                   Full Name *
                 </label>
                 <input
@@ -121,17 +121,17 @@ export const CallbackModal: React.FC<CallbackModalProps> = ({ isOpen, onClose })
                   placeholder="e.g. Manish Chawla"
                   value={name}
                   onChange={(e) => { setName(e.target.value); setError(''); }}
-                  className="w-full px-3.5 py-2.5 text-sm bg-zinc-50 border border-zinc-200 rounded-xl focus:bg-white focus:ring-2 focus:ring-emerald-500 focus:outline-hidden"
+                  className="w-full px-3.5 py-2.5 text-sm bg-zinc-900 border border-white/10 rounded-xl text-white placeholder:text-zinc-500 focus:bg-zinc-900 focus:ring-2 focus:ring-emerald-500 focus:outline-hidden"
                 />
               </div>
 
               {/* Mobile */}
               <div>
-                <label className="block text-xs font-bold text-[#0d0d0d] mb-1">
+                <label className="block text-xs font-bold text-zinc-300 mb-1">
                   Mobile Number *
                 </label>
                 <div className="relative">
-                  <span className="text-xs font-semibold text-zinc-500 absolute left-3.5 top-3">
+                  <span className="text-xs font-semibold text-zinc-400 absolute left-3.5 top-3">
                     +91
                   </span>
                   <input
@@ -141,20 +141,20 @@ export const CallbackModal: React.FC<CallbackModalProps> = ({ isOpen, onClose })
                     placeholder="10-digit mobile"
                     value={mobile}
                     onChange={(e) => { setMobile(e.target.value.replace(/\D/g, '')); setError(''); }}
-                    className="w-full pl-12 pr-3.5 py-2.5 text-sm bg-zinc-50 border border-zinc-200 rounded-xl focus:bg-white focus:ring-2 focus:ring-emerald-500 focus:outline-hidden"
+                    className="w-full pl-12 pr-3.5 py-2.5 text-sm bg-zinc-900 border border-white/10 rounded-xl text-white placeholder:text-zinc-500 focus:bg-zinc-900 focus:ring-2 focus:ring-emerald-500 focus:outline-hidden"
                   />
                 </div>
               </div>
 
               {/* Loan Type */}
               <div>
-                <label className="block text-xs font-bold text-[#0d0d0d] mb-1">
+                <label className="block text-xs font-bold text-zinc-300 mb-1">
                   Loan Requirement
                 </label>
                 <select
                   value={loanType}
                   onChange={(e) => setLoanType(e.target.value as LoanType)}
-                  className="w-full px-3.5 py-2.5 text-sm bg-zinc-50 border border-zinc-200 rounded-xl focus:bg-white focus:ring-2 focus:ring-emerald-500 focus:outline-hidden"
+                  className="w-full px-3.5 py-2.5 text-sm bg-zinc-900 border border-white/10 rounded-xl text-white focus:bg-zinc-900 focus:ring-2 focus:ring-emerald-500 focus:outline-hidden"
                 >
                   <option value="Business Loan">Business Loan</option>
                   <option value="MSME Loan">MSME Loan</option>
@@ -173,13 +173,13 @@ export const CallbackModal: React.FC<CallbackModalProps> = ({ isOpen, onClose })
 
               {/* Preferred Time */}
               <div>
-                <label className="block text-xs font-bold text-[#0d0d0d] mb-1">
+                <label className="block text-xs font-bold text-zinc-300 mb-1">
                   Preferred Callback Time
                 </label>
                 <select
                   value={preferredTime}
                   onChange={(e) => setPreferredTime(e.target.value)}
-                  className="w-full px-3.5 py-2.5 text-sm bg-zinc-50 border border-zinc-200 rounded-xl focus:bg-white focus:ring-2 focus:ring-emerald-500 focus:outline-hidden"
+                  className="w-full px-3.5 py-2.5 text-sm bg-zinc-900 border border-white/10 rounded-xl text-white focus:bg-zinc-900 focus:ring-2 focus:ring-emerald-500 focus:outline-hidden"
                 >
                   <option value="Morning (10:00 AM - 1:00 PM)">Morning (10:00 AM - 1:00 PM)</option>
                   <option value="Afternoon (1:00 PM - 5:00 PM)">Afternoon (1:00 PM - 5:00 PM)</option>
@@ -190,7 +190,7 @@ export const CallbackModal: React.FC<CallbackModalProps> = ({ isOpen, onClose })
 
               {/* Message */}
               <div>
-                <label className="block text-xs font-bold text-[#0d0d0d] mb-1">
+                <label className="block text-xs font-bold text-zinc-300 mb-1">
                   Brief Requirement / Notes
                 </label>
                 <textarea
@@ -198,7 +198,7 @@ export const CallbackModal: React.FC<CallbackModalProps> = ({ isOpen, onClose })
                   placeholder="e.g. Need discussion on CGTMSE eligibility for Delhi manufacturing plant..."
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
-                  className="w-full px-3.5 py-2.5 text-sm bg-zinc-50 border border-zinc-200 rounded-xl focus:bg-white focus:ring-2 focus:ring-emerald-500 focus:outline-hidden"
+                  className="w-full px-3.5 py-2.5 text-sm bg-zinc-900 border border-white/10 rounded-xl text-white placeholder:text-zinc-500 focus:bg-zinc-900 focus:ring-2 focus:ring-emerald-500 focus:outline-hidden"
                 />
               </div>
 
