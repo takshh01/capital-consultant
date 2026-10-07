@@ -27,7 +27,7 @@ export const Navbar: React.FC<NavbarProps> = ({
         <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
           <div className="flex items-center gap-3">
             <span className="flex items-center gap-1.5 text-zinc-300">
-              <span className="w-2 h-2 rounded-full bg-[#e5041a] animate-pulse" />
+              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
               Delhi NCR Advisory Desk Open
             </span>
             <span className="hidden sm:inline text-zinc-600">|</span>
@@ -41,14 +41,14 @@ export const Navbar: React.FC<NavbarProps> = ({
               href={`tel:${BUSINESS_PHONE_DISPLAY.replace(/\s+/g, '')}`}
               className="flex items-center gap-1 text-zinc-300 hover:text-white transition-colors"
             >
-              <Phone className="w-3.5 h-3.5 text-[#e5041a]" />
+              <Phone className="w-3.5 h-3.5 text-emerald-400" />
               <span>{BUSINESS_PHONE_DISPLAY}</span>
             </a>
             <a 
               href={`https://wa.me/${BUSINESS_WHATSAPP_NUMBER}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-1 text-zinc-300 hover:text-[#e5041a] transition-colors font-medium"
+              className="flex items-center gap-1 text-zinc-300 hover:text-emerald-400 transition-colors font-medium"
             >
               <MessageCircle className="w-3.5 h-3.5 text-emerald-400" />
               <span className="hidden sm:inline">WhatsApp:</span> +91 9625456835
@@ -70,16 +70,18 @@ export const Navbar: React.FC<NavbarProps> = ({
         <a 
           href="#"
           onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
-          className="flex items-center gap-2.5 group"
+          className="flex items-center gap-3 group"
         >
-          <div className="w-9 h-9 rounded-lg bg-[#e5041a] text-white flex items-center justify-center font-extrabold text-lg shadow-md shadow-[#e5041a]/30 group-hover:bg-[#cc0316] transition-colors">
-            C
+          <div className="w-8 h-8 rounded-lg bg-white/10 border border-white/20 flex items-center justify-center text-white group-hover:border-white/40 transition-colors shadow-sm">
+            <svg className="w-4 h-4 text-white fill-current" viewBox="0 0 24 24">
+              <path d="M12 2L14.4 9.6L22 12L14.4 14.4L12 22L9.6 14.4L2 12L9.6 9.6L12 2Z" />
+            </svg>
           </div>
           <div className="flex flex-col">
-            <span className="text-xl font-bold tracking-tight text-white leading-none">
+            <span className="text-lg font-extrabold tracking-tight text-white leading-none">
               Capital Consultancy
             </span>
-            <span className="text-[11px] font-semibold text-[#e5041a] tracking-wider uppercase mt-0.5">
+            <span className="text-[10px] font-semibold text-zinc-400 tracking-wider uppercase mt-1">
               Loan & Financial Advisory
             </span>
           </div>
@@ -89,37 +91,37 @@ export const Navbar: React.FC<NavbarProps> = ({
         <nav className="hidden lg:flex items-center gap-7 text-sm font-semibold text-zinc-300">
           <button 
             onClick={() => handleNavClick('solutions')}
-            className="hover:text-[#e5041a] transition-colors cursor-pointer py-1"
+            className="hover:text-emerald-400 transition-colors cursor-pointer py-1"
           >
             Loan Solutions
           </button>
           <button 
             onClick={() => handleNavClick('how-it-works')}
-            className="hover:text-[#e5041a] transition-colors cursor-pointer py-1"
+            className="hover:text-emerald-400 transition-colors cursor-pointer py-1"
           >
             How It Works
           </button>
           <button 
             onClick={() => handleNavClick('emi-calculator')}
-            className="hover:text-[#e5041a] transition-colors cursor-pointer py-1"
+            className="hover:text-emerald-400 transition-colors cursor-pointer py-1"
           >
             EMI Calculator
           </button>
           <button 
             onClick={() => handleNavClick('eligibility-checker')}
-            className="hover:text-[#e5041a] transition-colors cursor-pointer py-1"
+            className="hover:text-emerald-400 transition-colors cursor-pointer py-1"
           >
             Eligibility Check
           </button>
           <button 
             onClick={() => handleNavClick('about')}
-            className="hover:text-[#e5041a] transition-colors cursor-pointer py-1"
+            className="hover:text-emerald-400 transition-colors cursor-pointer py-1"
           >
             About Us
           </button>
           <button 
             onClick={() => handleNavClick('contact')}
-            className="hover:text-[#e5041a] transition-colors cursor-pointer py-1"
+            className="hover:text-emerald-400 transition-colors cursor-pointer py-1"
           >
             Contact
           </button>
@@ -129,15 +131,15 @@ export const Navbar: React.FC<NavbarProps> = ({
         <div className="hidden sm:flex items-center gap-3">
           <button
             onClick={onOpenCallbackModal}
-            className="px-4 py-2.5 text-xs font-semibold text-zinc-200 bg-zinc-900 hover:bg-zinc-800 border border-zinc-700/80 rounded-lg transition-colors whitespace-nowrap cursor-pointer"
+            className="px-4 py-2 text-xs font-semibold text-zinc-300 hover:text-white rounded-full transition-colors whitespace-nowrap cursor-pointer hover:bg-white/5"
           >
             Get a Callback
           </button>
           <button
             onClick={() => handleNavClick('enquiry-form')}
-            className="px-5 py-2.5 text-xs font-bold text-white bg-[#e5041a] hover:bg-[#cc0316] active:bg-[#b50212] rounded-lg shadow-md shadow-[#e5041a]/25 hover:shadow-lg transition-all whitespace-nowrap cursor-pointer"
+            className="px-6 py-2.5 text-xs font-bold text-[#080808] bg-white hover:bg-zinc-200 rounded-full shadow-md transition-all whitespace-nowrap cursor-pointer hover:scale-105 active:scale-95"
           >
-            Apply for a Loan
+            Get Started
           </button>
         </div>
 
@@ -145,7 +147,7 @@ export const Navbar: React.FC<NavbarProps> = ({
         <div className="flex items-center gap-2 lg:hidden">
           <button
             onClick={() => handleNavClick('enquiry-form')}
-            className="px-3 py-1.5 text-xs font-bold text-white bg-[#e5041a] rounded-lg sm:hidden"
+            className="px-4 py-1.5 text-xs font-bold text-[#080808] bg-white rounded-full sm:hidden"
           >
             Apply
           </button>
@@ -225,7 +227,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             </button>
             <button
               onClick={() => handleNavClick('enquiry-form')}
-              className="w-full py-2.5 text-xs font-bold text-white bg-[#e5041a] hover:bg-[#cc0316] rounded-lg text-center"
+              className="w-full py-2.5 text-xs font-bold text-[#080808] bg-white hover:bg-zinc-200 rounded-lg text-center"
             >
               Submit Loan Enquiry (WhatsApp)
             </button>

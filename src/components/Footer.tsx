@@ -47,7 +47,7 @@ export const Footer: React.FC<FooterProps> = ({
           {/* Col 1: Brand & Identity */}
           <div className="lg:col-span-4 space-y-4">
             <div className="flex items-center gap-2.5">
-              <div className="w-9 h-9 rounded-xl bg-[#e5041a] text-white flex items-center justify-center font-extrabold text-base shadow-md shadow-[#e5041a]/30">
+              <div className="w-9 h-9 rounded-xl bg-emerald-500 text-black flex items-center justify-center font-extrabold text-base shadow-md shadow-emerald-500/30">
                 C
               </div>
               <span className="text-xl font-bold tracking-tight text-white">
@@ -69,7 +69,7 @@ export const Footer: React.FC<FooterProps> = ({
                 href={`https://wa.me/${BUSINESS_WHATSAPP_NUMBER}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-3.5 py-2 bg-zinc-900 border border-zinc-700/80 text-white hover:text-[#ff4d5a] rounded-xl text-xs font-bold transition-colors flex items-center gap-1.5"
+                className="px-3.5 py-2 bg-zinc-900 border border-zinc-700/80 text-white hover:text-emerald-400 rounded-xl text-xs font-bold transition-colors flex items-center gap-1.5"
               >
                 <MessageCircle className="w-3.5 h-3.5 text-emerald-400" />
                 <span>+91 9625456835</span>
@@ -78,7 +78,7 @@ export const Footer: React.FC<FooterProps> = ({
                 href={`tel:${BUSINESS_PHONE_DISPLAY.replace(/\s+/g, '')}`}
                 className="px-3.5 py-2 bg-zinc-900 border border-zinc-700/80 text-zinc-300 hover:text-white rounded-xl text-xs font-semibold transition-colors flex items-center gap-1.5"
               >
-                <Phone className="w-3.5 h-3.5 text-[#ff4d5a]" />
+                <Phone className="w-3.5 h-3.5 text-emerald-400" />
                 <span>Call Desk</span>
               </a>
             </div>
@@ -94,7 +94,7 @@ export const Footer: React.FC<FooterProps> = ({
                 <button
                   key={link}
                   onClick={() => onSelectLoan(link)}
-                  className="text-left text-zinc-400 hover:text-[#e5041a] transition-colors py-0.5 truncate cursor-pointer"
+                  className="text-left text-zinc-400 hover:text-emerald-400 transition-colors py-0.5 truncate cursor-pointer"
                   title={`Apply for ${link}`}
                 >
                   {link}
@@ -110,11 +110,11 @@ export const Footer: React.FC<FooterProps> = ({
             </h4>
             <div className="space-y-2.5 text-xs text-zinc-400">
               <div className="flex items-start gap-2">
-                <MapPin className="w-4 h-4 text-[#ff4d5a] shrink-0 mt-0.5" />
+                <MapPin className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
                 <span>Pragati Tower, Rajender Place, Delhi 110008</span>
               </div>
               <div className="flex items-center gap-2">
-                <Phone className="w-4 h-4 text-[#ff4d5a] shrink-0" />
+                <Phone className="w-4 h-4 text-emerald-400 shrink-0" />
                 <a href={`tel:${BUSINESS_PHONE_DISPLAY.replace(/\s+/g, '')}`} className="hover:text-white transition-colors">
                   {BUSINESS_PHONE_DISPLAY}
                 </a>
@@ -126,7 +126,7 @@ export const Footer: React.FC<FooterProps> = ({
                 </a>
               </div>
               <div className="flex items-center gap-2">
-                <Mail className="w-4 h-4 text-[#ff4d5a] shrink-0" />
+                <Mail className="w-4 h-4 text-emerald-400 shrink-0" />
                 <a href={`mailto:${BUSINESS_EMAIL}`} className="hover:text-white transition-colors break-all">
                   {BUSINESS_EMAIL}
                 </a>
@@ -136,7 +136,7 @@ export const Footer: React.FC<FooterProps> = ({
             <div className="pt-2">
               <button
                 onClick={onOpenCallbackModal}
-                className="w-full py-2.5 px-3 text-xs font-bold text-white bg-[#e5041a] hover:bg-[#cc0316] rounded-xl transition-all shadow-md shadow-[#e5041a]/25 cursor-pointer text-center"
+                className="w-full py-2.5 px-3 text-xs font-bold text-black bg-emerald-400 hover:bg-emerald-300 rounded-xl transition-all shadow-md shadow-emerald-500/20 cursor-pointer text-center"
               >
                 Request a Callback
               </button>
@@ -148,7 +148,7 @@ export const Footer: React.FC<FooterProps> = ({
         {/* MANDATORY REGULATORY COMPLIANCE DISCLAIMER */}
         <div className="py-8 border-b border-white/10">
           <div className="bg-zinc-950 border border-zinc-800 rounded-2xl p-4 sm:p-5 text-zinc-400 text-xs leading-relaxed space-y-2">
-            <div className="flex items-center gap-2 font-bold text-[#ff4d5a]">
+            <div className="flex items-center gap-2 font-bold text-emerald-400">
               <ShieldCheck className="w-4 h-4 shrink-0" />
               <span>STATUTORY COMPLIANCE & FINANCIAL REGULATORY DISCLAIMER</span>
             </div>
@@ -168,15 +168,15 @@ export const Footer: React.FC<FooterProps> = ({
           </p>
 
           <div className="flex items-center gap-4">
-            <a href="#about" className="hover:text-[#e5041a] transition-colors">About</a>
+            <a href="#about" className="hover:text-emerald-400 transition-colors">About</a>
             <span aria-hidden="true">&middot;</span>
-            <a href="#solutions" className="hover:text-[#e5041a] transition-colors">Services</a>
+            <a href="#solutions" className="hover:text-emerald-400 transition-colors">Services</a>
             <span aria-hidden="true">&middot;</span>
-            <a href="#faq" className="hover:text-[#e5041a] transition-colors">FAQs</a>
+            <a href="#faq" className="hover:text-emerald-400 transition-colors">FAQs</a>
             <span aria-hidden="true">&middot;</span>
             <button
               onClick={onOpenAdminDrawer}
-              className="text-zinc-400 hover:text-[#e5041a] transition-colors cursor-pointer"
+              className="text-zinc-400 hover:text-emerald-400 transition-colors cursor-pointer"
               title="Internal Backup Leads (Advisors only)"
             >
               Lead Admin Portal

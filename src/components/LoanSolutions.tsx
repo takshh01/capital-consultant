@@ -34,7 +34,7 @@ export const LoanSolutions: React.FC<LoanSolutionsProps> = ({ onSelectLoanForEnq
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-3 mb-10">
-          <span className="inline-block px-3 py-1 rounded-full bg-[#e5041a]/10 text-xs font-bold uppercase tracking-wider text-[#e5041a] border border-[#e5041a]/20">
+          <span className="inline-block px-3 py-1 rounded-full bg-emerald-500/10 text-xs font-bold uppercase tracking-wider text-emerald-600 border border-emerald-500/20">
             Comprehensive Financing Catalogue
           </span>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0d0d0d] tracking-tight">
@@ -53,7 +53,7 @@ export const LoanSolutions: React.FC<LoanSolutionsProps> = ({ onSelectLoanForEnq
               onClick={() => setSelectedCategory(cat)}
               className={`px-4 py-2 text-xs font-bold rounded-xl transition-all cursor-pointer whitespace-nowrap ${
                 selectedCategory === cat
-                  ? 'bg-[#e5041a] text-white shadow-md shadow-[#e5041a]/25'
+                  ? 'bg-emerald-600 text-white shadow-md shadow-emerald-600/25'
                   : 'bg-white text-zinc-600 hover:bg-zinc-100 border border-zinc-200'
               }`}
             >
@@ -67,7 +67,7 @@ export const LoanSolutions: React.FC<LoanSolutionsProps> = ({ onSelectLoanForEnq
           {filteredLoans.map((loan) => (
             <div
               key={loan.id}
-              className="bg-white rounded-2xl border border-zinc-200/80 p-6 shadow-xs hover:shadow-lg hover:border-[#e5041a]/40 transition-all flex flex-col justify-between text-left group"
+              className="bg-white rounded-2xl border border-zinc-200/80 p-6 shadow-xs hover:shadow-lg hover:border-emerald-500/40 transition-all flex flex-col justify-between text-left group"
             >
               <div>
                 {/* Unboxed category metadata */}
@@ -77,7 +77,7 @@ export const LoanSolutions: React.FC<LoanSolutionsProps> = ({ onSelectLoanForEnq
                   <span className="font-semibold text-zinc-800">{loan.tenure}</span>
                 </div>
 
-                <h3 className="text-lg font-bold text-[#0d0d0d] group-hover:text-[#e5041a] transition-colors">
+                <h3 className="text-lg font-bold text-[#0d0d0d] group-hover:text-emerald-600 transition-colors">
                   {loan.title}
                 </h3>
 
@@ -106,14 +106,14 @@ export const LoanSolutions: React.FC<LoanSolutionsProps> = ({ onSelectLoanForEnq
                   </span>
                   {loan.highlights.slice(0, 3).map((hl, i) => (
                     <div key={i} className="flex items-start gap-2 text-xs text-zinc-700">
-                      <Check className="w-3.5 h-3.5 text-[#e5041a] shrink-0 mt-0.5" />
+                      <Check className="w-3.5 h-3.5 text-emerald-500 shrink-0 mt-0.5" />
                       <span>{hl}</span>
                     </div>
                   ))}
                 </div>
 
                 {/* Target profile */}
-                <div className="mt-4 text-[11px] text-zinc-700 bg-red-50/50 p-2.5 rounded-xl border border-red-100">
+                <div className="mt-4 text-[11px] text-zinc-700 bg-emerald-50/50 p-2.5 rounded-xl border border-emerald-100">
                   <strong className="text-[#0d0d0d]">Ideal for:</strong> {loan.idealFor}
                 </div>
               </div>
@@ -122,7 +122,7 @@ export const LoanSolutions: React.FC<LoanSolutionsProps> = ({ onSelectLoanForEnq
               <div className="mt-6 pt-4 border-t border-zinc-100 flex items-center gap-2">
                 <button
                   onClick={() => onSelectLoanForEnquiry(loan.id)}
-                  className="flex-1 py-2.5 px-3 text-xs font-bold text-white bg-[#e5041a] hover:bg-[#cc0316] rounded-xl flex items-center justify-center gap-1.5 transition-colors cursor-pointer shadow-md shadow-[#e5041a]/20"
+                  className="flex-1 py-2.5 px-3 text-xs font-bold text-white bg-[#0d0d0d] hover:bg-emerald-600 rounded-xl flex items-center justify-center gap-1.5 transition-colors cursor-pointer shadow-xs"
                 >
                   <span>Apply Now</span>
                   <ArrowRight className="w-3.5 h-3.5" />
@@ -153,7 +153,7 @@ export const LoanSolutions: React.FC<LoanSolutionsProps> = ({ onSelectLoanForEnq
           <div className="mt-4 flex flex-wrap items-center justify-center gap-3">
             <button
               onClick={() => onSelectLoanForEnquiry('Business Loan')}
-              className="px-5 py-2.5 text-xs font-bold text-white bg-[#e5041a] hover:bg-[#cc0316] rounded-xl cursor-pointer shadow-md shadow-[#e5041a]/20 transition-all"
+              className="px-5 py-2.5 text-xs font-bold text-white bg-emerald-600 hover:bg-emerald-500 rounded-xl cursor-pointer shadow-md shadow-emerald-600/20 transition-all"
             >
               Open Full Enquiry Form
             </button>

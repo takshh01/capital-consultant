@@ -41,7 +41,7 @@ export const FaqSection: React.FC = () => {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="text-center space-y-3 mb-12">
-          <span className="inline-block px-3 py-1 rounded-full bg-[#e5041a]/10 text-xs font-bold uppercase tracking-wider text-[#e5041a] border border-[#e5041a]/20">
+          <span className="inline-block px-3 py-1 rounded-full bg-emerald-500/10 text-xs font-bold uppercase tracking-wider text-emerald-600 border border-emerald-500/20">
             Common Inquiries
           </span>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0d0d0d] tracking-tight">
@@ -62,11 +62,11 @@ export const FaqSection: React.FC = () => {
               >
                 <button
                   onClick={() => toggle(idx)}
-                  className="w-full p-4 sm:p-5 text-left flex items-center justify-between gap-4 font-bold text-sm sm:text-base text-[#0d0d0d] hover:text-[#e5041a] transition-colors cursor-pointer"
+                  className="w-full p-4 sm:p-5 text-left flex items-center justify-between gap-4 font-bold text-sm sm:text-base text-[#0d0d0d] hover:text-emerald-600 transition-colors cursor-pointer"
                   aria-expanded={isOpen}
                 >
                   <span className="text-left">{faq.q}</span>
-                  <ChevronDown className={`w-5 h-5 text-zinc-400 shrink-0 transition-transform duration-200 ${isOpen ? 'rotate-180 text-[#e5041a]' : ''}`} />
+                  <ChevronDown className={`w-5 h-5 text-zinc-400 shrink-0 transition-transform duration-200 ${isOpen ? 'rotate-180 text-emerald-500' : ''}`} />
                 </button>
 
                 {isOpen && (
@@ -89,9 +89,9 @@ export const FaqSection: React.FC = () => {
             href={`https://wa.me/${BUSINESS_WHATSAPP_NUMBER}?text=${encodeURIComponent('Hello Capital Consultancy, I have a specific loan question regarding my business proposal.')}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="px-5 py-2.5 text-xs font-extrabold text-white bg-[#e5041a] hover:bg-[#cc0316] rounded-xl inline-flex items-center gap-1.5 whitespace-nowrap shadow-md shadow-[#e5041a]/25 transition-all"
+            className="px-5 py-2.5 text-xs font-extrabold text-[#080808] bg-white hover:bg-zinc-200 rounded-full inline-flex items-center gap-1.5 whitespace-nowrap shadow-md transition-all hover:scale-105 active:scale-95"
           >
-            <MessageCircle className="w-3.5 h-3.5 text-emerald-400" />
+            <MessageCircle className="w-3.5 h-3.5 text-emerald-600" />
             <span>Ask on WhatsApp</span>
           </a>
         </div>

@@ -34,7 +34,7 @@ export const TestimonialsSection: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="text-center max-w-3xl mx-auto space-y-3 mb-12">
-          <span className="inline-block px-3 py-1 rounded-full bg-[#e5041a]/10 text-xs font-bold uppercase tracking-wider text-[#e5041a] border border-[#e5041a]/20">
+          <span className="inline-block px-3 py-1 rounded-full bg-emerald-500/10 text-xs font-bold uppercase tracking-wider text-emerald-600 border border-emerald-500/20">
             Client Experiences & Case Outcomes
           </span>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0d0d0d] tracking-tight">
@@ -49,10 +49,10 @@ export const TestimonialsSection: React.FC = () => {
           {experiences.map((exp, idx) => (
             <div
               key={idx}
-              className="bg-white rounded-2xl border border-zinc-200/80 p-6 shadow-xs flex flex-col justify-between text-left hover:border-[#e5041a]/40 hover:shadow-lg transition-all"
+              className="bg-white rounded-2xl border border-zinc-200/80 p-6 shadow-xs flex flex-col justify-between text-left hover:border-emerald-500/40 hover:shadow-lg transition-all"
             >
               <div>
-                <Quote className="w-8 h-8 text-[#e5041a] mb-3" />
+                <Quote className="w-8 h-8 text-emerald-500 mb-3" />
                 
                 <p className="text-xs sm:text-sm text-zinc-600 leading-relaxed italic">
                   &ldquo;{exp.outcome}&rdquo;
@@ -60,7 +60,7 @@ export const TestimonialsSection: React.FC = () => {
 
                 <div className="mt-4 pt-3 border-t border-zinc-100 flex items-center justify-between text-xs">
                   <span className="font-bold text-[#0d0d0d]">{exp.loanCategory}</span>
-                  <span className="font-black text-[#e5041a]">{exp.quantum}</span>
+                  <span className="font-black text-emerald-600">{exp.quantum}</span>
                 </div>
               </div>
 

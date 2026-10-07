@@ -62,7 +62,7 @@ export const CallbackModal: React.FC<CallbackModalProps> = ({ isOpen, onClose })
         {/* Header */}
         <div className="bg-[#0d0d0d] text-white px-6 py-4 flex items-center justify-between border-b border-white/10">
           <div className="flex items-center gap-2.5">
-            <div className="w-8 h-8 rounded-lg bg-[#e5041a] text-white flex items-center justify-center font-bold shadow-sm shadow-[#e5041a]/30">
+            <div className="w-8 h-8 rounded-lg bg-emerald-500 text-black flex items-center justify-center font-bold shadow-sm shadow-emerald-500/30">
               <Phone className="w-4 h-4" />
             </div>
             <div>
@@ -83,7 +83,7 @@ export const CallbackModal: React.FC<CallbackModalProps> = ({ isOpen, onClose })
         <div className="p-6">
           {submitted ? (
             <div className="text-center py-6 space-y-4">
-              <div className="w-14 h-14 bg-red-50 text-[#e5041a] rounded-full flex items-center justify-center mx-auto border border-red-100">
+              <div className="w-14 h-14 bg-emerald-50 text-emerald-600 rounded-full flex items-center justify-center mx-auto border border-emerald-100">
                 <CheckCircle2 className="w-8 h-8" />
               </div>
               <h4 className="text-lg font-bold text-[#0d0d0d]">
@@ -95,7 +95,7 @@ export const CallbackModal: React.FC<CallbackModalProps> = ({ isOpen, onClose })
               <div className="pt-2">
                 <button
                   onClick={handleResetAndClose}
-                  className="px-6 py-2.5 text-xs font-bold text-white bg-[#e5041a] hover:bg-[#cc0316] rounded-xl transition-colors cursor-pointer shadow-md shadow-[#e5041a]/20"
+                  className="px-6 py-2.5 text-xs font-bold text-black bg-emerald-400 hover:bg-emerald-300 rounded-xl transition-colors cursor-pointer shadow-md shadow-emerald-500/20"
                 >
                   Close & Return
                 </button>
@@ -104,7 +104,7 @@ export const CallbackModal: React.FC<CallbackModalProps> = ({ isOpen, onClose })
           ) : (
             <form onSubmit={handleSubmit} className="space-y-4 text-left">
               {error && (
-                <div className="p-3 bg-rose-50 border border-rose-200 text-rose-700 rounded-lg text-xs flex items-center gap-2">
+                <div className="p-3 bg-amber-50 border border-amber-200 text-amber-800 rounded-lg text-xs flex items-center gap-2">
                   <AlertCircle className="w-4 h-4 shrink-0" />
                   <span>{error}</span>
                 </div>
@@ -121,7 +121,7 @@ export const CallbackModal: React.FC<CallbackModalProps> = ({ isOpen, onClose })
                   placeholder="e.g. Manish Chawla"
                   value={name}
                   onChange={(e) => { setName(e.target.value); setError(''); }}
-                  className="w-full px-3.5 py-2.5 text-sm bg-zinc-50 border border-zinc-200 rounded-xl focus:bg-white focus:ring-2 focus:ring-[#e5041a] focus:outline-hidden"
+                  className="w-full px-3.5 py-2.5 text-sm bg-zinc-50 border border-zinc-200 rounded-xl focus:bg-white focus:ring-2 focus:ring-emerald-500 focus:outline-hidden"
                 />
               </div>
 
@@ -141,7 +141,7 @@ export const CallbackModal: React.FC<CallbackModalProps> = ({ isOpen, onClose })
                     placeholder="10-digit mobile"
                     value={mobile}
                     onChange={(e) => { setMobile(e.target.value.replace(/\D/g, '')); setError(''); }}
-                    className="w-full pl-12 pr-3.5 py-2.5 text-sm bg-zinc-50 border border-zinc-200 rounded-xl focus:bg-white focus:ring-2 focus:ring-[#e5041a] focus:outline-hidden"
+                    className="w-full pl-12 pr-3.5 py-2.5 text-sm bg-zinc-50 border border-zinc-200 rounded-xl focus:bg-white focus:ring-2 focus:ring-emerald-500 focus:outline-hidden"
                   />
                 </div>
               </div>
@@ -154,7 +154,7 @@ export const CallbackModal: React.FC<CallbackModalProps> = ({ isOpen, onClose })
                 <select
                   value={loanType}
                   onChange={(e) => setLoanType(e.target.value as LoanType)}
-                  className="w-full px-3.5 py-2.5 text-sm bg-zinc-50 border border-zinc-200 rounded-xl focus:bg-white focus:ring-2 focus:ring-[#e5041a] focus:outline-hidden"
+                  className="w-full px-3.5 py-2.5 text-sm bg-zinc-50 border border-zinc-200 rounded-xl focus:bg-white focus:ring-2 focus:ring-emerald-500 focus:outline-hidden"
                 >
                   <option value="Business Loan">Business Loan</option>
                   <option value="MSME Loan">MSME Loan</option>
@@ -179,7 +179,7 @@ export const CallbackModal: React.FC<CallbackModalProps> = ({ isOpen, onClose })
                 <select
                   value={preferredTime}
                   onChange={(e) => setPreferredTime(e.target.value)}
-                  className="w-full px-3.5 py-2.5 text-sm bg-zinc-50 border border-zinc-200 rounded-xl focus:bg-white focus:ring-2 focus:ring-[#e5041a] focus:outline-hidden"
+                  className="w-full px-3.5 py-2.5 text-sm bg-zinc-50 border border-zinc-200 rounded-xl focus:bg-white focus:ring-2 focus:ring-emerald-500 focus:outline-hidden"
                 >
                   <option value="Morning (10:00 AM - 1:00 PM)">Morning (10:00 AM - 1:00 PM)</option>
                   <option value="Afternoon (1:00 PM - 5:00 PM)">Afternoon (1:00 PM - 5:00 PM)</option>
@@ -198,7 +198,7 @@ export const CallbackModal: React.FC<CallbackModalProps> = ({ isOpen, onClose })
                   placeholder="e.g. Need discussion on CGTMSE eligibility for Delhi manufacturing plant..."
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
-                  className="w-full px-3.5 py-2.5 text-sm bg-zinc-50 border border-zinc-200 rounded-xl focus:bg-white focus:ring-2 focus:ring-[#e5041a] focus:outline-hidden"
+                  className="w-full px-3.5 py-2.5 text-sm bg-zinc-50 border border-zinc-200 rounded-xl focus:bg-white focus:ring-2 focus:ring-emerald-500 focus:outline-hidden"
                 />
               </div>
 
@@ -206,9 +206,9 @@ export const CallbackModal: React.FC<CallbackModalProps> = ({ isOpen, onClose })
               <div className="pt-2">
                 <button
                   type="submit"
-                  className="w-full py-3.5 px-4 bg-[#e5041a] hover:bg-[#cc0316] text-white font-extrabold text-xs rounded-xl shadow-md shadow-[#e5041a]/25 transition-all flex items-center justify-center gap-2 cursor-pointer transform hover:-translate-y-0.5"
+                  className="w-full py-3.5 px-4 bg-emerald-500 hover:bg-emerald-600 text-black font-extrabold text-xs rounded-xl shadow-md shadow-emerald-500/25 transition-all flex items-center justify-center gap-2 cursor-pointer transform hover:-translate-y-0.5"
                 >
-                  <MessageCircle className="w-4 h-4 text-emerald-400" />
+                  <MessageCircle className="w-4 h-4 text-black" />
                   <span>Request Callback on WhatsApp</span>
                 </button>
               </div>

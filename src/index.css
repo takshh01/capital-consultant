@@ -1,36 +1,36 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #e5041a;
-  --color-primary-hover: #cc0316;
-  --color-primary-dark: #b50212;
-  --color-primary-light: #fff1f2;
-  --color-primary-muted: #ffe4e6;
-  --color-primary-border: #fecdd3;
+  --color-primary: #10b981;
+  --color-primary-hover: #059669;
+  --color-primary-dark: #047857;
+  --color-primary-light: #ecfdf5;
+  --color-primary-muted: #d1fae5;
+  --color-primary-border: #a7f3d0;
   
-  --color-secondary: #0d0d0d;
-  --color-secondary-surface: #121214;
-  --color-secondary-muted: #18181b;
+  --color-secondary: #050607;
+  --color-secondary-surface: #0a0c0d;
+  --color-secondary-muted: #121517;
   
-  --color-carbon-950: #080808;
-  --color-carbon-900: #0d0d0d;
-  --color-carbon-850: #121214;
-  --color-carbon-800: #18181b;
-  --color-carbon-700: #27272a;
+  --color-carbon-950: #050607;
+  --color-carbon-900: #0a0c0d;
+  --color-carbon-850: #101315;
+  --color-carbon-800: #171b1e;
+  --color-carbon-700: #242a2f;
 }
 
 @layer base {
   :root {
-    --primary: #e5041a;
-    --primary-foreground: #fcfcfc;
-    --secondary: #0d0d0d;
-    --secondary-foreground: #fcfcfc;
+    --primary: #10b981;
+    --primary-foreground: #ffffff;
+    --secondary: #050607;
+    --secondary-foreground: #ffffff;
     --background: #ffffff;
     --foreground: #0d0d0d;
     --muted: #f4f4f5;
     --muted-foreground: #636363;
     --border: #e4e4e7;
-    --ring: #e5041a;
+    --ring: #10b981;
   }
 
   html {

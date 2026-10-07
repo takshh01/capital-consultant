@@ -101,7 +101,7 @@ export const AdminLeadDrawer: React.FC<AdminLeadDrawerProps> = ({ isOpen, onClos
         <div className="bg-[#0d0d0d] text-white px-6 py-4 flex items-center justify-between border-b border-white/10">
           <div>
             <div className="flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-[#e5041a] animate-pulse" />
+              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
               <h3 className="text-base font-bold text-white leading-tight">
                 Capital Consultancy · Lead Management
               </h3>
@@ -114,7 +114,7 @@ export const AdminLeadDrawer: React.FC<AdminLeadDrawerProps> = ({ isOpen, onClos
           <div className="flex items-center gap-2">
             <button
               onClick={exportLeadsToCsv}
-              className="px-3 py-1.5 bg-[#e5041a] hover:bg-[#cc0316] text-white text-xs font-semibold rounded-lg flex items-center gap-1.5 transition-colors cursor-pointer shadow-sm shadow-[#e5041a]/25"
+              className="px-3 py-1.5 bg-emerald-500 hover:bg-emerald-600 text-black text-xs font-semibold rounded-lg flex items-center gap-1.5 transition-colors cursor-pointer shadow-sm shadow-emerald-500/25"
             >
               <Download className="w-3.5 h-3.5" />
               <span>Export CSV</span>
@@ -211,7 +211,7 @@ export const AdminLeadDrawer: React.FC<AdminLeadDrawerProps> = ({ isOpen, onClos
                         onChange={(e) => handleStatusChange(lead.id, e.target.value as LeadStatus)}
                         className={`text-xs font-semibold px-2 py-1 rounded-md border ${
                           lead.status === 'NEW' 
-                            ? 'bg-red-50 text-[#e5041a] border-red-200'
+                            ? 'bg-emerald-50 text-emerald-700 border-emerald-200'
                             : lead.status === 'APPROVED'
                             ? 'bg-emerald-50 text-emerald-700 border-emerald-200'
                             : lead.status === 'IN PROCESS'
@@ -234,7 +234,7 @@ export const AdminLeadDrawer: React.FC<AdminLeadDrawerProps> = ({ isOpen, onClos
                   <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 py-3 text-xs">
                     <div>
                       <span className="text-[10px] uppercase text-zinc-400 font-bold block">Facility</span>
-                      <span className="font-bold text-[#e5041a]">{lead.loanType}</span>
+                      <span className="font-bold text-emerald-600">{lead.loanType}</span>
                     </div>
                     <div>
                       <span className="text-[10px] uppercase text-slate-400 font-bold block">Required Amount</span>

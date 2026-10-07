@@ -79,7 +79,7 @@ export const EmiCalculator: React.FC = () => {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-3 mb-12">
-          <span className="inline-block px-3 py-1 rounded-full bg-[#e5041a]/10 text-xs font-bold uppercase tracking-wider text-[#e5041a] border border-[#e5041a]/20">
+          <span className="inline-block px-3 py-1 rounded-full bg-emerald-500/10 text-xs font-bold uppercase tracking-wider text-emerald-600 border border-emerald-500/20">
             Interactive Financial Planning
           </span>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0d0d0d] tracking-tight">
@@ -99,7 +99,7 @@ export const EmiCalculator: React.FC = () => {
             <div className="space-y-3">
               <div className="flex items-center justify-between">
                 <label className="text-sm font-bold text-[#0d0d0d] flex items-center gap-1.5">
-                  <IndianRupee className="w-4 h-4 text-[#e5041a]" />
+                  <IndianRupee className="w-4 h-4 text-emerald-500" />
                   Loan Amount
                 </label>
                 <div className="text-right">
@@ -119,7 +119,7 @@ export const EmiCalculator: React.FC = () => {
                 step={50000}
                 value={loanAmount}
                 onChange={(e) => setLoanAmount(Number(e.target.value))}
-                className="w-full h-2 bg-zinc-200 rounded-lg appearance-none cursor-pointer accent-[#e5041a]"
+                className="w-full h-2 bg-zinc-200 rounded-lg appearance-none cursor-pointer accent-emerald-500"
               />
 
               {/* Presets */}
@@ -131,7 +131,7 @@ export const EmiCalculator: React.FC = () => {
                     onClick={() => setLoanAmount(preset.val)}
                     className={`px-3 py-1 text-xs rounded-lg font-bold border transition-colors cursor-pointer ${
                       loanAmount === preset.val
-                        ? 'bg-[#e5041a] text-white border-[#e5041a] shadow-xs'
+                        ? 'bg-emerald-600 text-white border-emerald-600 shadow-xs'
                         : 'bg-white text-zinc-600 border-zinc-200 hover:bg-zinc-100'
                     }`}
                   >
@@ -145,7 +145,7 @@ export const EmiCalculator: React.FC = () => {
             <div className="space-y-3">
               <div className="flex items-center justify-between">
                 <label className="text-sm font-bold text-[#0d0d0d] flex items-center gap-1.5">
-                  <Percent className="w-4 h-4 text-[#e5041a]" />
+                  <Percent className="w-4 h-4 text-emerald-500" />
                   Annual Interest Rate
                 </label>
                 <div className="text-right">
@@ -163,7 +163,7 @@ export const EmiCalculator: React.FC = () => {
                 step={0.1}
                 value={interestRate}
                 onChange={(e) => setInterestRate(Number(e.target.value))}
-                className="w-full h-2 bg-zinc-200 rounded-lg appearance-none cursor-pointer accent-[#e5041a]"
+                className="w-full h-2 bg-zinc-200 rounded-lg appearance-none cursor-pointer accent-emerald-500"
               />
 
               <div className="flex justify-between text-[11px] text-zinc-500">
@@ -177,7 +177,7 @@ export const EmiCalculator: React.FC = () => {
             <div className="space-y-3">
               <div className="flex items-center justify-between">
                 <label className="text-sm font-bold text-[#0d0d0d] flex items-center gap-1.5">
-                  <Calendar className="w-4 h-4 text-[#e5041a]" />
+                  <Calendar className="w-4 h-4 text-emerald-500" />
                   Loan Tenure
                 </label>
                 <div className="text-right">
@@ -197,7 +197,7 @@ export const EmiCalculator: React.FC = () => {
                 step={1}
                 value={tenureYears}
                 onChange={(e) => setTenureYears(Number(e.target.value))}
-                className="w-full h-2 bg-zinc-200 rounded-lg appearance-none cursor-pointer accent-[#e5041a]"
+                className="w-full h-2 bg-zinc-200 rounded-lg appearance-none cursor-pointer accent-emerald-500"
               />
 
               <div className="flex justify-between text-[11px] text-zinc-500">
@@ -217,19 +217,19 @@ export const EmiCalculator: React.FC = () => {
                 placeholder="e.g. Rajesh Sharma"
                 value={customerName}
                 onChange={(e) => setCustomerName(e.target.value)}
-                className="w-full px-3.5 py-2.5 text-sm bg-white border border-zinc-200 rounded-xl focus:outline-hidden focus:ring-2 focus:ring-[#e5041a] focus:border-transparent text-zinc-900"
+                className="w-full px-3.5 py-2.5 text-sm bg-white border border-zinc-200 rounded-xl focus:outline-hidden focus:ring-2 focus:ring-emerald-500 focus:border-transparent text-zinc-900"
               />
             </div>
 
           </div>
 
-          {/* Result Card Column in onyx dark with crimson accents */}
+          {/* Result Card Column in onyx dark with emerald accents */}
           <div className="lg:col-span-5 bg-[#0d0d0d] text-white rounded-2xl p-6 sm:p-8 shadow-2xl flex flex-col justify-between border border-white/10">
             
             <div className="space-y-6">
               
               <div>
-                <span className="text-xs font-bold text-[#ff4d5a] uppercase tracking-wider">
+                <span className="text-xs font-bold text-emerald-400 uppercase tracking-wider">
                   Calculation Summary
                 </span>
                 <h3 className="text-xl font-bold text-white mt-1">
@@ -237,12 +237,12 @@ export const EmiCalculator: React.FC = () => {
                 </h3>
               </div>
 
-              {/* Monthly EMI Big Display with vibrant crimson */}
+              {/* Monthly EMI Big Display with vibrant emerald */}
               <div className="bg-zinc-900 border border-zinc-800 p-5 rounded-2xl">
                 <span className="text-xs text-zinc-400 block font-medium">
                   Monthly Installment (Estimated EMI)
                 </span>
-                <div className="text-3xl sm:text-4xl font-black text-[#ff4d5a] mt-1 tabular-nums">
+                <div className="text-3xl sm:text-4xl font-black text-emerald-400 mt-1 tabular-nums">
                   ₹{formatINR(monthlyEmi)}
                   <span className="text-xs text-zinc-400 font-normal"> / month</span>
                 </div>
@@ -273,7 +273,7 @@ export const EmiCalculator: React.FC = () => {
                 </div>
                 <div className="h-3 w-full bg-zinc-800 rounded-full overflow-hidden flex">
                   <div 
-                    className="bg-[#e5041a] h-full transition-all duration-300"
+                    className="bg-emerald-500 h-full transition-all duration-300"
                     style={{ width: `${principalPercent}%` }} 
                   />
                   <div 
@@ -290,9 +290,9 @@ export const EmiCalculator: React.FC = () => {
               <button
                 type="button"
                 onClick={handleDiscussOnWhatsApp}
-                className="w-full py-3.5 px-4 bg-[#e5041a] hover:bg-[#cc0316] active:bg-[#b50212] text-white font-extrabold text-sm rounded-xl transition-all shadow-lg shadow-[#e5041a]/25 flex items-center justify-center gap-2.5 cursor-pointer transform hover:-translate-y-0.5"
+                className="w-full py-4 px-4 bg-white hover:bg-zinc-200 active:bg-zinc-300 text-[#080808] font-extrabold text-sm rounded-full transition-all shadow-xl flex items-center justify-center gap-2.5 cursor-pointer transform hover:scale-105 active:scale-95"
               >
-                <MessageCircle className="w-5 h-5 text-emerald-400" />
+                <MessageCircle className="w-5 h-5 text-emerald-600" />
                 <span>Discuss This Loan on WhatsApp</span>
               </button>
 

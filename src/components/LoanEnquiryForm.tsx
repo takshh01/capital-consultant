@@ -186,7 +186,7 @@ export const LoanEnquiryForm: React.FC<LoanEnquiryFormProps> = ({ initialLoanTyp
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto space-y-3 mb-10">
-          <span className="inline-block px-3 py-1 rounded-full bg-[#e5041a]/10 text-xs font-bold uppercase tracking-wider text-[#e5041a] border border-[#e5041a]/20">
+          <span className="inline-block px-3 py-1 rounded-full bg-emerald-500/10 text-xs font-bold uppercase tracking-wider text-emerald-600 border border-emerald-500/20">
             Automated WhatsApp Desk
           </span>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0d0d0d] tracking-tight">
@@ -199,8 +199,8 @@ export const LoanEnquiryForm: React.FC<LoanEnquiryFormProps> = ({ initialLoanTyp
 
         {/* Confirmation Modal / Screen */}
         {isPrepared ? (
-          <div className="bg-[#0d0d0d] text-white border-2 border-[#e5041a] rounded-2xl p-8 sm:p-12 text-center max-w-2xl mx-auto shadow-2xl space-y-6">
-            <div className="w-16 h-16 bg-[#e5041a] text-white rounded-full flex items-center justify-center mx-auto shadow-lg shadow-[#e5041a]/30">
+          <div className="bg-[#0d0d0d] text-white border-2 border-emerald-500 rounded-2xl p-8 sm:p-12 text-center max-w-2xl mx-auto shadow-2xl space-y-6">
+            <div className="w-16 h-16 bg-emerald-500 text-white rounded-full flex items-center justify-center mx-auto shadow-lg shadow-emerald-500/30">
               <CheckCircle2 className="w-10 h-10" />
             </div>
 
@@ -216,7 +216,7 @@ export const LoanEnquiryForm: React.FC<LoanEnquiryFormProps> = ({ initialLoanTyp
             <div className="bg-zinc-900 p-4 rounded-xl border border-zinc-800 text-xs text-zinc-300 space-y-1 text-left max-w-md mx-auto">
               <div className="font-bold text-white">Summary:</div>
               <div>Customer: <strong className="text-white">{fullName}</strong> ({mobileNumber})</div>
-              <div>Facility: <strong className="text-[#ff4d5a]">{loanType}</strong> (₹{requiredLoanAmount})</div>
+              <div>Facility: <strong className="text-emerald-400">{loanType}</strong> (₹{requiredLoanAmount})</div>
               <div>Destination Desk: <strong className="text-white">+91 9625456835</strong></div>
             </div>
 
@@ -225,16 +225,16 @@ export const LoanEnquiryForm: React.FC<LoanEnquiryFormProps> = ({ initialLoanTyp
                 href={preparedWhatsAppUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto px-6 py-3.5 text-sm font-extrabold text-white bg-[#e5041a] hover:bg-[#cc0316] rounded-xl flex items-center justify-center gap-2 shadow-lg shadow-[#e5041a]/25 transition-all cursor-pointer transform hover:-translate-y-0.5"
+                className="w-full sm:w-auto px-6 py-3.5 text-sm font-extrabold text-white bg-emerald-600 hover:bg-emerald-500 rounded-full flex items-center justify-center gap-2 shadow-lg shadow-emerald-600/25 transition-all cursor-pointer transform hover:-translate-y-0.5"
               >
-                <MessageCircle className="w-5 h-5 text-emerald-400" />
+                <MessageCircle className="w-5 h-5 text-emerald-300" />
                 <span>Open WhatsApp Now</span>
               </a>
 
               <button
                 type="button"
                 onClick={() => setIsPrepared(false)}
-                className="w-full sm:w-auto px-6 py-3.5 text-sm font-semibold text-zinc-300 hover:text-white bg-zinc-900 border border-zinc-700 rounded-xl transition-all cursor-pointer"
+                className="w-full sm:w-auto px-6 py-3.5 text-sm font-semibold text-zinc-300 hover:text-white bg-zinc-900 border border-zinc-700 rounded-full transition-all cursor-pointer"
               >
                 Back to Website
               </button>
@@ -485,11 +485,11 @@ export const LoanEnquiryForm: React.FC<LoanEnquiryFormProps> = ({ initialLoanTyp
             </div>
 
             {/* Step 3: DYNAMIC LOAN-SPECIFIC QUESTIONS */}
-            <div className="space-y-4 bg-red-50/50 p-5 rounded-2xl border border-red-100">
-              <div className="flex items-center justify-between border-b border-red-100 pb-2">
+            <div className="space-y-4 bg-emerald-50/50 p-5 rounded-2xl border border-emerald-100">
+              <div className="flex items-center justify-between border-b border-emerald-100 pb-2">
                 <span className="text-xs font-bold text-[#0d0d0d] uppercase tracking-wider flex items-center gap-1.5">
                   <span>03. Dynamic Questions for:</span>
-                  <span className="text-white bg-[#e5041a] font-bold px-2 py-0.5 rounded-md shadow-xs">
+                  <span className="text-white bg-emerald-600 font-bold px-2 py-0.5 rounded-md shadow-xs">
                     {loanType}
                   </span>
                 </span>
@@ -819,12 +819,12 @@ export const LoanEnquiryForm: React.FC<LoanEnquiryFormProps> = ({ initialLoanTyp
                 <span>+91 9625456835 · Capital Consultancy</span>
               </div>
 
-              {/* Exact CTA in signature crimson red */}
+              {/* Exact CTA in signature emerald green */}
               <button
                 type="submit"
-                className="w-full sm:w-auto px-8 py-4 text-sm font-extrabold text-white bg-[#e5041a] hover:bg-[#cc0316] active:bg-[#b50212] rounded-xl shadow-lg shadow-[#e5041a]/25 hover:shadow-xl transition-all flex items-center justify-center gap-2.5 cursor-pointer transform hover:-translate-y-0.5"
+                className="w-full sm:w-auto px-8 py-4 text-sm font-extrabold text-white bg-emerald-600 hover:bg-emerald-500 active:bg-emerald-700 rounded-full shadow-lg shadow-emerald-600/25 hover:shadow-xl transition-all flex items-center justify-center gap-2.5 cursor-pointer transform hover:scale-105 active:scale-95"
               >
-                <MessageCircle className="w-5 h-5 text-emerald-400" />
+                <MessageCircle className="w-5 h-5 text-white" />
                 <span>SUBMIT & CONTINUE ON WHATSAPP</span>
               </button>
             </div>

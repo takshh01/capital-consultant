@@ -8,7 +8,7 @@ export const TrustBar: React.FC = () => {
         
         {/* Top summary row */}
         <div className="text-center max-w-3xl mx-auto space-y-2 mb-10">
-          <span className="inline-block px-3 py-1 rounded-full bg-[#e5041a]/10 text-xs font-bold uppercase tracking-wider text-[#e5041a] border border-[#e5041a]/20">
+          <span className="inline-block px-3 py-1 rounded-full bg-emerald-500/10 text-xs font-bold uppercase tracking-wider text-emerald-600 border border-emerald-500/20">
             Institutional Lending Ecosystem
           </span>
           <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0d0d0d] tracking-tight">
@@ -19,11 +19,11 @@ export const TrustBar: React.FC = () => {
           </p>
         </div>
 
-        {/* 4 Trust Pillars with signature crimson top borders */}
+        {/* 4 Trust Pillars with signature emerald top borders */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div className="bg-white p-6 rounded-2xl border border-zinc-200/80 border-t-4 border-t-[#e5041a] shadow-xs hover:shadow-md transition-shadow flex flex-col justify-between text-left">
+          <div className="bg-white p-6 rounded-2xl border border-zinc-200/80 border-t-4 border-t-emerald-500 shadow-xs hover:shadow-md transition-shadow flex flex-col justify-between text-left">
             <div className="w-10 h-10 rounded-xl bg-[#0d0d0d] text-white flex items-center justify-center shrink-0 mb-4 shadow-sm">
-              <Landmark className="w-5 h-5 text-[#ff4d5a]" />
+              <Landmark className="w-5 h-5 text-emerald-400" />
             </div>
             <div>
               <h4 className="text-base font-bold text-[#0d0d0d]">PSU & Private Banks</h4>
@@ -33,9 +33,9 @@ export const TrustBar: React.FC = () => {
             </div>
           </div>
 
-          <div className="bg-white p-6 rounded-2xl border border-zinc-200/80 border-t-4 border-t-[#e5041a] shadow-xs hover:shadow-md transition-shadow flex flex-col justify-between text-left">
+          <div className="bg-white p-6 rounded-2xl border border-zinc-200/80 border-t-4 border-t-emerald-500 shadow-xs hover:shadow-md transition-shadow flex flex-col justify-between text-left">
             <div className="w-10 h-10 rounded-xl bg-[#0d0d0d] text-white flex items-center justify-center shrink-0 mb-4 shadow-sm">
-              <ShieldCheck className="w-5 h-5 text-[#ff4d5a]" />
+              <ShieldCheck className="w-5 h-5 text-emerald-400" />
             </div>
             <div>
               <h4 className="text-base font-bold text-[#0d0d0d]">CGTMSE Coverage</h4>
@@ -45,9 +45,9 @@ export const TrustBar: React.FC = () => {
             </div>
           </div>
 
-          <div className="bg-white p-6 rounded-2xl border border-zinc-200/80 border-t-4 border-t-[#e5041a] shadow-xs hover:shadow-md transition-shadow flex flex-col justify-between text-left">
+          <div className="bg-white p-6 rounded-2xl border border-zinc-200/80 border-t-4 border-t-emerald-500 shadow-xs hover:shadow-md transition-shadow flex flex-col justify-between text-left">
             <div className="w-10 h-10 rounded-xl bg-[#0d0d0d] text-white flex items-center justify-center shrink-0 mb-4 shadow-sm">
-              <Building className="w-5 h-5 text-[#ff4d5a]" />
+              <Building className="w-5 h-5 text-emerald-400" />
             </div>
             <div>
               <h4 className="text-base font-bold text-[#0d0d0d]">Tier-1 NBFCs</h4>
@@ -57,9 +57,9 @@ export const TrustBar: React.FC = () => {
             </div>
           </div>
 
-          <div className="bg-white p-6 rounded-2xl border border-zinc-200/80 border-t-4 border-t-[#e5041a] shadow-xs hover:shadow-md transition-shadow flex flex-col justify-between text-left">
+          <div className="bg-white p-6 rounded-2xl border border-zinc-200/80 border-t-4 border-t-emerald-500 shadow-xs hover:shadow-md transition-shadow flex flex-col justify-between text-left">
             <div className="w-10 h-10 rounded-xl bg-[#0d0d0d] text-white flex items-center justify-center shrink-0 mb-4 shadow-sm">
-              <FileCheck2 className="w-5 h-5 text-[#ff4d5a]" />
+              <FileCheck2 className="w-5 h-5 text-emerald-400" />
             </div>
             <div>
               <h4 className="text-base font-bold text-[#0d0d0d]">₹0 Upfront Fee</h4>

@@ -43,7 +43,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#fafafa] text-[#0d0d0d] flex flex-col font-sans selection:bg-[#e5041a] selection:text-white">
+    <div className="min-h-screen bg-[#fafafa] text-[#0d0d0d] flex flex-col font-sans selection:bg-emerald-500 selection:text-white">
       {/* Top Navbar */}
       <Navbar
         onOpenCallbackModal={() => setCallbackModalOpen(true)}

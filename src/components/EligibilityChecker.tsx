@@ -75,12 +75,12 @@ export const EligibilityChecker: React.FC = () => {
   };
 
   return (
-    <section id="eligibility-checker" className="py-20 bg-white border-b border-[#DCE8EA]">
+    <section id="eligibility-checker" className="py-20 bg-white border-b border-zinc-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-3 mb-12">
-          <span className="inline-block px-3 py-1 rounded-full bg-[#e5041a]/10 text-xs font-bold uppercase tracking-wider text-[#e5041a] border border-[#e5041a]/20">
+          <span className="inline-block px-3 py-1 rounded-full bg-emerald-500/10 text-xs font-bold uppercase tracking-wider text-emerald-600 border border-emerald-500/20">
             Pre-Screening Assessment
           </span>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0d0d0d] tracking-tight">
@@ -116,7 +116,7 @@ export const EligibilityChecker: React.FC = () => {
                     placeholder="Enter your name"
                     value={name}
                     onChange={(e) => { setName(e.target.value); setError(''); }}
-                    className="w-full pl-10 pr-3.5 py-2.5 text-sm bg-white border border-zinc-300 rounded-lg focus:bg-white focus:ring-2 focus:ring-[#e5041a] focus:outline-hidden"
+                    className="w-full pl-10 pr-3.5 py-2.5 text-sm bg-white border border-zinc-300 rounded-lg focus:bg-white focus:ring-2 focus:ring-emerald-500 focus:outline-hidden"
                   />
                 </div>
               </div>
@@ -136,7 +136,7 @@ export const EligibilityChecker: React.FC = () => {
                     placeholder="10-digit number"
                     value={mobile}
                     onChange={(e) => { setMobile(e.target.value.replace(/\D/g, '')); setError(''); }}
-                    className="w-full pl-12 pr-3.5 py-2.5 text-sm bg-white border border-zinc-300 rounded-lg focus:bg-white focus:ring-2 focus:ring-[#e5041a] focus:outline-hidden"
+                    className="w-full pl-12 pr-3.5 py-2.5 text-sm bg-white border border-zinc-300 rounded-lg focus:bg-white focus:ring-2 focus:ring-emerald-500 focus:outline-hidden"
                   />
                 </div>
               </div>
@@ -152,7 +152,7 @@ export const EligibilityChecker: React.FC = () => {
                 <select
                   value={customerType}
                   onChange={(e) => setCustomerType(e.target.value as CustomerType)}
-                  className="w-full px-3.5 py-2.5 text-sm bg-white border border-zinc-300 rounded-lg focus:bg-white focus:ring-2 focus:ring-[#e5041a] focus:outline-hidden"
+                  className="w-full px-3.5 py-2.5 text-sm bg-white border border-zinc-300 rounded-lg focus:bg-white focus:ring-2 focus:ring-emerald-500 focus:outline-hidden"
                 >
                   {customerTypes.map(ct => (
                     <option key={ct} value={ct}>{ct}</option>
@@ -167,7 +167,7 @@ export const EligibilityChecker: React.FC = () => {
                 <select
                   value={loanType}
                   onChange={(e) => setLoanType(e.target.value as LoanType)}
-                  className="w-full px-3.5 py-2.5 text-sm bg-white border border-zinc-300 rounded-lg focus:bg-white focus:ring-2 focus:ring-[#e5041a] focus:outline-hidden"
+                  className="w-full px-3.5 py-2.5 text-sm bg-white border border-zinc-300 rounded-lg focus:bg-white focus:ring-2 focus:ring-emerald-500 focus:outline-hidden"
                 >
                   {loanOptions.map(opt => (
                     <option key={opt} value={opt}>{opt}</option>
@@ -189,7 +189,7 @@ export const EligibilityChecker: React.FC = () => {
                   placeholder="e.g. 50,00,000 (50 Lakhs)"
                   value={requiredAmount}
                   onChange={(e) => setRequiredAmount(e.target.value)}
-                  className="w-full px-3.5 py-2.5 text-sm bg-white border border-zinc-300 rounded-lg focus:bg-white focus:ring-2 focus:ring-[#e5041a] focus:outline-hidden"
+                  className="w-full px-3.5 py-2.5 text-sm bg-white border border-zinc-300 rounded-lg focus:bg-white focus:ring-2 focus:ring-emerald-500 focus:outline-hidden"
                 />
               </div>
 
@@ -202,7 +202,7 @@ export const EligibilityChecker: React.FC = () => {
                   placeholder="e.g. ₹1.5 Cr Turnover or ₹1.2L Salary"
                   value={incomeOrTurnover}
                   onChange={(e) => setIncomeOrTurnover(e.target.value)}
-                  className="w-full px-3.5 py-2.5 text-sm bg-white border border-zinc-300 rounded-lg focus:bg-white focus:ring-2 focus:ring-[#e5041a] focus:outline-hidden"
+                  className="w-full px-3.5 py-2.5 text-sm bg-white border border-zinc-300 rounded-lg focus:bg-white focus:ring-2 focus:ring-emerald-500 focus:outline-hidden"
                 />
               </div>
 
@@ -217,7 +217,7 @@ export const EligibilityChecker: React.FC = () => {
                 <select
                   value={creditScore}
                   onChange={(e) => setCreditScore(e.target.value)}
-                  className="w-full px-3.5 py-2.5 text-sm bg-white border border-zinc-300 rounded-lg focus:bg-white focus:ring-2 focus:ring-[#e5041a] focus:outline-hidden"
+                  className="w-full px-3.5 py-2.5 text-sm bg-white border border-zinc-300 rounded-lg focus:bg-white focus:ring-2 focus:ring-emerald-500 focus:outline-hidden"
                 >
                   <option value="750+ (Excellent)">750+ (Excellent)</option>
                   <option value="700 - 749 (Good)">700 - 749 (Good)</option>
@@ -234,7 +234,7 @@ export const EligibilityChecker: React.FC = () => {
                 <select
                   value={vintage}
                   onChange={(e) => setVintage(e.target.value)}
-                  className="w-full px-3.5 py-2.5 text-sm bg-white border border-zinc-300 rounded-lg focus:bg-white focus:ring-2 focus:ring-[#e5041a] focus:outline-hidden"
+                  className="w-full px-3.5 py-2.5 text-sm bg-white border border-zinc-300 rounded-lg focus:bg-white focus:ring-2 focus:ring-emerald-500 focus:outline-hidden"
                 >
                   <option value="Less than 1 Year">Less than 1 Year</option>
                   <option value="1 - 3 Years">1 - 3 Years</option>
@@ -250,7 +250,7 @@ export const EligibilityChecker: React.FC = () => {
                 <select
                   value={age}
                   onChange={(e) => setAge(e.target.value)}
-                  className="w-full px-3.5 py-2.5 text-sm bg-white border border-zinc-300 rounded-lg focus:bg-white focus:ring-2 focus:ring-[#e5041a] focus:outline-hidden"
+                  className="w-full px-3.5 py-2.5 text-sm bg-white border border-zinc-300 rounded-lg focus:bg-white focus:ring-2 focus:ring-emerald-500 focus:outline-hidden"
                 >
                   <option value="21 - 30 Years">21 - 30 Years</option>
                   <option value="31 - 45 Years">31 - 45 Years</option>
@@ -265,7 +265,7 @@ export const EligibilityChecker: React.FC = () => {
               <div className="pt-2 text-left">
                 <button
                   type="submit"
-                  className="w-full sm:w-auto px-8 py-3.5 text-xs font-bold text-white bg-[#e5041a] hover:bg-[#cc0316] rounded-xl transition-all cursor-pointer shadow-md shadow-[#e5041a]/25"
+                  className="w-full sm:w-auto px-8 py-3.5 text-xs font-bold text-white bg-[#0a0a0a] hover:bg-emerald-600 rounded-full transition-all cursor-pointer shadow-md hover:scale-105 active:scale-95"
                 >
                   Evaluate Requirement Feasibility
                 </button>
@@ -273,7 +273,7 @@ export const EligibilityChecker: React.FC = () => {
             ) : (
               <div className="mt-6 p-6 rounded-2xl bg-[#0d0d0d] text-white text-left space-y-4 border border-white/10 shadow-2xl">
                 <div className="flex items-start gap-3">
-                  <Sparkles className="w-5 h-5 text-[#ff4d5a] shrink-0 mt-0.5" />
+                  <Sparkles className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" />
                   <div>
                     <h4 className="text-sm font-bold text-white">
                       Preliminary Assessment Generated for {name}
@@ -288,16 +288,16 @@ export const EligibilityChecker: React.FC = () => {
                   <button
                     type="button"
                     onClick={handleWhatsAppSubmit}
-                    className="px-6 py-3.5 text-xs font-bold text-white bg-[#e5041a] hover:bg-[#cc0316] rounded-xl flex items-center justify-center gap-2 shadow-lg shadow-[#e5041a]/25 transition-all cursor-pointer"
+                    className="px-6 py-3.5 text-xs font-bold text-[#080808] bg-white hover:bg-zinc-200 rounded-full flex items-center justify-center gap-2 shadow-xl transition-all cursor-pointer hover:scale-105 active:scale-95"
                   >
-                    <MessageCircle className="w-4 h-4 text-emerald-400" />
+                    <MessageCircle className="w-4 h-4 text-emerald-600" />
                     <span>Discuss My Requirement on WhatsApp</span>
                   </button>
 
                   <button
                     type="button"
                     onClick={() => setSubmitted(false)}
-                    className="px-4 py-3 text-xs font-semibold text-zinc-300 hover:text-white bg-zinc-900 border border-zinc-700 rounded-xl transition-colors cursor-pointer"
+                    className="px-4 py-3 text-xs font-semibold text-zinc-300 hover:text-white bg-zinc-900 border border-zinc-700 rounded-full transition-colors cursor-pointer"
                   >
                     Recalculate / Modify
                   </button>

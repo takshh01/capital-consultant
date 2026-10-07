@@ -38,7 +38,7 @@ export const HowItWorks: React.FC<HowItWorksProps> = ({ onApplyClick }) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="text-center max-w-3xl mx-auto space-y-3 mb-14">
-          <span className="inline-block px-3 py-1 rounded-full bg-[#e5041a]/10 text-xs font-bold uppercase tracking-wider text-[#e5041a] border border-[#e5041a]/20">
+          <span className="inline-block px-3 py-1 rounded-full bg-emerald-500/10 text-xs font-bold uppercase tracking-wider text-emerald-600 border border-emerald-500/20">
             Streamlined Execution Flow
           </span>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0d0d0d] tracking-tight">
@@ -55,14 +55,14 @@ export const HowItWorks: React.FC<HowItWorksProps> = ({ onApplyClick }) => {
             return (
               <div 
                 key={idx}
-                className="bg-white rounded-2xl border border-zinc-200/80 p-6 shadow-xs flex flex-col justify-between text-left relative hover:border-[#e5041a]/40 hover:shadow-md transition-all"
+                className="bg-white rounded-2xl border border-zinc-200/80 p-6 shadow-xs flex flex-col justify-between text-left relative hover:border-emerald-500/40 hover:shadow-md transition-all"
               >
                 <div>
                   <div className="flex items-center justify-between mb-4">
-                    <span className="text-3xl font-black text-[#e5041a] tabular-nums">
+                    <span className="text-3xl font-black text-emerald-500 tabular-nums">
                       {s.step}
                     </span>
-                    <div className="w-10 h-10 rounded-xl bg-red-50 text-[#e5041a] flex items-center justify-center">
+                    <div className="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center">
                       <Icon className="w-5 h-5" />
                     </div>
                   </div>
@@ -77,7 +77,7 @@ export const HowItWorks: React.FC<HowItWorksProps> = ({ onApplyClick }) => {
                 </div>
 
                 <div className="mt-6 pt-3 border-t border-zinc-100 flex items-center gap-1.5 text-[11px] font-bold text-[#0d0d0d]">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-[#e5041a]" />
+                  <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500" />
                   <span>Guided by Senior Advisors</span>
                 </div>
               </div>
@@ -88,7 +88,7 @@ export const HowItWorks: React.FC<HowItWorksProps> = ({ onApplyClick }) => {
         <div className="mt-12 text-center">
           <button
             onClick={onApplyClick}
-            className="px-6 py-3.5 text-sm font-bold text-white bg-[#e5041a] hover:bg-[#cc0316] rounded-xl shadow-md shadow-[#e5041a]/25 transition-all inline-flex items-center gap-2 cursor-pointer"
+            className="px-8 py-3.5 text-sm font-bold text-white bg-[#0a0a0a] hover:bg-emerald-600 rounded-full shadow-lg transition-all inline-flex items-center gap-2 cursor-pointer hover:scale-105 active:scale-95"
           >
             <span>Begin Step 01: Submit Your Enquiry</span>
             <ArrowRight className="w-4 h-4" />

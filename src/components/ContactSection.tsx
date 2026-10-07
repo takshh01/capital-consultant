@@ -15,7 +15,7 @@ export const ContactSection: React.FC = () => {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-3 mb-12">
-          <span className="inline-block px-3 py-1 rounded-full bg-[#e5041a]/10 text-xs font-bold uppercase tracking-wider text-[#e5041a] border border-[#e5041a]/20">
+          <span className="inline-block px-3 py-1 rounded-full bg-emerald-500/10 text-xs font-bold uppercase tracking-wider text-emerald-600 border border-emerald-500/20">
             Delhi Headquarters & Advisory Desk
           </span>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0d0d0d] tracking-tight">
@@ -43,7 +43,7 @@ export const ContactSection: React.FC = () => {
               {/* Office Address */}
               <div className="flex items-start gap-3.5">
                 <div className="w-10 h-10 rounded-xl bg-[#0d0d0d] text-white flex items-center justify-center shrink-0 shadow-sm">
-                  <MapPin className="w-5 h-5 text-[#ff4d5a]" />
+                  <MapPin className="w-5 h-5 text-emerald-400" />
                 </div>
                 <div>
                   <span className="text-xs text-zinc-400 font-bold block uppercase tracking-wider">
@@ -61,7 +61,7 @@ export const ContactSection: React.FC = () => {
               {/* Telephone */}
               <div className="flex items-start gap-3.5">
                 <div className="w-10 h-10 rounded-xl bg-[#0d0d0d] text-white flex items-center justify-center shrink-0 shadow-sm">
-                  <Phone className="w-5 h-5 text-[#ff4d5a]" />
+                  <Phone className="w-5 h-5 text-emerald-400" />
                 </div>
                 <div>
                   <span className="text-xs text-zinc-400 font-bold block uppercase tracking-wider">
@@ -69,7 +69,7 @@ export const ContactSection: React.FC = () => {
                   </span>
                   <a 
                     href={`tel:${BUSINESS_PHONE_DISPLAY.replace(/\s+/g, '')}`} 
-                    className="text-[#0d0d0d] hover:text-[#e5041a] font-bold block mt-0.5 transition-colors"
+                    className="text-[#0d0d0d] hover:text-emerald-600 font-bold block mt-0.5 transition-colors"
                   >
                     {BUSINESS_PHONE_DISPLAY}
                   </a>
@@ -92,7 +92,7 @@ export const ContactSection: React.FC = () => {
                     href={`https://wa.me/${BUSINESS_WHATSAPP_NUMBER}`} 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="text-[#0d0d0d] hover:text-[#e5041a] font-bold block mt-0.5 transition-colors"
+                    className="text-[#0d0d0d] hover:text-emerald-600 font-bold block mt-0.5 transition-colors"
                   >
                     {BUSINESS_WHATSAPP_DISPLAY}
                   </a>
@@ -105,7 +105,7 @@ export const ContactSection: React.FC = () => {
               {/* Email */}
               <div className="flex items-start gap-3.5">
                 <div className="w-10 h-10 rounded-xl bg-[#0d0d0d] text-white flex items-center justify-center shrink-0 shadow-sm">
-                  <Mail className="w-5 h-5 text-[#ff4d5a]" />
+                  <Mail className="w-5 h-5 text-emerald-400" />
                 </div>
                 <div>
                   <span className="text-xs text-zinc-400 font-bold block uppercase tracking-wider">
@@ -113,7 +113,7 @@ export const ContactSection: React.FC = () => {
                   </span>
                   <a 
                     href={`mailto:${BUSINESS_EMAIL}`} 
-                    className="text-[#0d0d0d] hover:text-[#e5041a] font-semibold block mt-0.5 transition-colors break-all"
+                    className="text-[#0d0d0d] hover:text-emerald-600 font-semibold block mt-0.5 transition-colors break-all"
                   >
                     {BUSINESS_EMAIL}
                   </a>
@@ -123,7 +123,7 @@ export const ContactSection: React.FC = () => {
               {/* Working Hours */}
               <div className="flex items-start gap-3.5">
                 <div className="w-10 h-10 rounded-xl bg-[#0d0d0d] text-white flex items-center justify-center shrink-0 shadow-sm">
-                  <Clock className="w-5 h-5 text-[#ff4d5a]" />
+                  <Clock className="w-5 h-5 text-emerald-400" />
                 </div>
                 <div>
                   <span className="text-xs text-zinc-400 font-bold block uppercase tracking-wider">
@@ -145,9 +145,9 @@ export const ContactSection: React.FC = () => {
                 href={`https://wa.me/${BUSINESS_WHATSAPP_NUMBER}?text=${encodeURIComponent('Hello Capital Consultancy, I would like to schedule a consultation at your Rajender Place office.')}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex-1 py-3 px-3 bg-[#e5041a] hover:bg-[#cc0316] text-white font-extrabold text-xs rounded-xl transition-all flex items-center justify-center gap-1.5 shadow-md shadow-[#e5041a]/25"
+                className="flex-1 py-3 px-3 bg-[#0d0d0d] hover:bg-emerald-600 text-white font-extrabold text-xs rounded-xl transition-all flex items-center justify-center gap-1.5 shadow-xs"
               >
-                <MessageCircle className="w-4 h-4 text-emerald-300" />
+                <MessageCircle className="w-4 h-4 text-emerald-400" />
                 <span>Book Office Visit</span>
               </a>
               <a
@@ -164,7 +164,7 @@ export const ContactSection: React.FC = () => {
           {/* Interactive Office & Regional Coverage Panel */}
           <div className="lg:col-span-7 bg-white rounded-2xl border border-zinc-200/90 p-6 sm:p-8 shadow-xs text-left space-y-6">
             <div>
-              <span className="inline-block px-2.5 py-0.5 rounded-full bg-[#e5041a]/10 text-xs font-bold text-[#e5041a] uppercase tracking-wider border border-[#e5041a]/20">
+              <span className="inline-block px-2.5 py-0.5 rounded-full bg-emerald-500/10 text-xs font-bold text-emerald-600 uppercase tracking-wider border border-emerald-500/20">
                 Strategic Connectivity
               </span>
               <h3 className="text-lg font-bold text-[#0d0d0d] mt-1.5">
@@ -178,7 +178,7 @@ export const ContactSection: React.FC = () => {
             {/* Metro & Landmark Connectivity Card */}
             <div className="bg-zinc-50 p-5 rounded-xl border border-zinc-200 space-y-3">
               <h4 className="text-xs font-bold uppercase tracking-wider text-zinc-700 flex items-center gap-2">
-                <Building2 className="w-4 h-4 text-[#e5041a]" />
+                <Building2 className="w-4 h-4 text-emerald-500" />
                 Location & Accessibility Markers
               </h4>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs text-zinc-600">
@@ -228,8 +228,8 @@ export const ContactSection: React.FC = () => {
             </div>
 
             {/* Key Personnel Notice */}
-            <div className="p-4 rounded-xl bg-red-50/50 border border-red-100 text-xs text-zinc-700 space-y-1">
-              <div className="font-bold text-red-950">
+            <div className="p-4 rounded-xl bg-emerald-50/50 border border-emerald-100 text-xs text-zinc-700 space-y-1">
+              <div className="font-bold text-emerald-950">
                 Advisory Appointments:
               </div>
               <p>
