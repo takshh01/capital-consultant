@@ -67,9 +67,12 @@ export const FloatingWhatsApp: React.FC = () => {
           {/* Card Header */}
           <div className="bg-[#141416] text-white p-4 flex items-center justify-between border-b border-white/10">
             <div className="flex items-center gap-2.5">
-              <div className="w-9 h-9 rounded-full bg-emerald-500/20 border border-emerald-500/30 flex items-center justify-center font-bold text-emerald-400 text-sm">
-                CC
-              </div>
+              <img 
+                src="/logo.png" 
+                alt="Capital Consultancy Logo" 
+                referrerPolicy="no-referrer"
+                className="w-9 h-9 rounded-xl object-contain bg-white p-0.5 border border-white/20 shadow-sm"
+              />
               <div>
                 <h4 className="text-sm font-bold text-white leading-tight">Capital Consultancy Desk</h4>
                 <p className="text-[11px] text-zinc-400 flex items-center gap-1 mt-0.5">

@@ -8,6 +8,7 @@ import {
 } from '../utils/whatsapp';
 import { ShieldCheck, Phone, MessageCircle, Mail, MapPin } from 'lucide-react';
 import { LoanType } from '../types/loan';
+import { BrandLogo } from './BrandLogo';
 
 interface FooterProps {
   onSelectLoan: (loanType: LoanType) => void;
@@ -46,14 +47,7 @@ export const Footer: React.FC<FooterProps> = ({
           
           {/* Col 1: Brand & Identity */}
           <div className="lg:col-span-4 space-y-4">
-            <div className="flex items-center gap-2.5">
-              <div className="w-9 h-9 rounded-xl bg-emerald-500 text-black flex items-center justify-center font-extrabold text-base shadow-md shadow-emerald-500/30">
-                C
-              </div>
-              <span className="text-xl font-bold tracking-tight text-white">
-                Capital Consultancy
-              </span>
-            </div>
+            <BrandLogo size="lg" subtitle="Pragati Tower, Rajender Place, Delhi" />
             
             <p className="text-xs text-zinc-400 leading-relaxed">
               Professional loan and debt financial consultancy headquartered at Pragati Tower, Rajender Place, Delhi. Specializing in MSME credit, CGTMSE collateral-free limits, working capital, machinery funding, and structured corporate finance.

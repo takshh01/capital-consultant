@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Phone, MessageCircle, Menu, X, ShieldCheck } from 'lucide-react';
 import { BUSINESS_PHONE_DISPLAY, BUSINESS_WHATSAPP_NUMBER } from '../utils/whatsapp';
+import { BrandLogo } from './BrandLogo';
 
 interface NavbarProps {
   onOpenCallbackModal: () => void;
@@ -66,25 +67,13 @@ export const Navbar: React.FC<NavbarProps> = ({
 
       {/* Main Strict 3-Zone Navigation Bar */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-18 flex items-center justify-between">
-        {/* Zone 1: Single text element wordmark */}
+        {/* Zone 1: Official Brand Logo with Emblem */}
         <a 
           href="#"
           onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
-          className="flex items-center gap-3 group"
+          className="flex items-center group cursor-pointer"
         >
-          <div className="w-8 h-8 rounded-lg bg-white/10 border border-white/20 flex items-center justify-center text-white group-hover:border-white/40 transition-colors shadow-sm">
-            <svg className="w-4 h-4 text-white fill-current" viewBox="0 0 24 24">
-              <path d="M12 2L14.4 9.6L22 12L14.4 14.4L12 22L9.6 14.4L2 12L9.6 9.6L12 2Z" />
-            </svg>
-          </div>
-          <div className="flex flex-col">
-            <span className="text-lg font-extrabold tracking-tight text-white leading-none">
-              Capital Consultancy
-            </span>
-            <span className="text-[10px] font-semibold text-zinc-400 tracking-wider uppercase mt-1">
-              Loan & Financial Advisory
-            </span>
-          </div>
+          <BrandLogo size="md" />
         </a>
 
         {/* Zone 2: Clean text navigation links */}
