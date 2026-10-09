@@ -9,7 +9,7 @@ export const TestimonialsSection: React.FC = () => {
       location: 'Mayapuri Industrial Area, Delhi',
       loanCategory: 'CGTMSE Machinery Finance',
       quantum: '₹2.4 Crore',
-      outcome: 'Secured collateral-free machinery financing for two imported CNC vertical machining centers. Manish Chawla and his team structured our CMA data and liaised with the public sector bank so we experienced zero delays in letter of credit and disbursement.'
+      outcome: 'Secured collateral-free machinery financing for two imported CNC vertical machining centers. The advisory team structured our CMA data and liaised with the public sector bank so we experienced zero delays in letter of credit and disbursement.'
     },
     {
       clientName: 'Anil Malhotra',

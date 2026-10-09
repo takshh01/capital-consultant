@@ -233,7 +233,7 @@ export const ContactSection: React.FC = () => {
                 Advisory Appointments:
               </div>
               <p>
-                To ensure undivided attention from <strong>Manish Chawla (CEO)</strong> or <strong>Reena Taank (Manager)</strong>, we recommend scheduling an appointment via WhatsApp or requesting a callback prior to visiting the office.
+                To ensure undivided attention from <strong>Reena Taank (Manager)</strong>, we recommend scheduling an appointment via WhatsApp or requesting a callback prior to visiting the office.
               </p>
             </div>
 

@@ -20,7 +20,7 @@ export const LOAN_SOLUTIONS: LoanDetail[] = [
     category: 'Business & MSME',
     shortDesc: 'Unsecured business funding designed for operational expansion, inventory purchase, and working capital needs.',
     maxAmount: 'Up to ₹75 Lakhs (Unsecured)',
-    tentativeRate: 'From 11.5% p.a.',
+    tentativeRate: '14% to 20% p.a.',
     tenure: '12 to 60 Months',
     highlights: [
       'Zero collateral or security required',
@@ -37,7 +37,7 @@ export const LOAN_SOLUTIONS: LoanDetail[] = [
     category: 'Business & MSME',
     shortDesc: 'Priority lending schemes for Micro, Small & Medium Enterprises with competitive interest rates and structured repayment.',
     maxAmount: 'Up to ₹10 Crore',
-    tentativeRate: 'From 9.25% p.a.',
+    tentativeRate: '7% to 10.30% p.a.',
     tenure: 'Up to 7 Years',
     highlights: [
       'Priority sector lending benefits',
@@ -54,7 +54,7 @@ export const LOAN_SOLUTIONS: LoanDetail[] = [
     category: 'Business & MSME',
     shortDesc: 'Government credit guarantee scheme enabling micro & small enterprises to secure bank funding without third-party collateral.',
     maxAmount: 'Up to ₹5 Crore (No Third-Party Collateral)',
-    tentativeRate: 'From 8.90% p.a.',
+    tentativeRate: '7% to 10.30% p.a.',
     tenure: 'Up to 84 Months',
     highlights: [
       'Credit Guarantee Trust backed',
@@ -71,7 +71,7 @@ export const LOAN_SOLUTIONS: LoanDetail[] = [
     category: 'Business & MSME',
     shortDesc: 'Pradhan Mantri Mudra Yojana funding divided into Shishu, Kishore, and Tarun categories for non-corporate micro units.',
     maxAmount: 'Up to ₹20 Lakhs (Tarun Plus Scheme)',
-    tentativeRate: 'From 9.50% p.a.',
+    tentativeRate: '7% to 10.30% p.a.',
     tenure: '36 to 60 Months',
     highlights: [
       'Zero collateral requirement',
@@ -88,7 +88,7 @@ export const LOAN_SOLUTIONS: LoanDetail[] = [
     category: 'Business & MSME',
     shortDesc: 'Revolving Cash Credit (CC) and Overdraft (OD) limits to comfortably bridge debtor cycles and cash flow mismatches.',
     maxAmount: 'Customized based on turnover (₹25L to ₹50Cr+)',
-    tentativeRate: 'From 8.50% p.a.',
+    tentativeRate: '7% to 10.30% p.a.',
     tenure: 'Renewable Annually (12 Months)',
     highlights: [
       'Pay interest only on amount utilized',
@@ -105,7 +105,7 @@ export const LOAN_SOLUTIONS: LoanDetail[] = [
     category: 'Business & MSME',
     shortDesc: 'Capex funding for acquiring high-grade manufacturing, printing, medical, packaging, or construction machinery.',
     maxAmount: 'Up to 85% - 90% of Machine Value',
-    tentativeRate: 'From 9.00% p.a.',
+    tentativeRate: '7% to 10.30% p.a.',
     tenure: 'Up to 7 Years',
     highlights: [
       'The machine itself acts as primary hypothecation',
@@ -122,7 +122,7 @@ export const LOAN_SOLUTIONS: LoanDetail[] = [
     category: 'Secured & Mortgage',
     shortDesc: 'Unlock high-ticket capital against your residential, commercial, or industrial property at substantially lower interest rates.',
     maxAmount: '₹50 Lakhs to ₹50 Crore+',
-    tentativeRate: 'From 8.60% p.a.',
+    tentativeRate: '10.30% to 18% p.a.',
     tenure: 'Up to 15 Years',
     highlights: [
       'Highest loan quantum with lowest monthly EMI burden',
@@ -139,7 +139,7 @@ export const LOAN_SOLUTIONS: LoanDetail[] = [
     category: 'Secured & Mortgage',
     shortDesc: 'Competitive retail home loans for purchasing ready-to-move flats, under-construction apartments, or self-construction.',
     maxAmount: 'Up to ₹10 Crore+',
-    tentativeRate: 'From 8.35% p.a.',
+    tentativeRate: '7.30% to 18% p.a.',
     tenure: 'Up to 30 Years',
     highlights: [
       'Lowest interest rates across institutional lenders',
@@ -151,21 +151,21 @@ export const LOAN_SOLUTIONS: LoanDetail[] = [
     keyDocuments: ['Salary Slips / 3 Yrs ITR', 'Builder Allotment / Title Documents', 'Form 16 / Proof of Income', 'KYC']
   },
   {
-    id: 'Personal Loan',
-    title: 'Personal Loan',
-    category: 'Retail & Personal',
-    shortDesc: 'Quick unsecured cash credit for salaried employees and professionals for medical emergencies, weddings, or debt consolidation.',
-    maxAmount: 'Up to ₹40 Lakhs',
-    tentativeRate: 'From 10.49% p.a.',
-    tenure: '12 to 72 Months',
+    id: 'NPA Cases',
+    title: 'NPA Cases',
+    category: 'Specialized & Structured',
+    shortDesc: 'Structured financial resolution for Non-Performing Assets, enabling recovery and settlement.',
+    maxAmount: 'Case-specific assessment',
+    tentativeRate: '8.30% to 18% p.a.',
+    tenure: 'As per resolution plan',
     highlights: [
-      'Completely collateral-free sanction',
-      'Disbursal within 24 to 48 hours of verification',
-      'Zero restriction on end-usage',
-      'Online paperless documentation'
+      'Strategic debt restructuring',
+      'Liaison with bank recovery cells',
+      'Structured repayment settlement',
+      'Clearance of NPA status'
     ],
-    idealFor: 'Salaried executives and doctors, CAs, consultants with consistent monthly earnings.',
-    keyDocuments: ['3 Months Salary Slips', '6 Months Salary Account Statement', 'PAN & Aadhaar Card', 'Company ID']
+    idealFor: 'Businesses facing temporary liquidity distress and NPA classification.',
+    keyDocuments: ['Bank Notice / Communication', 'Financial Statements', 'Asset Details', 'KYC']
   },
   {
     id: 'Project Finance',

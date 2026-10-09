@@ -31,7 +31,6 @@ export const EligibilityChecker: React.FC = () => {
     'Working Capital',
     'Machinery / Equipment Finance',
     'Loan Against Property',
-    'Personal Loan',
     'Home Loan',
     'Project Finance'
   ];

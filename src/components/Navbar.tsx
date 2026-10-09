@@ -188,7 +188,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               onClick={() => handleNavClick('team')}
               className="text-left py-2 border-b border-white/10"
             >
-              Leadership (Manish Chawla & Reena Taank)
+              Leadership (Reena Taank)
             </button>
             <button 
               onClick={() => handleNavClick('faq')}

@@ -1,7 +1,7 @@
 import { LoanEnquiryFormData, CallbackFormData } from '../types/loan';
 
 export const BUSINESS_WHATSAPP_NUMBER = '919625456835';
-export const BUSINESS_PHONE_DISPLAY = '+91 9650160139';
+export const BUSINESS_PHONE_DISPLAY = '+91 9625456835';
 export const BUSINESS_WHATSAPP_DISPLAY = '+91 9625456835';
 export const BUSINESS_EMAIL = 'capitalcatalystconsultant@gmail.com';
 export const BUSINESS_OFFICE = 'Pragati Tower, Rajender Place, Delhi 110008';

@@ -396,7 +396,7 @@ export const LoanEnquiryForm: React.FC<LoanEnquiryFormProps> = ({ initialLoanTyp
                     <option value="Working Capital">Working Capital (CC / OD)</option>
                     <option value="Machinery / Equipment Finance">Machinery / Equipment Finance</option>
                     <option value="Loan Against Property">Loan Against Property (LAP)</option>
-                    <option value="Personal Loan">Personal Loan</option>
+                    <option value="NPA Cases">NPA Cases</option>
                     <option value="Home Loan">Home Loan</option>
                     <option value="Project Finance">Project Finance</option>
                     <option value="Bill Discounting">Bill Discounting / Factoring</option>
@@ -644,8 +644,8 @@ export const LoanEnquiryForm: React.FC<LoanEnquiryFormProps> = ({ initialLoanTyp
                 </div>
               )}
 
-              {/* DYNAMIC CASE: PERSONAL LOAN */}
-              {loanType === 'Personal Loan' && (
+              {/* DYNAMIC CASE: NPA CASES */}
+              {loanType === 'NPA Cases' && (
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-left">
                   <div>
                     <label className="block text-xs font-bold text-zinc-300 mb-1">

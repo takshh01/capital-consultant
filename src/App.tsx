@@ -95,7 +95,7 @@ export default function App() {
         {/* 10. WhatsApp High-Conversion CTA */}
         <WhatsAppCTA />
 
-        {/* 11. Leadership & Team (Manish Chawla & Reena Taank) */}
+        {/* 11. Leadership & Team (Reena Taank) */}
         <TeamSection />
 
         {/* 12. Testimonials / Genuine Client Outcomes */}

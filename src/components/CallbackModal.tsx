@@ -118,7 +118,7 @@ export const CallbackModal: React.FC<CallbackModalProps> = ({ isOpen, onClose })
                 <input
                   type="text"
                   required
-                  placeholder="e.g. Manish Chawla"
+                  placeholder="e.g. Rajesh Kumar"
                   value={name}
                   onChange={(e) => { setName(e.target.value); setError(''); }}
                   className="w-full px-3.5 py-2.5 text-sm bg-zinc-900 border border-white/10 rounded-xl text-white placeholder:text-zinc-500 focus:bg-zinc-900 focus:ring-2 focus:ring-emerald-500 focus:outline-hidden"

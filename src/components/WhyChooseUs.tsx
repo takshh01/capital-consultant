@@ -30,7 +30,7 @@ export const WhyChooseUs: React.FC = () => {
     },
     {
       title: 'Direct WhatsApp Advisory Desk',
-      description: 'Receive real-time updates and documentation support directly over WhatsApp with our leadership team (Manish Chawla & Reena Taank).',
+      description: 'Receive real-time updates and documentation support directly over WhatsApp with our advisory team (Reena Taank).',
       icon: Headset
     }
   ];

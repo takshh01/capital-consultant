@@ -31,7 +31,6 @@ export const Footer: React.FC<FooterProps> = ({
     'Working Capital',
     'Machinery / Equipment Finance',
     'Loan Against Property',
-    'Personal Loan',
     'Home Loan',
     'Project Finance',
     'Bill Discounting',
@@ -54,7 +53,7 @@ export const Footer: React.FC<FooterProps> = ({
             </p>
 
             <div className="pt-2 text-xs text-zinc-400 space-y-1">
-              <div>Leadership: <strong className="text-white">Manish Chawla</strong> (CEO) &middot; <strong className="text-white">Reena Taank</strong> (Manager)</div>
+              <div>Management: <strong className="text-white">Reena Taank</strong> (Manager)</div>
               <div>Office: Pragati Tower, Rajender Place, Delhi 110008</div>
             </div>
 

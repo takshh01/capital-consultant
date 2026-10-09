@@ -29,7 +29,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onApplyClick }) => {
             </p>
 
             <p className="text-zinc-300 text-sm sm:text-base leading-relaxed">
-              Under the leadership of <strong className="text-white">Manish Chawla (CEO)</strong> and <strong className="text-white">Reena Taank (Manager)</strong>, our advisory team evaluates your actual cash flows, turnover velocity, and collateral profile to structure your loan file precisely for the most advantageous institutions.
+              Under the leadership of <strong className="text-white">Reena Taank (Manager)</strong>, our advisory team evaluates your actual cash flows, turnover velocity, and collateral profile to structure your loan file precisely for the most advantageous institutions.
             </p>
 
             {/* Core Values / Features */}
@@ -140,13 +140,9 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onApplyClick }) => {
                 {/* Key Personnel */}
                 <div className="pt-4 border-t border-white/10">
                   <div className="text-xs font-semibold uppercase text-zinc-400 tracking-wider mb-3">
-                    Key Advisory Leadership
+                    Key Advisory Management
                   </div>
-                  <div className="grid grid-cols-2 gap-3">
-                    <div className="p-3 rounded-xl bg-zinc-900 border border-zinc-800">
-                      <div className="text-sm font-bold text-white">Manish Chawla</div>
-                      <div className="text-xs text-emerald-400 font-medium">Chief Executive Officer</div>
-                    </div>
+                  <div>
                     <div className="p-3 rounded-xl bg-zinc-900 border border-zinc-800">
                       <div className="text-sm font-bold text-white">Reena Taank</div>
                       <div className="text-xs text-emerald-400 font-medium">Operations Manager</div>

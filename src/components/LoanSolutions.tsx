@@ -88,7 +88,7 @@ export const LoanSolutions: React.FC<LoanSolutionsProps> = ({ onSelectLoanForEnq
                 {/* Key Metrics Matrix */}
                 <div className="mt-4 pt-3 border-t border-white/10 grid grid-cols-2 gap-2 text-xs">
                   <div className="bg-zinc-900/80 p-2.5 rounded-xl border border-white/10">
-                    <span className="text-[11px] text-zinc-400 block">Indicative Rate</span>
+                    <span className="text-[11px] text-zinc-400 block">ROI</span>
                     <span className="font-bold text-white">{loan.tentativeRate}</span>
                   </div>
                   <div className="bg-zinc-900/80 p-2.5 rounded-xl border border-white/10">

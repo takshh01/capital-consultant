@@ -107,7 +107,7 @@ export const AdminLeadDrawer: React.FC<AdminLeadDrawerProps> = ({ isOpen, onClos
               </h3>
             </div>
             <p className="text-xs text-zinc-400 mt-0.5">
-              Secure internal records desk for Manish Chawla & Reena Taank
+              Secure internal records desk for Reena Taank
             </p>
           </div>
 
@@ -283,7 +283,7 @@ export const AdminLeadDrawer: React.FC<AdminLeadDrawerProps> = ({ isOpen, onClos
                     </span>
                     <div className="flex items-center gap-2">
                       <a
-                        href={`https://wa.me/91${lead.phone}?text=${encodeURIComponent(`Hello ${lead.fullName}, this is Manish Chawla / Reena Taank from Capital Consultancy following up on your ${lead.loanType} enquiry.`)}`}
+                        href={`https://wa.me/91${lead.phone}?text=${encodeURIComponent(`Hello ${lead.fullName}, this is Reena Taank from Capital Consultancy following up on your ${lead.loanType} enquiry.`)}`}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="px-2.5 py-1 bg-emerald-500/10 text-emerald-400 hover:bg-emerald-500/20 border border-emerald-500/30 rounded font-medium flex items-center gap-1 transition-colors"

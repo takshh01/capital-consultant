@@ -46,8 +46,8 @@ export const Hero: React.FC<HeroProps> = ({
 
           {/* Primary Display Headline matching reference screenshot */}
           <h1 className="text-4xl sm:text-6xl lg:text-[76px] font-extrabold tracking-[-0.035em] text-white leading-[1.06] text-balance mb-6">
-            Empower Your Finances.<br />
-            <span className="text-white">Simplify Your Future.</span>
+            Empower Your Business Finances.<br />
+            <span className="text-white">simplify your futur.</span>
           </h1>
 
           {/* Clean Subtitle Paragraph */}
@@ -109,60 +109,18 @@ export const Hero: React.FC<HeroProps> = ({
             Trusted by Leading Banking & NBFC Partners
           </p>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6 sm:gap-8 items-center pt-1 text-zinc-300">
-            {/* Partner 1: State Bank of India */}
-            <div className="flex items-center gap-2.5 opacity-75 hover:opacity-100 transition-opacity">
-              <svg className="w-6 h-6 shrink-0 fill-current" viewBox="0 0 24 24">
-                <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2" fill="none" />
-                <circle cx="12" cy="12" r="4" fill="currentColor" />
-                <path d="M12 16v6" stroke="currentColor" strokeWidth="2" />
-              </svg>
-              <span className="text-sm font-bold tracking-tight text-white">SBI</span>
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-8 items-center pt-1 text-zinc-300">
+            <div className="flex items-center">
+              <span className="text-sm font-bold tracking-tight text-white">PSU BANKS</span>
             </div>
-
-            {/* Partner 2: HDFC Bank */}
-            <div className="flex items-center gap-2.5 opacity-75 hover:opacity-100 transition-opacity">
-              <svg className="w-6 h-6 shrink-0 fill-current" viewBox="0 0 24 24">
-                <rect x="2" y="2" width="20" height="20" rx="3" stroke="currentColor" strokeWidth="2" fill="none" />
-                <path d="M7 7h10v10H7z" fill="currentColor" opacity="0.4" />
-                <path d="M2 12h20M12 2v20" stroke="currentColor" strokeWidth="1.5" />
-              </svg>
-              <span className="text-sm font-bold tracking-tight text-white">HDFC Bank</span>
+            <div className="flex items-center">
+              <span className="text-sm font-bold tracking-tight text-white">GOVERMENT BANK</span>
             </div>
-
-            {/* Partner 3: ICICI Bank */}
-            <div className="flex items-center gap-2.5 opacity-75 hover:opacity-100 transition-opacity">
-              <svg className="w-6 h-6 shrink-0 fill-current" viewBox="0 0 24 24">
-                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-              <span className="text-sm font-bold tracking-tight text-white">ICICI Bank</span>
+            <div className="flex items-center">
+              <span className="text-sm font-bold tracking-tight text-white">PRIVATE BANK</span>
             </div>
-
-            {/* Partner 4: Punjab National Bank */}
-            <div className="flex items-center gap-2.5 opacity-75 hover:opacity-100 transition-opacity">
-              <svg className="w-6 h-6 shrink-0 fill-current" viewBox="0 0 24 24">
-                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" strokeWidth="2" fill="none" />
-                <path d="M8 8h8v8H8z" fill="currentColor" />
-              </svg>
-              <span className="text-sm font-bold tracking-tight text-white">PNB</span>
-            </div>
-
-            {/* Partner 5: SIDBI / CGTMSE */}
-            <div className="flex items-center gap-2.5 opacity-75 hover:opacity-100 transition-opacity">
-              <svg className="w-6 h-6 shrink-0 fill-current" viewBox="0 0 24 24">
-                <path d="M12 2l8 4v6c0 5.5-3.8 10.7-8 12-4.2-1.3-8-6.5-8-12V6l8-4z" stroke="currentColor" strokeWidth="2" fill="none" />
-                <path d="M9 12l2 2 4-4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
-              </svg>
-              <span className="text-sm font-bold tracking-tight text-white">SIDBI MSME</span>
-            </div>
-
-            {/* Partner 6: Axis Bank */}
-            <div className="flex items-center gap-2.5 opacity-75 hover:opacity-100 transition-opacity">
-              <svg className="w-6 h-6 shrink-0 fill-current" viewBox="0 0 24 24">
-                <path d="M12 3L2 21h20L12 3z" stroke="currentColor" strokeWidth="2" fill="none" />
-                <path d="M8 15h8" stroke="currentColor" strokeWidth="2" />
-              </svg>
-              <span className="text-sm font-bold tracking-tight text-white">Axis Bank</span>
+            <div className="flex items-center">
+              <span className="text-sm font-bold tracking-tight text-white">NBFC</span>
             </div>
           </div>
         </div>

@@ -13,7 +13,7 @@ export type LoanType =
   | 'Working Capital'
   | 'Machinery / Equipment Finance'
   | 'Loan Against Property'
-  | 'Personal Loan'
+  | 'NPA Cases'
   | 'Home Loan'
   | 'Project Finance'
   | 'Bill Discounting'
