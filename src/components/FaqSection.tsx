@@ -7,7 +7,7 @@ export const FaqSection: React.FC = () => {
 
   const faqs = [
     {
-      q: 'Can MSMEs really get a bank loan up to ₹5 Crore without third-party collateral under CGTMSE?',
+      q: 'Can MSMEs really get a bank loan up to ₹5 crore without collateral under CGTMSE?',
       a: 'Yes. Under the Credit Guarantee Fund Trust for Micro and Small Enterprises (CGTMSE) scheme set up by the Ministry of MSME and SIDBI, eligible manufacturing and service enterprises can obtain credit facilities up to ₹5 Crore without having to mortgage immovable property or provide third-party personal guarantees. Capital Consultancy prepares the required CMA data, project viability reports, and coordinates with CGTMSE-registered member lending banks.'
     },
     {

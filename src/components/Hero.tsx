@@ -117,7 +117,7 @@ export const Hero: React.FC<HeroProps> = ({
               <span className="text-sm font-bold tracking-tight text-white">GOVERMENT BANK</span>
             </div>
             <div className="flex items-center">
-              <span className="text-sm font-bold tracking-tight text-white">PRIVATE BANK</span>
+              <span className="text-sm font-bold tracking-tight text-white">PRIVATE FINANCE</span>
             </div>
             <div className="flex items-center">
               <span className="text-sm font-bold tracking-tight text-white">NBFC</span>

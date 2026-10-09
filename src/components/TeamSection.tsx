@@ -29,7 +29,6 @@ export const TeamSection: React.FC = () => {
                 <div>
                   <h3 className="text-xl font-bold text-white">Reena Taank</h3>
                   <p className="text-xs font-bold text-emerald-400 tracking-wide uppercase mt-0.5">
-                    Operations & Processing Manager
                   </p>
                 </div>
                 <div className="w-12 h-12 rounded-2xl bg-black border border-white/10 text-white font-black text-xl flex items-center justify-center shadow-md">

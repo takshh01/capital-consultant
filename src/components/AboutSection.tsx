@@ -153,7 +153,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onApplyClick }) => {
                 {/* Regional Reach */}
                 <div className="p-3 rounded-xl bg-zinc-950 border border-zinc-800 text-xs text-zinc-400">
                   <p>
-                    Serving business owners across <strong>Delhi, Noida, Gurugram, Faridabad, Ghaziabad, Panipat, Sonipat</strong> and nationwide corporate mandates.
+                    Serving business owners across pan India
                   </p>
                 </div>
 
