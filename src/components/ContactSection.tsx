@@ -130,7 +130,7 @@ export const ContactSection: React.FC = () => {
                     Working Hours
                   </span>
                   <p className="text-white font-semibold mt-0.5">
-                    Monday to Saturday: 9:30 AM – 7:00 PM
+                    Monday to Saturday: 10:00 AM – 6:00 PM
                   </p>
                   <p className="text-[11px] text-zinc-400 mt-0.5">
                     Sunday: By Prior Appointment for Corporate Mandates
